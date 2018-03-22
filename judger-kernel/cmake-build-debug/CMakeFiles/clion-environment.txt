@@ -1,3 +1,0 @@
-ToolSet: 3.22@D:\andriod\java\mingw
-Options: 
-CMake: 3.7.2@D:\andriod\CLion 2017.1.2\bin\cmake\bin\cmake.exe

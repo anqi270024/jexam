@@ -33,7 +33,7 @@ sourceCompatibility = 1.8
 targetCompatibility = 1.8
 compileJava.dependsOn(processResources)
 jar {
-    baseName = 'jmooc'
+    baseName = 'jexam'
     version =  '1.0.0'
 }
 configurations {
@@ -67,13 +67,6 @@ dependencies {
     testCompile 'junit:junit:4.12'
     //---------------------模板引擎----------------------------
     compile "org.springframework.boot:spring-boot-starter-freemarker:${springBootVersion}"
-    /*compile 'org.thymeleaf:thymeleaf:3.0.2.RELEASE'
-    compile ("org.springframework.boot:spring-boot-starter-thymeleaf:${springBootVersion}"){
-        exclude group: 'nz.net.ultraq.thymeleaf'
-        exclude group: 'org.thymeleaf', module: 'thymeleaf-spring4'
-    }
-    compile ('org.thymeleaf:thymeleaf-spring4:3.0.2.RELEASE')
-    compile 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect:2.1.2'*/
     //---------------------权限引擎-----------------------------
     //compile "org.springframework.boot:spring-boot-starter-security:${springBootVersion}"
     //----------------------日志-------------------------------
@@ -82,7 +75,6 @@ dependencies {
     //--------------------数据库驱动----------------------------
     compile 'mysql:mysql-connector-java:6.0.5'
     //-------------------数据库连接池---------------------------
-    //compile 'com.zaxxer:HikariCP:2.6.1'
     compile 'com.alibaba:druid:1.0.29'
     //---------------------缓存--------------------------------
     compile 'net.sf.ehcache:ehcache:2.10.4'

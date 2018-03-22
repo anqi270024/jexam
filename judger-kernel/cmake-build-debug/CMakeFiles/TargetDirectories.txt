@@ -1,3 +1,0 @@
-G:/cHome/work/judger-kernel/cmake-build-debug/CMakeFiles/judger_kernel.dir
-G:/cHome/work/judger-kernel/cmake-build-debug/CMakeFiles/edit_cache.dir
-G:/cHome/work/judger-kernel/cmake-build-debug/CMakeFiles/rebuild_cache.dir
