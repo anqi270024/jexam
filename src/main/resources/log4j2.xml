@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Configuration status="off">
     <!-- 日志文件目录和压缩文件 -->
-    <Properties>
-        <Property name="fileName">/home/jcala/jmooc/log/spring_log</Property>
-        <Property name="fileGz">/home/jcala/jmooc/log/spring_log/7z</Property>
-    </Properties>
     <Appenders>
         <!--这个输出控制台的配置 -->
         <Console name="console" target="SYSTEM_OUT">

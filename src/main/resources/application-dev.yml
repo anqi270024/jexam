@@ -1,5 +1,5 @@
 server:
-    port: 80
+    port: 8037
     max-http-header-size: 8192
     compression:
         min-response-size: 512
@@ -9,7 +9,6 @@ server:
       maxThreads: 10
       minSpareThreads: 3
       accesslog:
-        directory: /home/jcala/jmooc/log/server_log
         pattern: combined
         enabled: true
     undertow:
@@ -18,7 +17,6 @@ server:
         buffer-size: 16384
         accesslog:
             enabled: true
-            dir: /home/jcala/jmooc/log/server_log
             pattern: combined
 logging:
     config: classpath:log4j2.xml
@@ -48,7 +46,7 @@ spring:
         role: com.alibaba.druid.pool.DruidDataSource
         name: root
         password: root
-        url: jdbc:mysql://127.0.0.1:3306/jmooc?serverTimezone=UTC&characterEncoding=utf-8
+        url: jdbc:mysql://127.0.0.1:3306/jexam?serverTimezone=UTC&characterEncoding=utf-8
         driverClassName: com.mysql.cj.jdbc.Driver
         schema: classpath:import.sql
         initialize: false

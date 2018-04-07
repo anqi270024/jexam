@@ -9,54 +9,51 @@ import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * 用户
+ * @author flyleft
+ * @date 2018/4/7
+ */
 @Getter
 @Setter
 @Entity
-@Table(name = "users")
-public class User implements Serializable{
+@Table(name = "user")
+public class User implements Serializable {
 
     private static final String DEFAULT_AVATAR="/img/default.png";
 
     private static final long serialVersionUID = 8665628721543300843L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;//id
+    private long id;
 
     @Column(nullable = false,length = 40)
-    private String name;//用户名
+    private String name;
 
     @Column(nullable = false,length = 32)
-    private String password;//密码
+    private String password;
 
+    /**
+     * 类型。1：学生，2：老师
+     */
     @Column(nullable = false,columnDefinition="tinyint default 1")
-    private int role;//类型。1：学生，2：老师，3：管理员
+    private int role;
 
     @Column(nullable = false,name = "avatar_url",columnDefinition="varchar(40) default '/img/default.png'")
-    private String avatarUrl;//头像
-
-    @OneToMany(cascade = CascadeType.REMOVE,fetch=FetchType.LAZY,mappedBy = "user")
-    private Set<Course> courses=new HashSet<>();
+    private String avatarUrl;
 
     @Column(name = "exercise_collection")
     @ManyToMany(cascade = CascadeType.REMOVE,fetch=FetchType.LAZY)
-    private Set<Exercise> exerciseCollection=new HashSet<>();//收藏的习题
+    private Set<Exercise> exerciseCollection=new HashSet<>();
+
+    @ManyToMany(mappedBy = "participants")
+    private Set<Exam> exams =new HashSet<>();
 
     @Column(name = "notice_num",columnDefinition = "int default 0")
     private int noticeNum;
 
-    @Column(columnDefinition = "text",name = "join_courses")
-    private String joinCourses;
-
-    @Column(columnDefinition = "text",name = "col_exercises")
-    private String colExercises;
-
-    @OneToMany(cascade = CascadeType.REMOVE,fetch=FetchType.LAZY,mappedBy = "owner")
-    @OrderBy("id DESC")
-    private Set<Notice> notices=new HashSet<>();
-
     public User() {
     }
-
 
     public User(long id) {
         this.id=id;

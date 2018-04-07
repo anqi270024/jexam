@@ -25,8 +25,7 @@ import java.util.Properties;
 
 @Configuration
 @EnableTransactionManagement
-@EnableJpaRepositories("me.jcala.jmooc.repository")
-@EntityScan("me.jcala.jmooc.entity")
+@EnableJpaRepositories("me.anqi.jexam.repository")
 public class DruidDataSourceConfig implements EnvironmentAware,TransactionManagementConfigurer {
     private RelaxedPropertyResolver propertyResolver;
 
@@ -91,7 +90,7 @@ public class DruidDataSourceConfig implements EnvironmentAware,TransactionManage
     public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
         LocalContainerEntityManagerFactoryBean entityManagerFactoryBean = new LocalContainerEntityManagerFactoryBean();
         entityManagerFactoryBean.setDataSource(dataSource());
-        entityManagerFactoryBean.setPackagesToScan("me.jcala.jmooc");
+        entityManagerFactoryBean.setPackagesToScan("me.anqi.jexam");
         entityManagerFactoryBean.setJpaVendorAdapter(new HibernateJpaVendorAdapter());
 
         Properties jpaProperties = new Properties();

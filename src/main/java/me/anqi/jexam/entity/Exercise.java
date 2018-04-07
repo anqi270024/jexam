@@ -8,53 +8,69 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Map;
 
-//习题表
+/**
+ * 习题
+ * @author flyleft
+ * @date 2018/4/7
+ */
 @Getter
 @Setter
 @Entity
 @Table(name = "exercise")
-public class Exercise implements Serializable{
+public class Exercise implements Serializable {
 
     private static final long serialVersionUID = -5175465537985355910L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;//id
+    private long id;
 
+    @Column(nullable = false,length = 40)
+    private String subject;
+
+    /**
+     * 习题内容
+     */
     @Column(nullable = false,columnDefinition="text")
-    private String title;//习题名称
+    private String content;
 
-    @Column(columnDefinition="text")
-    private String content;//习题内容
-
-    @Column(nullable = false,columnDefinition="tinyint default 1")//1,2,3,4,5五个难度等级
-    private int difficulty;//难度
-
-    @Column(columnDefinition="text")
-    private String chooses;//选项列表
-
-    @Column(name = "choose_answer",columnDefinition="char(1)")
-    private char answer;//正确选项
-
+    /**
+     * 习题分值
+     */
     @Column(nullable = false,columnDefinition="tinyint default 1")
-    private int score;//习题分值
+    private int score;
 
-    @Column(columnDefinition="text")
-    private String analysis;//习题解析
-
+    /**
+     * 习题类型
+     * 选择题： choose
+     * 填空题： completion
+     * 简答题： short_answer
+     */
     @Column(nullable = false, length = 10)
-    private String type;//类型:c,cp,java
+    private String type;
 
-    @Column(nullable = false,columnDefinition = "int default 0")
-    private int collNum;//收藏本题目的人数
+    /**
+     * 选择题选项列表
+     */
+    @Column(columnDefinition="text")
+    private String chooses;
 
-    @Column(nullable = false,columnDefinition = "bigint default 0")
-    private long ownerId;//题目所有者的id
+    /**
+     * 题目所有者的id
+     */
+    @Column(nullable = false, columnDefinition = "bigint default 0")
+    private long ownerId;
 
-    @JsonIgnore
-    @ManyToOne(cascade = CascadeType.REMOVE,fetch=FetchType.EAGER,targetEntity = Lesson.class)
-    @JoinColumn(name = "lesson_id")
-    private Lesson lesson;
+
+    /**
+     * 习题参考答案
+     */
+    @Column(columnDefinition="text")
+    private String answer;
+
+    @ManyToOne(cascade = CascadeType.REMOVE, fetch=FetchType.EAGER, targetEntity = Exam.class)
+    @JoinColumn(name = "exam_id")
+    private Exam exam;
 
     @Transient
     @JsonIgnore
@@ -63,21 +79,4 @@ public class Exercise implements Serializable{
     public Exercise() {
     }
 
-    public Exercise(String title, int difficulty, char answer,int score, String analysis, String type) {
-        this.title = title;
-        this.difficulty = difficulty;
-        this.answer = answer;
-        this.score = score;
-        this.analysis = analysis;
-        this.type = type;
-    }
-    public Exercise(String title, String content, int difficulty, String chooses, char answer, String analysis, String type) {
-        this.title = title;
-        this.content = content;
-        this.difficulty = difficulty;
-        this.chooses = chooses;
-        this.answer = answer;
-        this.analysis = analysis;
-        this.type = type;
-    }
 }

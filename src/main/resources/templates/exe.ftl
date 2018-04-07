@@ -77,44 +77,38 @@
     <div class="container">
         <div class="row">
             <div class="test col-md-9">
-                <p>类型：</p>
+                <p>科目：</p>
                 <ul class="">
                     <li class="course-nav-item on">
                         <a href="/exercise/list">全部</a>
                     </li>
                     <li class="course-nav-item">
-                        <a href="/exercise/list?c=c" >C</a>
+                        <a href="/exercise/list?c=c" >JAVA</a>
                     </li>
                     <li class="course-nav-item">
-                        <a href="/exercise/list?c=cp" >C++</a>
+                        <a href="/exercise/list?c=cp" >数学</a>
                     </li>
                     <li class="course-nav-item">
-                        <a href="/exercise/list?c=java" >JAVA</a>
+                        <a href="/exercise/list?c=java" >英语</a>
                     </li>
                 </ul>
             </div>
         </div>
         <div class="row">
             <div class="test col-md-9">
-                <p>难度：</p>
+                <p>题型：</p>
                 <ul class="">
                     <li class="course-nav-item on">
                         <a href="/exercise/list">全部</a>
                     </li>
                     <li class="course-nav-item">
-                        <a href="/exercise/list?c=1" >1</a>
+                        <a href="/exercise/list?c=1" >选择题</a>
                     </li>
                     <li class="course-nav-item">
-                        <a href="/exercise/list?c=2" >2</a>
+                        <a href="/exercise/list?c=2" >填空题</a>
                     </li>
                     <li class="course-nav-item">
-                        <a href="/exercise/list?c=3" >3</a>
-                    </li>
-                    <li class="course-nav-item">
-                        <a href="/exercise/list?c=4" >4</a>
-                    </li>
-                    <li class="course-nav-item">
-                        <a href="/exercise/list?c=5" >5</a>
+                        <a href="/exercise/list?c=3" >简答题</a>
                     </li>
                 </ul>
             </div>

@@ -15,7 +15,7 @@ public class JexamApplication extends SpringBootServletInitializer {
 		return application.sources(JexamApplication.class);
 	}
 
-	public static void main(String[] args) throws Exception {
+	public static void main(String[] args) {
 		SpringApplication.run(JexamApplication.class, args);
 	}
 }
