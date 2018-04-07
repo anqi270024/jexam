@@ -29,14 +29,14 @@
                     <ul class="nav navbar-nav">
 
                         <li><a href="/"><span>首页</span></a></li>
-                        <li><a href="/exercise/list"><span>习题中心</span></a></li>
+                        <li><a href="/exercises/list"><span>习题中心</span></a></li>
 
                     <#if type == 1>
                         <li class="dropdown user-dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>${name!"jmooc"}<b class="caret"></b></a>
                             <ul class="dropdown-menu">
-                                <li><a href="/user/stu/crs"><i class="fa fa-user"></i> 以往成绩</a></li>
-                                <li><a href="/user/stu/exe/col"><i class="fa fa-gear"></i> 习题收藏</a></li>
+                                <li><a href="/user/stu/exams"><i class="fa fa-user"></i> 参与考试</a></li>
+                                <li><a href="/user/stu/exercises"><i class="fa fa-gear"></i> 习题收藏</a></li>
                                 <li class="divider"></li>
                                 <li><a href="/user/logout"><i class="fa fa-power-off"></i> 登出</a></li>
                             </ul>
@@ -45,7 +45,10 @@
                         <li class="dropdown user-dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>${name!"jmooc"}<b class="caret"></b></a>
                             <ul class="dropdown-menu">
-                                <li><a href="/user/tea/crs_mgr?do=add"><i class="fa fa-user"></i> 课程管理</a></li>
+                                <li><a href="/user/tea/subjects"><i class="fa fa-user"></i> 添加科目</a></li>
+                                <li><a href="/user/tea/students"><i class="fa fa-user"></i> 添加学生</a></li>
+                                <li><a href="/user/tea/exams"><i class="fa fa-user"></i> 添加试卷</a></li>
+                                <li><a href="/user/tea/papers"><i class="fa fa-user"></i> 成绩批改</a></li>
                                 <li class="divider"></li>
                                 <li><a href="/user/logout"><i class="fa fa-power-off"></i> 登出</a></li>
                             </ul>

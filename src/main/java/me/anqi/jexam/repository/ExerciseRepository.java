@@ -14,8 +14,12 @@ public interface ExerciseRepository  extends CrudRepository<Exercise, Long> {
 
     List<Exercise> findByType(@Param("type") String type, Pageable pageable);
 
+    List<Exercise> findBySubjectId(@Param("subject_id") long subjectId, Pageable pageable);
+
     Page<Exercise> findAll(Pageable pageable);
 
     int countExerciseByType(@Param("type") String type);
+
+    int countExerciseBySubjectId(@Param("subject_id") long subjectId);
 
 }

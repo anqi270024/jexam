@@ -25,8 +25,8 @@ public class Exercise implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @Column(nullable = false,length = 40)
-    private String subject;
+    @Column(nullable = false, name = "subject_id")
+    private long subjectId;
 
     /**
      * 习题内容

@@ -24,4 +24,10 @@ public class Subject implements Serializable {
     @Column(nullable = false, length = 40, unique = true)
     private String name;
 
+    public Subject() {
+    }
+
+    public Subject(String name) {
+        this.name = name;
+    }
 }

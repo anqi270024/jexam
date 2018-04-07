@@ -39,33 +39,32 @@
                     <ul class="nav navbar-nav">
 
                         <li><a href="/"><span>首页</span></a></li>
-                        <li><a href="/course/list"><span>课程中心</span></a></li>
-                        <li><a href="/code"><span>代码运行</span></a></li>
-                        <li><a href="/exercise/list"><span>习题中心</span></a></li>
-                    <#if type == 1>
-                        <li class="dropdown user-dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>${name!"jmooc"}<b class="caret"></b></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="/user/stu/crs"><i class="fa fa-user"></i> 学习课程</a></li>
-                                <li><a href="/user/all/notice?r=s"><i class="fa fa-envelope"></i> 消息 <span class="badge">${num!0}</span></a></li>
-                                <li><a href="/user/stu/exe/col"><i class="fa fa-gear"></i> 习题收藏</a></li>
-                                <li class="divider"></li>
-                                <li><a href="/user/logout"><i class="fa fa-power-off"></i> 登出</a></li>
-                            </ul>
-                        </li>
-                    <#elseif type == 2>
-                        <li class="dropdown user-dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>${name!"jmooc"}<b class="caret"></b></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="/user/tea/crs_mgr?do=add"><i class="fa fa-user"></i> 课程管理</a></li>
-                                <li><a href="/user/all/notice?r=t"><i class="fa fa-envelope"></i> 消息 <span class="badge">${num!0}</span></a></li>
-                                <li class="divider"></li>
-                                <li><a href="/user/logout"><i class="fa fa-power-off"></i> 登出</a></li>
-                            </ul>
-                        </li>
-                    <#else>
-                        <li><a class="btn" href="/login">登录</a></li>
-                    </#if>
+                        <li><a href="/exercises/list"><span>习题中心</span></a></li>
+                        <#if type == 1>
+                            <li class="dropdown user-dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>${name!"jmooc"}<b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="/user/stu/exams"><i class="fa fa-user"></i> 参与考试</a></li>
+                                    <li><a href="/user/stu/exercises"><i class="fa fa-gear"></i> 习题收藏</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="/user/logout"><i class="fa fa-power-off"></i> 登出</a></li>
+                                </ul>
+                            </li>
+                        <#elseif type == 2>
+                            <li class="dropdown user-dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>${name!"jmooc"}<b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="/user/tea/subjects"><i class="fa fa-user"></i> 添加科目</a></li>
+                                    <li><a href="/user/tea/students"><i class="fa fa-user"></i> 添加学生</a></li>
+                                    <li><a href="/user/tea/exams"><i class="fa fa-user"></i> 添加试卷</a></li>
+                                    <li><a href="/user/tea/papers"><i class="fa fa-user"></i> 成绩批改</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="/user/logout"><i class="fa fa-power-off"></i> 登出</a></li>
+                                </ul>
+                            </li>
+                        <#else>
+                            <li><a class="btn" href="/login">登录</a></li>
+                        </#if>
                     </ul>
                 </div>
             </div>
@@ -80,17 +79,13 @@
                 <p>科目：</p>
                 <ul class="">
                     <li class="course-nav-item on">
-                        <a href="/exercise/list">全部</a>
+                        <a href="/exercises/list">全部</a>
                     </li>
+                    <#list subjects as item>
                     <li class="course-nav-item">
-                        <a href="/exercise/list?c=c" >JAVA</a>
+                        <a href="/exercises/list?subject_id=${(item.id)!}" >${(item.name)!}</a>
                     </li>
-                    <li class="course-nav-item">
-                        <a href="/exercise/list?c=cp" >数学</a>
-                    </li>
-                    <li class="course-nav-item">
-                        <a href="/exercise/list?c=java" >英语</a>
-                    </li>
+                    </#list>
                 </ul>
             </div>
         </div>
@@ -99,16 +94,16 @@
                 <p>题型：</p>
                 <ul class="">
                     <li class="course-nav-item on">
-                        <a href="/exercise/list">全部</a>
+                        <a href="/exercises/list">全部</a>
                     </li>
                     <li class="course-nav-item">
-                        <a href="/exercise/list?c=1" >选择题</a>
+                        <a href="/exercises/list?type=choose" >选择题</a>
                     </li>
                     <li class="course-nav-item">
-                        <a href="/exercise/list?c=2" >填空题</a>
+                        <a href="/exercises/list?type=completion" >填空题</a>
                     </li>
                     <li class="course-nav-item">
-                        <a href="/exercise/list?c=3" >简答题</a>
+                        <a href="/exercises/list?type=short_answer" >简答题</a>
                     </li>
                 </ul>
             </div>

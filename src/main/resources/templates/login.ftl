@@ -54,8 +54,6 @@
         if ("学生用户" == $(this).text().trim()){
             $(this).text("教师用户");
         }else if("教师用户" == $(this).text().trim()) {
-            $(this).text("管理员用户");
-        }else {
             $(this).text("学生用户");
         }
     });
@@ -63,10 +61,8 @@
     var getType=function () {
         if ("学生用户" == $("#user-type").text().trim()){
             return 1;
-        }else if("教师用户" == $("#user-type").text().trim()) {
+        }if("教师用户" == $("#user-type").text().trim()) {
             return 2;
-        }else {
-            return 3;
         }
     };
     $("#login-button").bind("click",

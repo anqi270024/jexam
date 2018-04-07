@@ -26,8 +26,8 @@ public class Exam implements Serializable {
     @Column(nullable = false,length = 40)
     private String name;
 
-    @Column(nullable = false,length = 40)
-    private String subject;
+    @Column(nullable = false, name = "subject_id")
+    private long subjectId;
 
     @Column(name = "exercises")
     @OrderBy("pos ASC")

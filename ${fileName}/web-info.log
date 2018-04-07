@@ -1,496 +1,260 @@
-2018-04-06 at 00:01:49 CST [main] INFO  me.anqi.jexam.JexamApplication   - Starting JexamApplication on oneplusone.local with PID 31883 (/Users/jcala/work/code/self/jexam/out/production/classes started by jcala in /Users/jcala/work/code/self/jexam)
-2018-04-06 at 00:01:49 CST [main] INFO  me.anqi.jexam.JexamApplication   - The following profiles are active: dev
-2018-04-06 at 00:01:49 CST [main] INFO  org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext   - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1722011b: startup date [Fri Apr 06 00:01:49 CST 2018]; root of context hierarchy
-2018-04-06 at 00:01:49 CST [background-preinit] INFO  org.hibernate.validator.internal.util.Version   - HV000001: Hibernate Validator 5.3.5.Final
-2018-04-06 at 00:01:51 CST [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean   - Building JPA container EntityManagerFactory for persistence unit 'default'
-2018-04-06 at 00:01:51 CST [main] INFO  org.hibernate.jpa.internal.util.LogHelper   - HHH000204: Processing PersistenceUnitInfo [
+2018-04-07 at 23:27:43 CST [main] INFO  me.anqi.jexam.JexamApplication   - Starting JexamApplication on oneplusone.local with PID 87569 (/Users/jcala/work/code/self/jexam/out/production/classes started by jcala in /Users/jcala/work/code/self/jexam)
+2018-04-07 at 23:27:43 CST [main] INFO  me.anqi.jexam.JexamApplication   - The following profiles are active: dev
+2018-04-07 at 23:27:43 CST [main] INFO  org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext   - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1722011b: startup date [Sat Apr 07 23:27:43 CST 2018]; root of context hierarchy
+2018-04-07 at 23:27:43 CST [background-preinit] INFO  org.hibernate.validator.internal.util.Version   - HV000001: Hibernate Validator 5.3.5.Final
+2018-04-07 at 23:27:44 CST [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean   - Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-04-07 at 23:27:44 CST [main] INFO  org.hibernate.jpa.internal.util.LogHelper   - HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-2018-04-06 at 00:01:51 CST [main] INFO  org.hibernate.Version   - HHH000412: Hibernate Core {5.2.10.Final}
-2018-04-06 at 00:01:51 CST [main] INFO  org.hibernate.cfg.Environment   - HHH000206: hibernate.properties not found
-2018-04-06 at 00:01:51 CST [main] INFO  org.hibernate.annotations.common.Version   - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-2018-04-06 at 00:01:51 CST [main] INFO  com.alibaba.druid.pool.DruidDataSource   - {dataSource-1} inited
-2018-04-06 at 00:01:51 CST [main] INFO  org.hibernate.dialect.Dialect   - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2018-04-06 at 00:01:52 CST [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean   - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2018-04-06 at 00:01:52 CST [main] INFO  org.xnio   - XNIO version 3.3.6.Final
-2018-04-06 at 00:01:52 CST [main] INFO  org.xnio.nio   - XNIO NIO Implementation Version 3.3.6.Final
-2018-04-06 at 00:01:52 CST [main] WARN  io.undertow.websockets.jsr   - UT026009: XNIO worker was not set on WebSocketDeploymentInfo, the default worker will be used
-2018-04-06 at 00:01:52 CST [main] WARN  io.undertow.websockets.jsr   - UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
-2018-04-06 at 00:01:52 CST [main] INFO  io.undertow.servlet   - Initializing Spring embedded WebApplicationContext
-2018-04-06 at 00:01:52 CST [main] INFO  org.springframework.web.context.ContextLoader   - Root WebApplicationContext: initialization completed in 3248 ms
-2018-04-06 at 00:01:53 CST [main] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean   - Mapping servlet: 'statViewServlet' to [/druid/*]
-2018-04-06 at 00:01:53 CST [main] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean   - Mapping servlet: 'dispatcherServlet' to [/]
-2018-04-06 at 00:01:53 CST [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean   - Mapping filter: 'characterEncodingFilter' to: [/*]
-2018-04-06 at 00:01:53 CST [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean   - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2018-04-06 at 00:01:53 CST [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean   - Mapping filter: 'httpPutFormContentFilter' to: [/*]
-2018-04-06 at 00:01:53 CST [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean   - Mapping filter: 'requestContextFilter' to: [/*]
-2018-04-06 at 00:01:53 CST [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean   - Mapping filter: 'webStatFilter' to urls: [/*]
-2018-04-06 at 00:01:53 CST [main] INFO  me.anqi.jexam.service.inter.InitSer   - ----------开始初始化数据-----------
-2018-04-06 at 00:01:53 CST [main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator   - HHH000397: Using ASTQueryTranslatorFactory
-2018-04-06 at 00:01:54 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter   - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1722011b: startup date [Fri Apr 06 00:01:49 CST 2018]; root of context hierarchy
-2018-04-06 at 00:01:54 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/code/result],methods=[GET]}" onto public me.anqi.jexam.entity.auxiliary.CodeResult me.anqi.jexam.ctrl.CodeController.getResult(long,javax.servlet.http.HttpServletRequest)
-2018-04-06 at 00:01:54 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/code],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.CodeController.codePage(java.lang.String,java.lang.Long,javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
-2018-04-06 at 00:01:54 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/code/run],methods=[POST]}" onto public java.lang.String me.anqi.jexam.ctrl.CodeController.codePost(me.anqi.jexam.entity.auxiliary.CodeForm,org.springframework.validation.BindingResult,javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
-2018-04-06 at 00:01:54 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/user/tea/crs_mgr],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.CrsController.courseManagerPage(java.lang.String,javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
-2018-04-06 at 00:01:54 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/user/tea/crs_mgr/add],methods=[POST]}" onto public java.lang.String me.anqi.jexam.ctrl.CrsController.addCourse(me.anqi.jexam.entity.Course,org.springframework.validation.BindingResult,javax.servlet.http.HttpServletRequest)
-2018-04-06 at 00:01:54 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/user/tea/crs_mgr/del],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.CrsController.delCourse(long)
-2018-04-06 at 00:01:54 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/user/tea/chp_mgr],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.CrsController.chpMgr(long,org.springframework.ui.Model)
-2018-04-06 at 00:01:54 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/user/tea/chp_mgr/add],methods=[POST]}" onto public java.lang.String me.anqi.jexam.ctrl.CrsController.chpPost(me.anqi.jexam.entity.auxiliary.ChpForm,org.springframework.validation.BindingResult)
-2018-04-06 at 00:01:54 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/user/tea/les_mgr],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.CrsController.lesMgr(long,long,org.springframework.ui.Model)
-2018-04-06 at 00:01:54 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/user/tea/les_mgr/add],methods=[POST]}" onto public java.lang.String me.anqi.jexam.ctrl.CrsController.lesPost(me.anqi.jexam.entity.Lesson,org.springframework.validation.BindingResult,long,long)
-2018-04-06 at 00:01:54 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/user/tea/les_mgr/video],methods=[POST]}" onto public java.lang.String me.anqi.jexam.ctrl.CrsController.modifyVideo(long,long,long,org.springframework.web.multipart.MultipartFile)
-2018-04-06 at 00:01:54 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/user/tea/les_mgr/file],methods=[POST]}" onto public java.lang.String me.anqi.jexam.ctrl.CrsController.uploadFile(long,long,long,org.springframework.web.multipart.MultipartFile)
-2018-04-06 at 00:01:54 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/user/tea/les_mgr/exe],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.CrsController.exeMgr(long,long,long,org.springframework.ui.Model)
-2018-04-06 at 00:01:54 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/user/tea/les_mgr/exe/add],methods=[POST]}" onto public java.lang.String me.anqi.jexam.ctrl.CrsController.exePost(me.anqi.jexam.entity.auxiliary.ExeForm,org.springframework.validation.BindingResult,long,long,long,javax.servlet.http.HttpServletRequest)
-2018-04-06 at 00:01:54 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/user/tea/les_mgr/exe/add_batch],methods=[POST]}" onto public java.lang.String me.anqi.jexam.ctrl.CrsController.exePostBatch(java.lang.String,long,long,long,javax.servlet.http.HttpServletRequest)
-2018-04-06 at 00:01:54 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/user/all/crs/join/{id}],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.CrsController.joinCrs(long,javax.servlet.http.HttpServletRequest)
-2018-04-06 at 00:01:54 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/user/all/cmt/crs/add],methods=[POST]}" onto public java.lang.String me.anqi.jexam.ctrl.CrsController.crsCmtPost(me.anqi.jexam.entity.Notice,org.springframework.validation.BindingResult,javax.servlet.http.HttpServletRequest)
-2018-04-06 at 00:01:54 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/user/all/cmt/exe/add],methods=[POST]}" onto public java.lang.String me.anqi.jexam.ctrl.CrsController.exeCmtPost(me.anqi.jexam.entity.Notice,org.springframework.validation.BindingResult,javax.servlet.http.HttpServletRequest)
-2018-04-06 at 00:01:54 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/user/all/exe/col/add/{id}],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.CrsController.exeColAdd(long,javax.servlet.http.HttpServletRequest)
-2018-04-06 at 00:01:54 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/user/all/notice],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.CrsController.noticeMgr(java.lang.String,javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
-2018-04-06 at 00:01:54 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/user/stu/exe/col],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.CrsController.colExePage(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
-2018-04-06 at 00:01:54 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/user/stu/crs],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.CrsController.joinCrsPage(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
-2018-04-06 at 00:01:54 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.FrontController.index(org.springframework.ui.Model,javax.servlet.http.HttpServletRequest)
-2018-04-06 at 00:01:54 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/video],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.FrontController.video(java.lang.String,org.springframework.ui.Model)
-2018-04-06 at 00:01:54 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/exercise/list],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.FrontController.exercise(java.lang.String,org.springframework.data.domain.Pageable,javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
-2018-04-06 at 00:01:54 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/course/list],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.FrontController.coursesList(java.lang.String,org.springframework.data.domain.Pageable,javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
-2018-04-06 at 00:01:54 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/course/{id}],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.FrontController.courseDetail(long,java.lang.String,javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
-2018-04-06 at 00:01:54 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/exercise/{id}],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.FrontController.courseExe(long,org.springframework.ui.Model,javax.servlet.http.HttpServletRequest)
-2018-04-06 at 00:01:54 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/les/exe],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.FrontController.lesExe(long,org.springframework.ui.Model,javax.servlet.http.HttpServletRequest)
-2018-04-06 at 00:01:54 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/login],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.UserController.loginPage()
-2018-04-06 at 00:01:54 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/login.do],methods=[POST]}" onto public java.lang.String me.anqi.jexam.ctrl.UserController.DoLogin(me.anqi.jexam.entity.User,javax.servlet.http.HttpServletRequest)
-2018-04-06 at 00:01:54 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/user/logout],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.UserController.doLogOut(javax.servlet.http.HttpServletRequest)
-2018-04-06 at 00:01:54 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-2018-04-06 at 00:01:54 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-2018-04-06 at 00:01:54 CST [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping   - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-04-06 at 00:01:54 CST [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping   - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-04-06 at 00:01:54 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver   - Detected @ExceptionHandler methods in ctrlExceptionHandler
-2018-04-06 at 00:01:54 CST [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping   - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-04-06 at 00:01:54 CST [main] INFO  org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer   - ClassTemplateLoader for Spring macros added to FreeMarker configuration
-2018-04-06 at 00:01:54 CST [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter   - Registering beans for JMX exposure on startup
-2018-04-06 at 00:01:54 CST [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter   - Bean with name 'dataSource' has been autodetected for JMX exposure
-2018-04-06 at 00:01:54 CST [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter   - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
-2018-04-06 at 00:01:54 CST [main] INFO  org.springframework.boot.context.embedded.undertow.UndertowEmbeddedServletContainer   - Undertow started on port(s) 8037 (http)
-2018-04-06 at 00:01:54 CST [main] INFO  me.anqi.jexam.JexamApplication   - Started JexamApplication in 5.335 seconds (JVM running for 7.197)
-2018-04-06 at 00:02:14 CST [XNIO-3 task-1] INFO  io.undertow.servlet   - Initializing Spring FrameworkServlet 'dispatcherServlet'
-2018-04-06 at 00:02:14 CST [XNIO-3 task-1] INFO  org.springframework.web.servlet.DispatcherServlet   - FrameworkServlet 'dispatcherServlet': initialization started
-2018-04-06 at 00:02:14 CST [XNIO-3 task-1] INFO  org.springframework.web.servlet.DispatcherServlet   - FrameworkServlet 'dispatcherServlet': initialization completed in 10 ms
-2018-04-06 at 00:34:26 CST [Thread-16] INFO  org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext   - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1722011b: startup date [Fri Apr 06 00:01:49 CST 2018]; root of context hierarchy
-2018-04-06 at 00:34:35 CST [main] INFO  me.anqi.jexam.JexamApplication   - Starting JexamApplication on oneplusone.local with PID 33675 (/Users/jcala/work/code/self/jexam/out/production/classes started by jcala in /Users/jcala/work/code/self/jexam)
-2018-04-06 at 00:34:35 CST [main] INFO  me.anqi.jexam.JexamApplication   - The following profiles are active: dev
-2018-04-06 at 00:34:35 CST [main] INFO  org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext   - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@68f1b17f: startup date [Fri Apr 06 00:34:35 CST 2018]; root of context hierarchy
-2018-04-06 at 00:34:35 CST [background-preinit] INFO  org.hibernate.validator.internal.util.Version   - HV000001: Hibernate Validator 5.3.5.Final
-2018-04-06 at 00:34:37 CST [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean   - Building JPA container EntityManagerFactory for persistence unit 'default'
-2018-04-06 at 00:34:37 CST [main] INFO  org.hibernate.jpa.internal.util.LogHelper   - HHH000204: Processing PersistenceUnitInfo [
+2018-04-07 at 23:27:44 CST [main] INFO  org.hibernate.Version   - HHH000412: Hibernate Core {5.2.10.Final}
+2018-04-07 at 23:27:44 CST [main] INFO  org.hibernate.cfg.Environment   - HHH000206: hibernate.properties not found
+2018-04-07 at 23:27:44 CST [main] INFO  org.hibernate.annotations.common.Version   - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-04-07 at 23:27:44 CST [main] INFO  com.alibaba.druid.pool.DruidDataSource   - {dataSource-1} inited
+2018-04-07 at 23:27:44 CST [main] INFO  org.hibernate.dialect.Dialect   - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2018-04-07 at 23:27:45 CST [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean   - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-04-07 at 23:27:45 CST [main] INFO  org.xnio   - XNIO version 3.3.6.Final
+2018-04-07 at 23:27:45 CST [main] INFO  org.xnio.nio   - XNIO NIO Implementation Version 3.3.6.Final
+2018-04-07 at 23:27:45 CST [main] WARN  io.undertow.websockets.jsr   - UT026009: XNIO worker was not set on WebSocketDeploymentInfo, the default worker will be used
+2018-04-07 at 23:27:45 CST [main] WARN  io.undertow.websockets.jsr   - UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2018-04-07 at 23:27:45 CST [main] INFO  io.undertow.servlet   - Initializing Spring embedded WebApplicationContext
+2018-04-07 at 23:27:45 CST [main] INFO  org.springframework.web.context.ContextLoader   - Root WebApplicationContext: initialization completed in 2522 ms
+2018-04-07 at 23:27:45 CST [main] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean   - Mapping servlet: 'statViewServlet' to [/druid/*]
+2018-04-07 at 23:27:45 CST [main] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean   - Mapping servlet: 'dispatcherServlet' to [/]
+2018-04-07 at 23:27:45 CST [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean   - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-04-07 at 23:27:45 CST [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean   - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-04-07 at 23:27:45 CST [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean   - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-04-07 at 23:27:45 CST [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean   - Mapping filter: 'requestContextFilter' to: [/*]
+2018-04-07 at 23:27:45 CST [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean   - Mapping filter: 'webStatFilter' to urls: [/*]
+2018-04-07 at 23:27:46 CST [main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator   - HHH000397: Using ASTQueryTranslatorFactory
+2018-04-07 at 23:27:46 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter   - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1722011b: startup date [Sat Apr 07 23:27:43 CST 2018]; root of context hierarchy
+2018-04-07 at 23:27:46 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.FrontController.index(org.springframework.ui.Model,javax.servlet.http.HttpServletRequest)
+2018-04-07 at 23:27:46 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/exercise/list],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.FrontController.exercise(java.lang.String,org.springframework.data.domain.Pageable,javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+2018-04-07 at 23:27:46 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/exercise/{id}],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.FrontController.courseExe(long,org.springframework.ui.Model,javax.servlet.http.HttpServletRequest)
+2018-04-07 at 23:27:46 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/login.do],methods=[POST]}" onto public java.lang.String me.anqi.jexam.ctrl.UserController.DoLogin(me.anqi.jexam.entity.User,javax.servlet.http.HttpServletRequest)
+2018-04-07 at 23:27:46 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/user/logout],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.UserController.doLogOut(javax.servlet.http.HttpServletRequest)
+2018-04-07 at 23:27:46 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/login],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.UserController.loginPage()
+2018-04-07 at 23:27:46 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-04-07 at 23:27:46 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-04-07 at 23:27:46 CST [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping   - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-07 at 23:27:46 CST [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping   - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-07 at 23:27:46 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver   - Detected @ExceptionHandler methods in ctrlExceptionHandler
+2018-04-07 at 23:27:46 CST [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping   - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-07 at 23:27:46 CST [main] INFO  org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer   - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2018-04-07 at 23:27:46 CST [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter   - Registering beans for JMX exposure on startup
+2018-04-07 at 23:27:46 CST [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter   - Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-04-07 at 23:27:46 CST [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter   - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2018-04-07 at 23:27:46 CST [main] INFO  org.springframework.boot.context.embedded.undertow.UndertowEmbeddedServletContainer   - Undertow started on port(s) 8037 (http)
+2018-04-07 at 23:27:46 CST [main] INFO  me.anqi.jexam.JexamApplication   - Started JexamApplication in 4.129 seconds (JVM running for 5.25)
+2018-04-07 at 23:56:24 CST [Thread-13] INFO  org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext   - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1722011b: startup date [Sat Apr 07 23:27:43 CST 2018]; root of context hierarchy
+2018-04-07 at 23:56:28 CST [main] INFO  me.anqi.jexam.JexamApplication   - Starting JexamApplication on oneplusone.local with PID 89064 (/Users/jcala/work/code/self/jexam/out/production/classes started by jcala in /Users/jcala/work/code/self/jexam)
+2018-04-07 at 23:56:28 CST [main] INFO  me.anqi.jexam.JexamApplication   - The following profiles are active: dev
+2018-04-07 at 23:56:28 CST [main] INFO  org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext   - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@68f1b17f: startup date [Sat Apr 07 23:56:28 CST 2018]; root of context hierarchy
+2018-04-07 at 23:56:28 CST [background-preinit] INFO  org.hibernate.validator.internal.util.Version   - HV000001: Hibernate Validator 5.3.5.Final
+2018-04-07 at 23:56:29 CST [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean   - Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-04-07 at 23:56:29 CST [main] INFO  org.hibernate.jpa.internal.util.LogHelper   - HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-2018-04-06 at 00:34:37 CST [main] INFO  org.hibernate.Version   - HHH000412: Hibernate Core {5.2.10.Final}
-2018-04-06 at 00:34:37 CST [main] INFO  org.hibernate.cfg.Environment   - HHH000206: hibernate.properties not found
-2018-04-06 at 00:34:37 CST [main] INFO  org.hibernate.annotations.common.Version   - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-2018-04-06 at 00:34:37 CST [main] INFO  com.alibaba.druid.pool.DruidDataSource   - {dataSource-1} inited
-2018-04-06 at 00:34:37 CST [main] INFO  org.hibernate.dialect.Dialect   - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2018-04-06 at 00:34:38 CST [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean   - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2018-04-06 at 00:34:39 CST [main] INFO  org.xnio   - XNIO version 3.3.6.Final
-2018-04-06 at 00:34:39 CST [main] INFO  org.xnio.nio   - XNIO NIO Implementation Version 3.3.6.Final
-2018-04-06 at 00:34:39 CST [main] WARN  io.undertow.websockets.jsr   - UT026009: XNIO worker was not set on WebSocketDeploymentInfo, the default worker will be used
-2018-04-06 at 00:34:39 CST [main] WARN  io.undertow.websockets.jsr   - UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
-2018-04-06 at 00:34:39 CST [main] INFO  io.undertow.servlet   - Initializing Spring embedded WebApplicationContext
-2018-04-06 at 00:34:39 CST [main] INFO  org.springframework.web.context.ContextLoader   - Root WebApplicationContext: initialization completed in 3420 ms
-2018-04-06 at 00:34:39 CST [main] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean   - Mapping servlet: 'statViewServlet' to [/druid/*]
-2018-04-06 at 00:34:39 CST [main] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean   - Mapping servlet: 'dispatcherServlet' to [/]
-2018-04-06 at 00:34:39 CST [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean   - Mapping filter: 'characterEncodingFilter' to: [/*]
-2018-04-06 at 00:34:39 CST [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean   - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2018-04-06 at 00:34:39 CST [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean   - Mapping filter: 'httpPutFormContentFilter' to: [/*]
-2018-04-06 at 00:34:39 CST [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean   - Mapping filter: 'requestContextFilter' to: [/*]
-2018-04-06 at 00:34:39 CST [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean   - Mapping filter: 'webStatFilter' to urls: [/*]
-2018-04-06 at 00:34:39 CST [main] INFO  me.anqi.jexam.service.inter.InitSer   - ----------开始初始化数据-----------
-2018-04-06 at 00:34:39 CST [main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator   - HHH000397: Using ASTQueryTranslatorFactory
-2018-04-06 at 00:34:39 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter   - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@68f1b17f: startup date [Fri Apr 06 00:34:35 CST 2018]; root of context hierarchy
-2018-04-06 at 00:34:40 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/code/result],methods=[GET]}" onto public me.anqi.jexam.entity.auxiliary.CodeResult me.anqi.jexam.ctrl.CodeController.getResult(long,javax.servlet.http.HttpServletRequest)
-2018-04-06 at 00:34:40 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/code/run],methods=[POST]}" onto public java.lang.String me.anqi.jexam.ctrl.CodeController.codePost(me.anqi.jexam.entity.auxiliary.CodeForm,org.springframework.validation.BindingResult,javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
-2018-04-06 at 00:34:40 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/code],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.CodeController.codePage(java.lang.String,java.lang.Long,javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
-2018-04-06 at 00:34:40 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/user/tea/chp_mgr],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.CrsController.chpMgr(long,org.springframework.ui.Model)
-2018-04-06 at 00:34:40 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/user/tea/crs_mgr],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.CrsController.courseManagerPage(java.lang.String,javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
-2018-04-06 at 00:34:40 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/user/tea/crs_mgr/add],methods=[POST]}" onto public java.lang.String me.anqi.jexam.ctrl.CrsController.addCourse(me.anqi.jexam.entity.Course,org.springframework.validation.BindingResult,javax.servlet.http.HttpServletRequest)
-2018-04-06 at 00:34:40 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/user/tea/crs_mgr/del],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.CrsController.delCourse(long)
-2018-04-06 at 00:34:40 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/user/tea/chp_mgr/add],methods=[POST]}" onto public java.lang.String me.anqi.jexam.ctrl.CrsController.chpPost(me.anqi.jexam.entity.auxiliary.ChpForm,org.springframework.validation.BindingResult)
-2018-04-06 at 00:34:40 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/user/tea/les_mgr],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.CrsController.lesMgr(long,long,org.springframework.ui.Model)
-2018-04-06 at 00:34:40 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/user/tea/les_mgr/add],methods=[POST]}" onto public java.lang.String me.anqi.jexam.ctrl.CrsController.lesPost(me.anqi.jexam.entity.Lesson,org.springframework.validation.BindingResult,long,long)
-2018-04-06 at 00:34:40 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/user/tea/les_mgr/video],methods=[POST]}" onto public java.lang.String me.anqi.jexam.ctrl.CrsController.modifyVideo(long,long,long,org.springframework.web.multipart.MultipartFile)
-2018-04-06 at 00:34:40 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/user/tea/les_mgr/file],methods=[POST]}" onto public java.lang.String me.anqi.jexam.ctrl.CrsController.uploadFile(long,long,long,org.springframework.web.multipart.MultipartFile)
-2018-04-06 at 00:34:40 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/user/tea/les_mgr/exe],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.CrsController.exeMgr(long,long,long,org.springframework.ui.Model)
-2018-04-06 at 00:34:40 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/user/tea/les_mgr/exe/add],methods=[POST]}" onto public java.lang.String me.anqi.jexam.ctrl.CrsController.exePost(me.anqi.jexam.entity.auxiliary.ExeForm,org.springframework.validation.BindingResult,long,long,long,javax.servlet.http.HttpServletRequest)
-2018-04-06 at 00:34:40 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/user/tea/les_mgr/exe/add_batch],methods=[POST]}" onto public java.lang.String me.anqi.jexam.ctrl.CrsController.exePostBatch(java.lang.String,long,long,long,javax.servlet.http.HttpServletRequest)
-2018-04-06 at 00:34:40 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/user/all/crs/join/{id}],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.CrsController.joinCrs(long,javax.servlet.http.HttpServletRequest)
-2018-04-06 at 00:34:40 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/user/all/cmt/crs/add],methods=[POST]}" onto public java.lang.String me.anqi.jexam.ctrl.CrsController.crsCmtPost(me.anqi.jexam.entity.Notice,org.springframework.validation.BindingResult,javax.servlet.http.HttpServletRequest)
-2018-04-06 at 00:34:40 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/user/all/cmt/exe/add],methods=[POST]}" onto public java.lang.String me.anqi.jexam.ctrl.CrsController.exeCmtPost(me.anqi.jexam.entity.Notice,org.springframework.validation.BindingResult,javax.servlet.http.HttpServletRequest)
-2018-04-06 at 00:34:40 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/user/all/exe/col/add/{id}],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.CrsController.exeColAdd(long,javax.servlet.http.HttpServletRequest)
-2018-04-06 at 00:34:40 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/user/all/notice],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.CrsController.noticeMgr(java.lang.String,javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
-2018-04-06 at 00:34:40 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/user/stu/exe/col],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.CrsController.colExePage(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
-2018-04-06 at 00:34:40 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/user/stu/crs],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.CrsController.joinCrsPage(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
-2018-04-06 at 00:34:40 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.FrontController.index(org.springframework.ui.Model,javax.servlet.http.HttpServletRequest)
-2018-04-06 at 00:34:40 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/video],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.FrontController.video(java.lang.String,org.springframework.ui.Model)
-2018-04-06 at 00:34:40 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/exercise/list],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.FrontController.exercise(java.lang.String,org.springframework.data.domain.Pageable,javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
-2018-04-06 at 00:34:40 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/course/list],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.FrontController.coursesList(java.lang.String,org.springframework.data.domain.Pageable,javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
-2018-04-06 at 00:34:40 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/course/{id}],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.FrontController.courseDetail(long,java.lang.String,javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
-2018-04-06 at 00:34:40 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/exercise/{id}],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.FrontController.courseExe(long,org.springframework.ui.Model,javax.servlet.http.HttpServletRequest)
-2018-04-06 at 00:34:40 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/les/exe],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.FrontController.lesExe(long,org.springframework.ui.Model,javax.servlet.http.HttpServletRequest)
-2018-04-06 at 00:34:40 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/login],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.UserController.loginPage()
-2018-04-06 at 00:34:40 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/login.do],methods=[POST]}" onto public java.lang.String me.anqi.jexam.ctrl.UserController.DoLogin(me.anqi.jexam.entity.User,javax.servlet.http.HttpServletRequest)
-2018-04-06 at 00:34:40 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/user/logout],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.UserController.doLogOut(javax.servlet.http.HttpServletRequest)
-2018-04-06 at 00:34:40 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-2018-04-06 at 00:34:40 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-2018-04-06 at 00:34:40 CST [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping   - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-04-06 at 00:34:40 CST [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping   - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-04-06 at 00:34:40 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver   - Detected @ExceptionHandler methods in ctrlExceptionHandler
-2018-04-06 at 00:34:40 CST [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping   - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-04-06 at 00:34:40 CST [main] INFO  org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer   - ClassTemplateLoader for Spring macros added to FreeMarker configuration
-2018-04-06 at 00:34:40 CST [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter   - Registering beans for JMX exposure on startup
-2018-04-06 at 00:34:40 CST [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter   - Bean with name 'dataSource' has been autodetected for JMX exposure
-2018-04-06 at 00:34:40 CST [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter   - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
-2018-04-06 at 00:34:40 CST [main] INFO  org.springframework.boot.context.embedded.undertow.UndertowEmbeddedServletContainer   - Undertow started on port(s) 8037 (http)
-2018-04-06 at 00:34:40 CST [main] INFO  me.anqi.jexam.JexamApplication   - Started JexamApplication in 5.311 seconds (JVM running for 6.899)
-2018-04-06 at 00:34:45 CST [XNIO-3 task-1] INFO  io.undertow.servlet   - Initializing Spring FrameworkServlet 'dispatcherServlet'
-2018-04-06 at 00:34:45 CST [XNIO-3 task-1] INFO  org.springframework.web.servlet.DispatcherServlet   - FrameworkServlet 'dispatcherServlet': initialization started
-2018-04-06 at 00:34:45 CST [XNIO-3 task-1] INFO  org.springframework.web.servlet.DispatcherServlet   - FrameworkServlet 'dispatcherServlet': initialization completed in 12 ms
-2018-04-06 at 00:36:19 CST [XNIO-3 task-7] INFO  me.anqi.jexam.ctrl.FrontController   - 课程列表响应时间为：28
-2018-04-06 at 00:44:45 CST [XNIO-3 task-3] INFO  me.anqi.jexam.ctrl.FrontController   - 课程列表响应时间为：7
-2018-04-06 at 00:44:47 CST [XNIO-3 task-2] INFO  me.anqi.jexam.ctrl.FrontController   - 习题列表响应时间为：15
-2018-04-06 at 01:15:02 CST [Thread-16] INFO  org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext   - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@68f1b17f: startup date [Fri Apr 06 00:34:35 CST 2018]; root of context hierarchy
-2018-04-06 at 01:27:10 CST [main] INFO  me.anqi.jexam.JexamApplication   - Starting JexamApplication on oneplusone.local with PID 36468 (/Users/jcala/work/code/self/jexam/out/production/classes started by jcala in /Users/jcala/work/code/self/jexam)
-2018-04-06 at 01:27:10 CST [main] INFO  me.anqi.jexam.JexamApplication   - The following profiles are active: dev
-2018-04-06 at 01:27:11 CST [main] INFO  org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext   - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@68f1b17f: startup date [Fri Apr 06 01:27:11 CST 2018]; root of context hierarchy
-2018-04-06 at 01:27:11 CST [background-preinit] INFO  org.hibernate.validator.internal.util.Version   - HV000001: Hibernate Validator 5.3.5.Final
-2018-04-06 at 01:27:12 CST [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean   - Building JPA container EntityManagerFactory for persistence unit 'default'
-2018-04-06 at 01:27:12 CST [main] INFO  org.hibernate.jpa.internal.util.LogHelper   - HHH000204: Processing PersistenceUnitInfo [
+2018-04-07 at 23:56:30 CST [main] INFO  org.hibernate.Version   - HHH000412: Hibernate Core {5.2.10.Final}
+2018-04-07 at 23:56:30 CST [main] INFO  org.hibernate.cfg.Environment   - HHH000206: hibernate.properties not found
+2018-04-07 at 23:56:30 CST [main] INFO  org.hibernate.annotations.common.Version   - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-04-07 at 23:56:30 CST [main] INFO  com.alibaba.druid.pool.DruidDataSource   - {dataSource-1} inited
+2018-04-07 at 23:56:30 CST [main] INFO  org.hibernate.dialect.Dialect   - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2018-04-07 at 23:56:31 CST [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean   - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-04-07 at 23:56:31 CST [main] INFO  org.xnio   - XNIO version 3.3.6.Final
+2018-04-07 at 23:56:31 CST [main] INFO  org.xnio.nio   - XNIO NIO Implementation Version 3.3.6.Final
+2018-04-07 at 23:56:31 CST [main] WARN  io.undertow.websockets.jsr   - UT026009: XNIO worker was not set on WebSocketDeploymentInfo, the default worker will be used
+2018-04-07 at 23:56:31 CST [main] WARN  io.undertow.websockets.jsr   - UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2018-04-07 at 23:56:31 CST [main] INFO  io.undertow.servlet   - Initializing Spring embedded WebApplicationContext
+2018-04-07 at 23:56:31 CST [main] INFO  org.springframework.web.context.ContextLoader   - Root WebApplicationContext: initialization completed in 2878 ms
+2018-04-07 at 23:56:31 CST [main] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean   - Mapping servlet: 'statViewServlet' to [/druid/*]
+2018-04-07 at 23:56:31 CST [main] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean   - Mapping servlet: 'dispatcherServlet' to [/]
+2018-04-07 at 23:56:31 CST [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean   - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-04-07 at 23:56:31 CST [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean   - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-04-07 at 23:56:31 CST [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean   - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-04-07 at 23:56:31 CST [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean   - Mapping filter: 'requestContextFilter' to: [/*]
+2018-04-07 at 23:56:31 CST [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean   - Mapping filter: 'webStatFilter' to urls: [/*]
+2018-04-07 at 23:56:32 CST [main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator   - HHH000397: Using ASTQueryTranslatorFactory
+2018-04-07 at 23:56:32 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter   - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@68f1b17f: startup date [Sat Apr 07 23:56:28 CST 2018]; root of context hierarchy
+2018-04-07 at 23:56:32 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.FrontController.index(org.springframework.ui.Model,javax.servlet.http.HttpServletRequest)
+2018-04-07 at 23:56:32 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/exercise/list],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.FrontController.exercise(java.lang.String,java.lang.Long,org.springframework.data.domain.Pageable,javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+2018-04-07 at 23:56:32 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/exercise/{id}],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.FrontController.courseExe(long,org.springframework.ui.Model,javax.servlet.http.HttpServletRequest)
+2018-04-07 at 23:56:32 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/login],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.UserController.loginPage()
+2018-04-07 at 23:56:32 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/login.do],methods=[POST]}" onto public java.lang.String me.anqi.jexam.ctrl.UserController.DoLogin(me.anqi.jexam.entity.User,javax.servlet.http.HttpServletRequest)
+2018-04-07 at 23:56:32 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/user/logout],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.UserController.doLogOut(javax.servlet.http.HttpServletRequest)
+2018-04-07 at 23:56:32 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-04-07 at 23:56:32 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-04-07 at 23:56:32 CST [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping   - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-07 at 23:56:32 CST [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping   - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-07 at 23:56:32 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver   - Detected @ExceptionHandler methods in ctrlExceptionHandler
+2018-04-07 at 23:56:32 CST [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping   - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-07 at 23:56:32 CST [main] INFO  org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer   - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2018-04-07 at 23:56:32 CST [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter   - Registering beans for JMX exposure on startup
+2018-04-07 at 23:56:32 CST [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter   - Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-04-07 at 23:56:32 CST [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter   - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2018-04-07 at 23:56:32 CST [main] INFO  org.springframework.boot.context.embedded.undertow.UndertowEmbeddedServletContainer   - Undertow started on port(s) 8037 (http)
+2018-04-07 at 23:56:32 CST [main] INFO  me.anqi.jexam.JexamApplication   - Started JexamApplication in 4.447 seconds (JVM running for 5.654)
+2018-04-08 at 00:00:32 CST [Thread-13] INFO  org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext   - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@68f1b17f: startup date [Sat Apr 07 23:56:28 CST 2018]; root of context hierarchy
+2018-04-08 at 00:00:34 CST [main] INFO  me.anqi.jexam.JexamApplication   - Starting JexamApplication on oneplusone.local with PID 89272 (/Users/jcala/work/code/self/jexam/out/production/classes started by jcala in /Users/jcala/work/code/self/jexam)
+2018-04-08 at 00:00:34 CST [main] INFO  me.anqi.jexam.JexamApplication   - The following profiles are active: dev
+2018-04-08 at 00:00:35 CST [main] INFO  org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext   - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@68f1b17f: startup date [Sun Apr 08 00:00:35 CST 2018]; root of context hierarchy
+2018-04-08 at 00:00:35 CST [background-preinit] INFO  org.hibernate.validator.internal.util.Version   - HV000001: Hibernate Validator 5.3.5.Final
+2018-04-08 at 00:00:36 CST [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean   - Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-04-08 at 00:00:36 CST [main] INFO  org.hibernate.jpa.internal.util.LogHelper   - HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-2018-04-06 at 01:27:12 CST [main] INFO  org.hibernate.Version   - HHH000412: Hibernate Core {5.2.10.Final}
-2018-04-06 at 01:27:12 CST [main] INFO  org.hibernate.cfg.Environment   - HHH000206: hibernate.properties not found
-2018-04-06 at 01:27:12 CST [main] INFO  org.hibernate.annotations.common.Version   - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-2018-04-06 at 01:27:12 CST [main] INFO  com.alibaba.druid.pool.DruidDataSource   - {dataSource-1} inited
-2018-04-06 at 01:27:12 CST [main] INFO  org.hibernate.dialect.Dialect   - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2018-04-06 at 01:27:13 CST [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean   - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2018-04-06 at 01:27:13 CST [main] INFO  org.xnio   - XNIO version 3.3.6.Final
-2018-04-06 at 01:27:13 CST [main] INFO  org.xnio.nio   - XNIO NIO Implementation Version 3.3.6.Final
-2018-04-06 at 01:27:13 CST [main] WARN  io.undertow.websockets.jsr   - UT026009: XNIO worker was not set on WebSocketDeploymentInfo, the default worker will be used
-2018-04-06 at 01:27:13 CST [main] WARN  io.undertow.websockets.jsr   - UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
-2018-04-06 at 01:27:13 CST [main] INFO  io.undertow.servlet   - Initializing Spring embedded WebApplicationContext
-2018-04-06 at 01:27:13 CST [main] INFO  org.springframework.web.context.ContextLoader   - Root WebApplicationContext: initialization completed in 2821 ms
-2018-04-06 at 01:27:13 CST [main] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean   - Mapping servlet: 'statViewServlet' to [/druid/*]
-2018-04-06 at 01:27:13 CST [main] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean   - Mapping servlet: 'dispatcherServlet' to [/]
-2018-04-06 at 01:27:13 CST [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean   - Mapping filter: 'characterEncodingFilter' to: [/*]
-2018-04-06 at 01:27:13 CST [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean   - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2018-04-06 at 01:27:13 CST [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean   - Mapping filter: 'httpPutFormContentFilter' to: [/*]
-2018-04-06 at 01:27:13 CST [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean   - Mapping filter: 'requestContextFilter' to: [/*]
-2018-04-06 at 01:27:13 CST [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean   - Mapping filter: 'webStatFilter' to urls: [/*]
-2018-04-06 at 01:27:14 CST [main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator   - HHH000397: Using ASTQueryTranslatorFactory
-2018-04-06 at 01:27:14 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter   - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@68f1b17f: startup date [Fri Apr 06 01:27:11 CST 2018]; root of context hierarchy
-2018-04-06 at 01:27:14 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.FrontController.index(org.springframework.ui.Model,javax.servlet.http.HttpServletRequest)
-2018-04-06 at 01:27:14 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/exercise/list],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.FrontController.exercise(java.lang.String,org.springframework.data.domain.Pageable,javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
-2018-04-06 at 01:27:14 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/exercise/{id}],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.FrontController.courseExe(long,org.springframework.ui.Model,javax.servlet.http.HttpServletRequest)
-2018-04-06 at 01:27:14 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/login],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.UserController.loginPage()
-2018-04-06 at 01:27:14 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/user/logout],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.UserController.doLogOut(javax.servlet.http.HttpServletRequest)
-2018-04-06 at 01:27:14 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/login.do],methods=[POST]}" onto public java.lang.String me.anqi.jexam.ctrl.UserController.DoLogin(me.anqi.jexam.entity.User,javax.servlet.http.HttpServletRequest)
-2018-04-06 at 01:27:14 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-2018-04-06 at 01:27:14 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-2018-04-06 at 01:27:14 CST [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping   - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-04-06 at 01:27:14 CST [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping   - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-04-06 at 01:27:14 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver   - Detected @ExceptionHandler methods in ctrlExceptionHandler
-2018-04-06 at 01:27:14 CST [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping   - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-04-06 at 01:27:14 CST [main] INFO  org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer   - ClassTemplateLoader for Spring macros added to FreeMarker configuration
-2018-04-06 at 01:27:15 CST [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter   - Registering beans for JMX exposure on startup
-2018-04-06 at 01:27:15 CST [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter   - Bean with name 'dataSource' has been autodetected for JMX exposure
-2018-04-06 at 01:27:15 CST [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter   - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
-2018-04-06 at 01:27:15 CST [main] INFO  org.springframework.boot.context.embedded.undertow.UndertowEmbeddedServletContainer   - Undertow started on port(s) 8037 (http)
-2018-04-06 at 01:27:15 CST [main] INFO  me.anqi.jexam.JexamApplication   - Started JexamApplication in 4.456 seconds (JVM running for 5.629)
-2018-04-06 at 01:27:20 CST [XNIO-3 task-1] INFO  io.undertow.servlet   - Initializing Spring FrameworkServlet 'dispatcherServlet'
-2018-04-06 at 01:27:20 CST [XNIO-3 task-1] INFO  org.springframework.web.servlet.DispatcherServlet   - FrameworkServlet 'dispatcherServlet': initialization started
-2018-04-06 at 01:27:20 CST [XNIO-3 task-1] INFO  org.springframework.web.servlet.DispatcherServlet   - FrameworkServlet 'dispatcherServlet': initialization completed in 13 ms
-2018-04-06 at 01:33:03 CST [Thread-14] INFO  org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext   - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@68f1b17f: startup date [Fri Apr 06 01:27:11 CST 2018]; root of context hierarchy
-2018-04-06 at 01:33:06 CST [main] INFO  me.anqi.jexam.JexamApplication   - Starting JexamApplication on oneplusone.local with PID 36771 (/Users/jcala/work/code/self/jexam/out/production/classes started by jcala in /Users/jcala/work/code/self/jexam)
-2018-04-06 at 01:33:06 CST [main] INFO  me.anqi.jexam.JexamApplication   - The following profiles are active: dev
-2018-04-06 at 01:33:06 CST [main] INFO  org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext   - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@68f1b17f: startup date [Fri Apr 06 01:33:06 CST 2018]; root of context hierarchy
-2018-04-06 at 01:33:06 CST [background-preinit] INFO  org.hibernate.validator.internal.util.Version   - HV000001: Hibernate Validator 5.3.5.Final
-2018-04-06 at 01:33:07 CST [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean   - Building JPA container EntityManagerFactory for persistence unit 'default'
-2018-04-06 at 01:33:07 CST [main] INFO  org.hibernate.jpa.internal.util.LogHelper   - HHH000204: Processing PersistenceUnitInfo [
+2018-04-08 at 00:00:36 CST [main] INFO  org.hibernate.Version   - HHH000412: Hibernate Core {5.2.10.Final}
+2018-04-08 at 00:00:36 CST [main] INFO  org.hibernate.cfg.Environment   - HHH000206: hibernate.properties not found
+2018-04-08 at 00:00:36 CST [main] INFO  org.hibernate.annotations.common.Version   - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-04-08 at 00:00:36 CST [main] INFO  com.alibaba.druid.pool.DruidDataSource   - {dataSource-1} inited
+2018-04-08 at 00:00:36 CST [main] INFO  org.hibernate.dialect.Dialect   - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2018-04-08 at 00:00:37 CST [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean   - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-04-08 at 00:00:37 CST [main] INFO  org.xnio   - XNIO version 3.3.6.Final
+2018-04-08 at 00:00:37 CST [main] INFO  org.xnio.nio   - XNIO NIO Implementation Version 3.3.6.Final
+2018-04-08 at 00:00:37 CST [main] WARN  io.undertow.websockets.jsr   - UT026009: XNIO worker was not set on WebSocketDeploymentInfo, the default worker will be used
+2018-04-08 at 00:00:37 CST [main] WARN  io.undertow.websockets.jsr   - UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2018-04-08 at 00:00:37 CST [main] INFO  io.undertow.servlet   - Initializing Spring embedded WebApplicationContext
+2018-04-08 at 00:00:37 CST [main] INFO  org.springframework.web.context.ContextLoader   - Root WebApplicationContext: initialization completed in 2584 ms
+2018-04-08 at 00:00:37 CST [main] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean   - Mapping servlet: 'statViewServlet' to [/druid/*]
+2018-04-08 at 00:00:37 CST [main] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean   - Mapping servlet: 'dispatcherServlet' to [/]
+2018-04-08 at 00:00:37 CST [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean   - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-04-08 at 00:00:37 CST [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean   - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-04-08 at 00:00:37 CST [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean   - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-04-08 at 00:00:37 CST [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean   - Mapping filter: 'requestContextFilter' to: [/*]
+2018-04-08 at 00:00:37 CST [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean   - Mapping filter: 'webStatFilter' to urls: [/*]
+2018-04-08 at 00:00:38 CST [main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator   - HHH000397: Using ASTQueryTranslatorFactory
+2018-04-08 at 00:00:38 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter   - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@68f1b17f: startup date [Sun Apr 08 00:00:35 CST 2018]; root of context hierarchy
+2018-04-08 at 00:00:38 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.FrontController.index(org.springframework.ui.Model,javax.servlet.http.HttpServletRequest)
+2018-04-08 at 00:00:38 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/exercise/list],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.FrontController.exercise(java.lang.String,java.lang.Long,org.springframework.data.domain.Pageable,javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+2018-04-08 at 00:00:38 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/exercise/{id}],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.FrontController.courseExe(long,org.springframework.ui.Model,javax.servlet.http.HttpServletRequest)
+2018-04-08 at 00:00:38 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/login],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.UserController.loginPage()
+2018-04-08 at 00:00:38 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/login.do],methods=[POST]}" onto public java.lang.String me.anqi.jexam.ctrl.UserController.DoLogin(me.anqi.jexam.entity.User,javax.servlet.http.HttpServletRequest)
+2018-04-08 at 00:00:38 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/user/logout],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.UserController.doLogOut(javax.servlet.http.HttpServletRequest)
+2018-04-08 at 00:00:38 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-04-08 at 00:00:38 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-04-08 at 00:00:38 CST [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping   - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-08 at 00:00:38 CST [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping   - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-08 at 00:00:38 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver   - Detected @ExceptionHandler methods in ctrlExceptionHandler
+2018-04-08 at 00:00:38 CST [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping   - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-08 at 00:00:38 CST [main] INFO  org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer   - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2018-04-08 at 00:00:38 CST [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter   - Registering beans for JMX exposure on startup
+2018-04-08 at 00:00:38 CST [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter   - Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-04-08 at 00:00:38 CST [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter   - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2018-04-08 at 00:00:38 CST [main] INFO  org.springframework.boot.context.embedded.undertow.UndertowEmbeddedServletContainer   - Undertow started on port(s) 8037 (http)
+2018-04-08 at 00:00:38 CST [main] INFO  me.anqi.jexam.JexamApplication   - Started JexamApplication in 4.253 seconds (JVM running for 5.62)
+2018-04-08 at 00:01:08 CST [XNIO-3 task-1] INFO  io.undertow.servlet   - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-04-08 at 00:01:08 CST [XNIO-3 task-1] INFO  org.springframework.web.servlet.DispatcherServlet   - FrameworkServlet 'dispatcherServlet': initialization started
+2018-04-08 at 00:01:08 CST [XNIO-3 task-1] INFO  org.springframework.web.servlet.DispatcherServlet   - FrameworkServlet 'dispatcherServlet': initialization completed in 14 ms
+2018-04-08 at 01:50:32 CST [Thread-14] INFO  org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext   - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@68f1b17f: startup date [Sun Apr 08 00:00:35 CST 2018]; root of context hierarchy
+2018-04-08 at 01:50:36 CST [main] INFO  me.anqi.jexam.JexamApplication   - Starting JexamApplication on oneplusone.local with PID 95013 (/Users/jcala/work/code/self/jexam/out/production/classes started by jcala in /Users/jcala/work/code/self/jexam)
+2018-04-08 at 01:50:36 CST [main] INFO  me.anqi.jexam.JexamApplication   - The following profiles are active: dev
+2018-04-08 at 01:50:36 CST [main] INFO  org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext   - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@68f1b17f: startup date [Sun Apr 08 01:50:36 CST 2018]; root of context hierarchy
+2018-04-08 at 01:50:36 CST [background-preinit] INFO  org.hibernate.validator.internal.util.Version   - HV000001: Hibernate Validator 5.3.5.Final
+2018-04-08 at 01:50:37 CST [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean   - Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-04-08 at 01:50:37 CST [main] INFO  org.hibernate.jpa.internal.util.LogHelper   - HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-2018-04-06 at 01:33:07 CST [main] INFO  org.hibernate.Version   - HHH000412: Hibernate Core {5.2.10.Final}
-2018-04-06 at 01:33:07 CST [main] INFO  org.hibernate.cfg.Environment   - HHH000206: hibernate.properties not found
-2018-04-06 at 01:33:07 CST [main] INFO  org.hibernate.annotations.common.Version   - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-2018-04-06 at 01:33:08 CST [main] INFO  com.alibaba.druid.pool.DruidDataSource   - {dataSource-1} inited
-2018-04-06 at 01:33:08 CST [main] INFO  org.hibernate.dialect.Dialect   - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2018-04-06 at 01:33:08 CST [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean   - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2018-04-06 at 01:33:08 CST [main] INFO  org.xnio   - XNIO version 3.3.6.Final
-2018-04-06 at 01:33:08 CST [main] INFO  org.xnio.nio   - XNIO NIO Implementation Version 3.3.6.Final
-2018-04-06 at 01:33:08 CST [main] WARN  io.undertow.websockets.jsr   - UT026009: XNIO worker was not set on WebSocketDeploymentInfo, the default worker will be used
-2018-04-06 at 01:33:08 CST [main] WARN  io.undertow.websockets.jsr   - UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
-2018-04-06 at 01:33:08 CST [main] INFO  io.undertow.servlet   - Initializing Spring embedded WebApplicationContext
-2018-04-06 at 01:33:08 CST [main] INFO  org.springframework.web.context.ContextLoader   - Root WebApplicationContext: initialization completed in 2397 ms
-2018-04-06 at 01:33:09 CST [main] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean   - Mapping servlet: 'statViewServlet' to [/druid/*]
-2018-04-06 at 01:33:09 CST [main] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean   - Mapping servlet: 'dispatcherServlet' to [/]
-2018-04-06 at 01:33:09 CST [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean   - Mapping filter: 'characterEncodingFilter' to: [/*]
-2018-04-06 at 01:33:09 CST [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean   - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2018-04-06 at 01:33:09 CST [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean   - Mapping filter: 'httpPutFormContentFilter' to: [/*]
-2018-04-06 at 01:33:09 CST [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean   - Mapping filter: 'requestContextFilter' to: [/*]
-2018-04-06 at 01:33:09 CST [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean   - Mapping filter: 'webStatFilter' to urls: [/*]
-2018-04-06 at 01:33:09 CST [main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator   - HHH000397: Using ASTQueryTranslatorFactory
-2018-04-06 at 01:33:09 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter   - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@68f1b17f: startup date [Fri Apr 06 01:33:06 CST 2018]; root of context hierarchy
-2018-04-06 at 01:33:09 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.FrontController.index(org.springframework.ui.Model,javax.servlet.http.HttpServletRequest)
-2018-04-06 at 01:33:09 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/exercise/list],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.FrontController.exercise(java.lang.String,org.springframework.data.domain.Pageable,javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
-2018-04-06 at 01:33:09 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/exercise/{id}],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.FrontController.courseExe(long,org.springframework.ui.Model,javax.servlet.http.HttpServletRequest)
-2018-04-06 at 01:33:09 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/login.do],methods=[POST]}" onto public java.lang.String me.anqi.jexam.ctrl.UserController.DoLogin(me.anqi.jexam.entity.User,javax.servlet.http.HttpServletRequest)
-2018-04-06 at 01:33:09 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/login],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.UserController.loginPage()
-2018-04-06 at 01:33:09 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/user/logout],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.UserController.doLogOut(javax.servlet.http.HttpServletRequest)
-2018-04-06 at 01:33:09 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-2018-04-06 at 01:33:09 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-2018-04-06 at 01:33:09 CST [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping   - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-04-06 at 01:33:09 CST [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping   - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-04-06 at 01:33:09 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver   - Detected @ExceptionHandler methods in ctrlExceptionHandler
-2018-04-06 at 01:33:09 CST [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping   - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-04-06 at 01:33:09 CST [main] INFO  org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer   - ClassTemplateLoader for Spring macros added to FreeMarker configuration
-2018-04-06 at 01:33:10 CST [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter   - Registering beans for JMX exposure on startup
-2018-04-06 at 01:33:10 CST [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter   - Bean with name 'dataSource' has been autodetected for JMX exposure
-2018-04-06 at 01:33:10 CST [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter   - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
-2018-04-06 at 01:33:10 CST [main] INFO  org.springframework.boot.context.embedded.undertow.UndertowEmbeddedServletContainer   - Undertow started on port(s) 8037 (http)
-2018-04-06 at 01:33:10 CST [main] INFO  me.anqi.jexam.JexamApplication   - Started JexamApplication in 3.991 seconds (JVM running for 5.035)
-2018-04-06 at 01:33:13 CST [XNIO-3 task-1] INFO  io.undertow.servlet   - Initializing Spring FrameworkServlet 'dispatcherServlet'
-2018-04-06 at 01:33:13 CST [XNIO-3 task-1] INFO  org.springframework.web.servlet.DispatcherServlet   - FrameworkServlet 'dispatcherServlet': initialization started
-2018-04-06 at 01:33:13 CST [XNIO-3 task-1] INFO  org.springframework.web.servlet.DispatcherServlet   - FrameworkServlet 'dispatcherServlet': initialization completed in 11 ms
-2018-04-06 at 01:33:27 CST [XNIO-3 task-4] INFO  me.anqi.jexam.ctrl.FrontController   - 习题列表响应时间为：24
-2018-04-06 at 01:33:37 CST [XNIO-3 task-5] INFO  me.anqi.jexam.ctrl.FrontController   - 习题列表响应时间为：8
-2018-04-07 at 16:08:43 CST [Thread-13] INFO  org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext   - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@68f1b17f: startup date [Fri Apr 06 01:33:06 CST 2018]; root of context hierarchy
-2018-04-07 at 16:08:48 CST [main] INFO  me.anqi.jexam.JexamApplication   - Starting JexamApplication on oneplusone.local with PID 66957 (/Users/jcala/work/code/self/jexam/out/production/classes started by jcala in /Users/jcala/work/code/self/jexam)
-2018-04-07 at 16:08:48 CST [main] INFO  me.anqi.jexam.JexamApplication   - The following profiles are active: dev
-2018-04-07 at 16:08:48 CST [main] INFO  org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext   - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@68f1b17f: startup date [Sat Apr 07 16:08:48 CST 2018]; root of context hierarchy
-2018-04-07 at 16:08:48 CST [background-preinit] INFO  org.hibernate.validator.internal.util.Version   - HV000001: Hibernate Validator 5.3.5.Final
-2018-04-07 at 16:08:50 CST [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean   - Building JPA container EntityManagerFactory for persistence unit 'default'
-2018-04-07 at 16:08:50 CST [main] INFO  org.hibernate.jpa.internal.util.LogHelper   - HHH000204: Processing PersistenceUnitInfo [
+2018-04-08 at 01:50:37 CST [main] INFO  org.hibernate.Version   - HHH000412: Hibernate Core {5.2.10.Final}
+2018-04-08 at 01:50:37 CST [main] INFO  org.hibernate.cfg.Environment   - HHH000206: hibernate.properties not found
+2018-04-08 at 01:50:37 CST [main] INFO  org.hibernate.annotations.common.Version   - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-04-08 at 01:50:38 CST [main] INFO  com.alibaba.druid.pool.DruidDataSource   - {dataSource-1} inited
+2018-04-08 at 01:50:38 CST [main] INFO  org.hibernate.dialect.Dialect   - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2018-04-08 at 01:50:38 CST [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean   - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-04-08 at 01:50:38 CST [main] INFO  org.xnio   - XNIO version 3.3.6.Final
+2018-04-08 at 01:50:38 CST [main] INFO  org.xnio.nio   - XNIO NIO Implementation Version 3.3.6.Final
+2018-04-08 at 01:50:38 CST [main] WARN  io.undertow.websockets.jsr   - UT026009: XNIO worker was not set on WebSocketDeploymentInfo, the default worker will be used
+2018-04-08 at 01:50:38 CST [main] WARN  io.undertow.websockets.jsr   - UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2018-04-08 at 01:50:38 CST [main] INFO  io.undertow.servlet   - Initializing Spring embedded WebApplicationContext
+2018-04-08 at 01:50:38 CST [main] INFO  org.springframework.web.context.ContextLoader   - Root WebApplicationContext: initialization completed in 2342 ms
+2018-04-08 at 01:50:39 CST [main] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean   - Mapping servlet: 'statViewServlet' to [/druid/*]
+2018-04-08 at 01:50:39 CST [main] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean   - Mapping servlet: 'dispatcherServlet' to [/]
+2018-04-08 at 01:50:39 CST [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean   - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-04-08 at 01:50:39 CST [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean   - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-04-08 at 01:50:39 CST [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean   - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-04-08 at 01:50:39 CST [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean   - Mapping filter: 'requestContextFilter' to: [/*]
+2018-04-08 at 01:50:39 CST [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean   - Mapping filter: 'webStatFilter' to urls: [/*]
+2018-04-08 at 01:50:39 CST [main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator   - HHH000397: Using ASTQueryTranslatorFactory
+2018-04-08 at 01:50:39 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter   - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@68f1b17f: startup date [Sun Apr 08 01:50:36 CST 2018]; root of context hierarchy
+2018-04-08 at 01:50:39 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/exercises/list],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.ExerciseController.exercise(java.lang.String,java.lang.Long,org.springframework.data.domain.Pageable,javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+2018-04-08 at 01:50:39 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/exercises/{id}],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.ExerciseController.courseExe(long,org.springframework.ui.Model,javax.servlet.http.HttpServletRequest)
+2018-04-08 at 01:50:39 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.FrontController.index(org.springframework.ui.Model,javax.servlet.http.HttpServletRequest)
+2018-04-08 at 01:50:39 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/user/stu/exams],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.StudentController.exams()
+2018-04-08 at 01:50:39 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/user/stu/exercises],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.StudentController.exercises()
+2018-04-08 at 01:50:39 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/user/tea/subjects],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.TeacherController.subjects()
+2018-04-08 at 01:50:39 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/user/tea/papers],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.TeacherController.papers()
+2018-04-08 at 01:50:39 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/user/tea/students],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.TeacherController.students()
+2018-04-08 at 01:50:39 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/user/tea/exams],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.TeacherController.exams()
+2018-04-08 at 01:50:39 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/login],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.UserController.loginPage()
+2018-04-08 at 01:50:39 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/login.do],methods=[POST]}" onto public java.lang.String me.anqi.jexam.ctrl.UserController.DoLogin(me.anqi.jexam.entity.User,javax.servlet.http.HttpServletRequest)
+2018-04-08 at 01:50:39 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/user/logout],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.UserController.doLogOut(javax.servlet.http.HttpServletRequest)
+2018-04-08 at 01:50:39 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-04-08 at 01:50:39 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-04-08 at 01:50:39 CST [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping   - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-08 at 01:50:39 CST [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping   - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-08 at 01:50:39 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver   - Detected @ExceptionHandler methods in ctrlExceptionHandler
+2018-04-08 at 01:50:39 CST [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping   - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-08 at 01:50:40 CST [main] INFO  org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer   - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2018-04-08 at 01:50:40 CST [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter   - Registering beans for JMX exposure on startup
+2018-04-08 at 01:50:40 CST [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter   - Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-04-08 at 01:50:40 CST [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter   - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2018-04-08 at 01:50:40 CST [main] INFO  org.springframework.boot.context.embedded.undertow.UndertowEmbeddedServletContainer   - Undertow started on port(s) 8037 (http)
+2018-04-08 at 01:50:40 CST [main] INFO  me.anqi.jexam.JexamApplication   - Started JexamApplication in 3.862 seconds (JVM running for 5.086)
+2018-04-08 at 01:50:56 CST [XNIO-3 task-1] INFO  io.undertow.servlet   - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-04-08 at 01:50:56 CST [XNIO-3 task-1] INFO  org.springframework.web.servlet.DispatcherServlet   - FrameworkServlet 'dispatcherServlet': initialization started
+2018-04-08 at 01:50:56 CST [XNIO-3 task-1] INFO  org.springframework.web.servlet.DispatcherServlet   - FrameworkServlet 'dispatcherServlet': initialization completed in 11 ms
+2018-04-08 at 02:03:50 CST [Thread-12] INFO  org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext   - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@68f1b17f: startup date [Sun Apr 08 01:50:36 CST 2018]; root of context hierarchy
+2018-04-08 at 02:03:55 CST [main] INFO  me.anqi.jexam.JexamApplication   - Starting JexamApplication on oneplusone.local with PID 95743 (/Users/jcala/work/code/self/jexam/out/production/classes started by jcala in /Users/jcala/work/code/self/jexam)
+2018-04-08 at 02:03:55 CST [main] INFO  me.anqi.jexam.JexamApplication   - The following profiles are active: dev
+2018-04-08 at 02:03:55 CST [main] INFO  org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext   - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@68f1b17f: startup date [Sun Apr 08 02:03:55 CST 2018]; root of context hierarchy
+2018-04-08 at 02:03:55 CST [background-preinit] INFO  org.hibernate.validator.internal.util.Version   - HV000001: Hibernate Validator 5.3.5.Final
+2018-04-08 at 02:03:56 CST [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean   - Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-04-08 at 02:03:56 CST [main] INFO  org.hibernate.jpa.internal.util.LogHelper   - HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-2018-04-07 at 16:08:50 CST [main] INFO  org.hibernate.Version   - HHH000412: Hibernate Core {5.2.10.Final}
-2018-04-07 at 16:08:50 CST [main] INFO  org.hibernate.cfg.Environment   - HHH000206: hibernate.properties not found
-2018-04-07 at 16:08:50 CST [main] INFO  org.hibernate.annotations.common.Version   - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-2018-04-07 at 16:08:50 CST [main] INFO  com.alibaba.druid.pool.DruidDataSource   - {dataSource-1} inited
-2018-04-07 at 16:08:50 CST [main] INFO  org.hibernate.dialect.Dialect   - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2018-04-07 at 16:08:51 CST [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean   - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2018-04-07 at 16:08:51 CST [main] INFO  org.xnio   - XNIO version 3.3.6.Final
-2018-04-07 at 16:08:51 CST [main] INFO  org.xnio.nio   - XNIO NIO Implementation Version 3.3.6.Final
-2018-04-07 at 16:08:51 CST [main] WARN  io.undertow.websockets.jsr   - UT026009: XNIO worker was not set on WebSocketDeploymentInfo, the default worker will be used
-2018-04-07 at 16:08:51 CST [main] WARN  io.undertow.websockets.jsr   - UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
-2018-04-07 at 16:08:51 CST [main] INFO  io.undertow.servlet   - Initializing Spring embedded WebApplicationContext
-2018-04-07 at 16:08:51 CST [main] INFO  org.springframework.web.context.ContextLoader   - Root WebApplicationContext: initialization completed in 3255 ms
-2018-04-07 at 16:08:51 CST [main] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean   - Mapping servlet: 'statViewServlet' to [/druid/*]
-2018-04-07 at 16:08:51 CST [main] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean   - Mapping servlet: 'dispatcherServlet' to [/]
-2018-04-07 at 16:08:51 CST [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean   - Mapping filter: 'characterEncodingFilter' to: [/*]
-2018-04-07 at 16:08:51 CST [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean   - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2018-04-07 at 16:08:51 CST [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean   - Mapping filter: 'httpPutFormContentFilter' to: [/*]
-2018-04-07 at 16:08:51 CST [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean   - Mapping filter: 'requestContextFilter' to: [/*]
-2018-04-07 at 16:08:51 CST [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean   - Mapping filter: 'webStatFilter' to urls: [/*]
-2018-04-07 at 16:08:52 CST [main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator   - HHH000397: Using ASTQueryTranslatorFactory
-2018-04-07 at 16:08:52 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter   - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@68f1b17f: startup date [Sat Apr 07 16:08:48 CST 2018]; root of context hierarchy
-2018-04-07 at 16:08:52 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.FrontController.index(org.springframework.ui.Model,javax.servlet.http.HttpServletRequest)
-2018-04-07 at 16:08:52 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/exercise/list],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.FrontController.exercise(java.lang.String,org.springframework.data.domain.Pageable,javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
-2018-04-07 at 16:08:52 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/exercise/{id}],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.FrontController.courseExe(long,org.springframework.ui.Model,javax.servlet.http.HttpServletRequest)
-2018-04-07 at 16:08:52 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/login.do],methods=[POST]}" onto public java.lang.String me.anqi.jexam.ctrl.UserController.DoLogin(me.anqi.jexam.entity.User,javax.servlet.http.HttpServletRequest)
-2018-04-07 at 16:08:52 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/login],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.UserController.loginPage()
-2018-04-07 at 16:08:52 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/user/logout],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.UserController.doLogOut(javax.servlet.http.HttpServletRequest)
-2018-04-07 at 16:08:52 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-2018-04-07 at 16:08:52 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-2018-04-07 at 16:08:52 CST [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping   - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-04-07 at 16:08:52 CST [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping   - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-04-07 at 16:08:52 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver   - Detected @ExceptionHandler methods in ctrlExceptionHandler
-2018-04-07 at 16:08:52 CST [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping   - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-04-07 at 16:08:53 CST [main] INFO  org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer   - ClassTemplateLoader for Spring macros added to FreeMarker configuration
-2018-04-07 at 16:08:53 CST [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter   - Registering beans for JMX exposure on startup
-2018-04-07 at 16:08:53 CST [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter   - Bean with name 'dataSource' has been autodetected for JMX exposure
-2018-04-07 at 16:08:53 CST [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter   - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
-2018-04-07 at 16:08:53 CST [main] INFO  org.springframework.boot.autoconfigure.logging.AutoConfigurationReportLoggingInitializer   - 
-
-Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
-2018-04-07 at 16:08:53 CST [main] INFO  org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext   - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@68f1b17f: startup date [Sat Apr 07 16:08:48 CST 2018]; root of context hierarchy
-2018-04-07 at 16:08:53 CST [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter   - Unregistering JMX-exposed beans on shutdown
-2018-04-07 at 16:08:53 CST [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter   - Unregistering JMX-exposed beans
-2018-04-07 at 16:08:53 CST [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean   - Closing JPA EntityManagerFactory for persistence unit 'default'
-2018-04-07 at 16:08:53 CST [main] INFO  com.alibaba.druid.pool.DruidDataSource   - {dataSource-1} closed
-2018-04-07 at 16:09:08 CST [main] INFO  me.anqi.jexam.JexamApplication   - Starting JexamApplication on oneplusone.local with PID 66978 (/Users/jcala/work/code/self/jexam/out/production/classes started by jcala in /Users/jcala/work/code/self/jexam)
-2018-04-07 at 16:09:08 CST [main] INFO  me.anqi.jexam.JexamApplication   - The following profiles are active: dev
-2018-04-07 at 16:09:08 CST [main] INFO  org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext   - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@68f1b17f: startup date [Sat Apr 07 16:09:08 CST 2018]; root of context hierarchy
-2018-04-07 at 16:09:08 CST [background-preinit] INFO  org.hibernate.validator.internal.util.Version   - HV000001: Hibernate Validator 5.3.5.Final
-2018-04-07 at 16:09:09 CST [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean   - Building JPA container EntityManagerFactory for persistence unit 'default'
-2018-04-07 at 16:09:09 CST [main] INFO  org.hibernate.jpa.internal.util.LogHelper   - HHH000204: Processing PersistenceUnitInfo [
-	name: default
-	...]
-2018-04-07 at 16:09:09 CST [main] INFO  org.hibernate.Version   - HHH000412: Hibernate Core {5.2.10.Final}
-2018-04-07 at 16:09:09 CST [main] INFO  org.hibernate.cfg.Environment   - HHH000206: hibernate.properties not found
-2018-04-07 at 16:09:09 CST [main] INFO  org.hibernate.annotations.common.Version   - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-2018-04-07 at 16:09:10 CST [main] INFO  com.alibaba.druid.pool.DruidDataSource   - {dataSource-1} inited
-2018-04-07 at 16:09:10 CST [main] INFO  org.hibernate.dialect.Dialect   - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2018-04-07 at 16:09:10 CST [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean   - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2018-04-07 at 16:09:10 CST [main] INFO  org.xnio   - XNIO version 3.3.6.Final
-2018-04-07 at 16:09:10 CST [main] INFO  org.xnio.nio   - XNIO NIO Implementation Version 3.3.6.Final
-2018-04-07 at 16:09:10 CST [main] WARN  io.undertow.websockets.jsr   - UT026009: XNIO worker was not set on WebSocketDeploymentInfo, the default worker will be used
-2018-04-07 at 16:09:10 CST [main] WARN  io.undertow.websockets.jsr   - UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
-2018-04-07 at 16:09:10 CST [main] INFO  io.undertow.servlet   - Initializing Spring embedded WebApplicationContext
-2018-04-07 at 16:09:10 CST [main] INFO  org.springframework.web.context.ContextLoader   - Root WebApplicationContext: initialization completed in 2371 ms
-2018-04-07 at 16:09:10 CST [main] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean   - Mapping servlet: 'statViewServlet' to [/druid/*]
-2018-04-07 at 16:09:10 CST [main] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean   - Mapping servlet: 'dispatcherServlet' to [/]
-2018-04-07 at 16:09:10 CST [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean   - Mapping filter: 'characterEncodingFilter' to: [/*]
-2018-04-07 at 16:09:10 CST [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean   - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2018-04-07 at 16:09:10 CST [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean   - Mapping filter: 'httpPutFormContentFilter' to: [/*]
-2018-04-07 at 16:09:10 CST [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean   - Mapping filter: 'requestContextFilter' to: [/*]
-2018-04-07 at 16:09:10 CST [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean   - Mapping filter: 'webStatFilter' to urls: [/*]
-2018-04-07 at 16:09:11 CST [main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator   - HHH000397: Using ASTQueryTranslatorFactory
-2018-04-07 at 16:09:11 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter   - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@68f1b17f: startup date [Sat Apr 07 16:09:08 CST 2018]; root of context hierarchy
-2018-04-07 at 16:09:11 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.FrontController.index(org.springframework.ui.Model,javax.servlet.http.HttpServletRequest)
-2018-04-07 at 16:09:11 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/exercise/list],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.FrontController.exercise(java.lang.String,org.springframework.data.domain.Pageable,javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
-2018-04-07 at 16:09:11 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/exercise/{id}],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.FrontController.courseExe(long,org.springframework.ui.Model,javax.servlet.http.HttpServletRequest)
-2018-04-07 at 16:09:11 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/login.do],methods=[POST]}" onto public java.lang.String me.anqi.jexam.ctrl.UserController.DoLogin(me.anqi.jexam.entity.User,javax.servlet.http.HttpServletRequest)
-2018-04-07 at 16:09:11 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/login],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.UserController.loginPage()
-2018-04-07 at 16:09:11 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/user/logout],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.UserController.doLogOut(javax.servlet.http.HttpServletRequest)
-2018-04-07 at 16:09:11 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-2018-04-07 at 16:09:11 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-2018-04-07 at 16:09:11 CST [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping   - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-04-07 at 16:09:11 CST [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping   - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-04-07 at 16:09:11 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver   - Detected @ExceptionHandler methods in ctrlExceptionHandler
-2018-04-07 at 16:09:11 CST [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping   - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-04-07 at 16:09:11 CST [main] INFO  org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer   - ClassTemplateLoader for Spring macros added to FreeMarker configuration
-2018-04-07 at 16:09:12 CST [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter   - Registering beans for JMX exposure on startup
-2018-04-07 at 16:09:12 CST [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter   - Bean with name 'dataSource' has been autodetected for JMX exposure
-2018-04-07 at 16:09:12 CST [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter   - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
-2018-04-07 at 16:09:12 CST [main] INFO  org.springframework.boot.context.embedded.undertow.UndertowEmbeddedServletContainer   - Undertow started on port(s) 8037 (http)
-2018-04-07 at 16:09:12 CST [main] INFO  me.anqi.jexam.JexamApplication   - Started JexamApplication in 4.022 seconds (JVM running for 5.067)
-2018-04-07 at 16:09:19 CST [XNIO-3 task-1] INFO  io.undertow.servlet   - Initializing Spring FrameworkServlet 'dispatcherServlet'
-2018-04-07 at 16:09:19 CST [XNIO-3 task-1] INFO  org.springframework.web.servlet.DispatcherServlet   - FrameworkServlet 'dispatcherServlet': initialization started
-2018-04-07 at 16:09:19 CST [XNIO-3 task-1] INFO  org.springframework.web.servlet.DispatcherServlet   - FrameworkServlet 'dispatcherServlet': initialization completed in 13 ms
-2018-04-07 at 16:09:34 CST [XNIO-3 task-7] INFO  me.anqi.jexam.ctrl.FrontController   - 习题列表响应时间为：26
-2018-04-07 at 22:56:28 CST [Thread-13] INFO  org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext   - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@68f1b17f: startup date [Sat Apr 07 16:09:08 CST 2018]; root of context hierarchy
-2018-04-07 at 22:57:33 CST [main] INFO  me.anqi.jexam.JexamApplication   - Starting JexamApplication on oneplusone.local with PID 85985 (/Users/jcala/work/code/self/jexam/out/production/classes started by jcala in /Users/jcala/work/code/self/jexam)
-2018-04-07 at 22:57:33 CST [main] INFO  me.anqi.jexam.JexamApplication   - The following profiles are active: dev
-2018-04-07 at 22:57:33 CST [main] INFO  org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext   - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1722011b: startup date [Sat Apr 07 22:57:33 CST 2018]; root of context hierarchy
-2018-04-07 at 22:57:34 CST [background-preinit] INFO  org.hibernate.validator.internal.util.Version   - HV000001: Hibernate Validator 5.3.5.Final
-2018-04-07 at 22:57:35 CST [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean   - Building JPA container EntityManagerFactory for persistence unit 'default'
-2018-04-07 at 22:57:35 CST [main] INFO  org.hibernate.jpa.internal.util.LogHelper   - HHH000204: Processing PersistenceUnitInfo [
-	name: default
-	...]
-2018-04-07 at 22:57:35 CST [main] INFO  org.hibernate.Version   - HHH000412: Hibernate Core {5.2.10.Final}
-2018-04-07 at 22:57:35 CST [main] INFO  org.hibernate.cfg.Environment   - HHH000206: hibernate.properties not found
-2018-04-07 at 22:57:35 CST [main] INFO  org.hibernate.annotations.common.Version   - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-2018-04-07 at 22:57:35 CST [main] INFO  com.alibaba.druid.pool.DruidDataSource   - {dataSource-1} inited
-2018-04-07 at 22:57:35 CST [main] INFO  org.hibernate.dialect.Dialect   - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2018-04-07 at 22:57:35 CST [main] WARN  org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext   - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start embedded container; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'undertowEmbeddedServletContainerFactory' defined in class path resource [org/springframework/boot/autoconfigure/web/EmbeddedServletContainerAutoConfiguration$EmbeddedUndertow.class]: BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManager' defined in class path resource [me/anqi/jexam/conf/DruidDataSourceConfig.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [me/anqi/jexam/conf/DruidDataSourceConfig.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: me.anqi.jexam.entity.Exercise.exercise in me.anqi.jexam.entity.Exam.exercises
-2018-04-07 at 22:57:35 CST [main] INFO  com.alibaba.druid.pool.DruidDataSource   - {dataSource-1} closed
-2018-04-07 at 23:01:47 CST [main] INFO  me.anqi.jexam.JexamApplication   - Starting JexamApplication on oneplusone.local with PID 86201 (/Users/jcala/work/code/self/jexam/out/production/classes started by jcala in /Users/jcala/work/code/self/jexam)
-2018-04-07 at 23:01:47 CST [main] INFO  me.anqi.jexam.JexamApplication   - The following profiles are active: dev
-2018-04-07 at 23:01:47 CST [main] INFO  org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext   - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1722011b: startup date [Sat Apr 07 23:01:47 CST 2018]; root of context hierarchy
-2018-04-07 at 23:01:47 CST [background-preinit] INFO  org.hibernate.validator.internal.util.Version   - HV000001: Hibernate Validator 5.3.5.Final
-2018-04-07 at 23:01:48 CST [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean   - Building JPA container EntityManagerFactory for persistence unit 'default'
-2018-04-07 at 23:01:48 CST [main] INFO  org.hibernate.jpa.internal.util.LogHelper   - HHH000204: Processing PersistenceUnitInfo [
-	name: default
-	...]
-2018-04-07 at 23:01:48 CST [main] INFO  org.hibernate.Version   - HHH000412: Hibernate Core {5.2.10.Final}
-2018-04-07 at 23:01:48 CST [main] INFO  org.hibernate.cfg.Environment   - HHH000206: hibernate.properties not found
-2018-04-07 at 23:01:48 CST [main] INFO  org.hibernate.annotations.common.Version   - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-2018-04-07 at 23:01:48 CST [main] INFO  com.alibaba.druid.pool.DruidDataSource   - {dataSource-1} inited
-2018-04-07 at 23:01:48 CST [main] INFO  org.hibernate.dialect.Dialect   - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2018-04-07 at 23:01:49 CST [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean   - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2018-04-07 at 23:01:49 CST [main] INFO  org.xnio   - XNIO version 3.3.6.Final
-2018-04-07 at 23:01:49 CST [main] INFO  org.xnio.nio   - XNIO NIO Implementation Version 3.3.6.Final
-2018-04-07 at 23:01:49 CST [main] WARN  io.undertow.websockets.jsr   - UT026009: XNIO worker was not set on WebSocketDeploymentInfo, the default worker will be used
-2018-04-07 at 23:01:49 CST [main] WARN  io.undertow.websockets.jsr   - UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
-2018-04-07 at 23:01:49 CST [main] INFO  io.undertow.servlet   - Initializing Spring embedded WebApplicationContext
-2018-04-07 at 23:01:49 CST [main] INFO  org.springframework.web.context.ContextLoader   - Root WebApplicationContext: initialization completed in 2407 ms
-2018-04-07 at 23:01:49 CST [main] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean   - Mapping servlet: 'statViewServlet' to [/druid/*]
-2018-04-07 at 23:01:49 CST [main] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean   - Mapping servlet: 'dispatcherServlet' to [/]
-2018-04-07 at 23:01:49 CST [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean   - Mapping filter: 'characterEncodingFilter' to: [/*]
-2018-04-07 at 23:01:49 CST [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean   - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2018-04-07 at 23:01:49 CST [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean   - Mapping filter: 'httpPutFormContentFilter' to: [/*]
-2018-04-07 at 23:01:49 CST [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean   - Mapping filter: 'requestContextFilter' to: [/*]
-2018-04-07 at 23:01:49 CST [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean   - Mapping filter: 'webStatFilter' to urls: [/*]
-2018-04-07 at 23:01:50 CST [main] WARN  org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext   - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'frontController' defined in file [/Users/jcala/work/code/self/jexam/out/production/classes/me/anqi/jexam/ctrl/FrontController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'frontSerImpl' defined in file [/Users/jcala/work/code/self/jexam/out/production/classes/me/anqi/jexam/service/FrontSerImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'exerciseRepository': Invocation of init method failed; nested exception is org.springframework.data.mapping.PropertyReferenceException: No property difficulty found for type Exercise!
-2018-04-07 at 23:01:50 CST [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean   - Closing JPA EntityManagerFactory for persistence unit 'default'
-2018-04-07 at 23:01:50 CST [main] INFO  com.alibaba.druid.pool.DruidDataSource   - {dataSource-1} closed
-2018-04-07 at 23:01:50 CST [main] INFO  org.springframework.boot.autoconfigure.logging.AutoConfigurationReportLoggingInitializer   - 
-
-Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
-2018-04-07 at 23:03:54 CST [main] INFO  me.anqi.jexam.JexamApplication   - Starting JexamApplication on oneplusone.local with PID 86315 (/Users/jcala/work/code/self/jexam/out/production/classes started by jcala in /Users/jcala/work/code/self/jexam)
-2018-04-07 at 23:03:54 CST [main] INFO  me.anqi.jexam.JexamApplication   - The following profiles are active: dev
-2018-04-07 at 23:03:54 CST [main] INFO  org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext   - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1722011b: startup date [Sat Apr 07 23:03:54 CST 2018]; root of context hierarchy
-2018-04-07 at 23:03:54 CST [background-preinit] INFO  org.hibernate.validator.internal.util.Version   - HV000001: Hibernate Validator 5.3.5.Final
-2018-04-07 at 23:03:55 CST [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean   - Building JPA container EntityManagerFactory for persistence unit 'default'
-2018-04-07 at 23:03:56 CST [main] INFO  org.hibernate.jpa.internal.util.LogHelper   - HHH000204: Processing PersistenceUnitInfo [
-	name: default
-	...]
-2018-04-07 at 23:03:56 CST [main] INFO  org.hibernate.Version   - HHH000412: Hibernate Core {5.2.10.Final}
-2018-04-07 at 23:03:56 CST [main] INFO  org.hibernate.cfg.Environment   - HHH000206: hibernate.properties not found
-2018-04-07 at 23:03:56 CST [main] INFO  org.hibernate.annotations.common.Version   - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-2018-04-07 at 23:03:56 CST [main] INFO  com.alibaba.druid.pool.DruidDataSource   - {dataSource-1} inited
-2018-04-07 at 23:03:56 CST [main] INFO  org.hibernate.dialect.Dialect   - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2018-04-07 at 23:03:57 CST [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean   - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2018-04-07 at 23:03:57 CST [main] INFO  org.xnio   - XNIO version 3.3.6.Final
-2018-04-07 at 23:03:57 CST [main] INFO  org.xnio.nio   - XNIO NIO Implementation Version 3.3.6.Final
-2018-04-07 at 23:03:57 CST [main] WARN  io.undertow.websockets.jsr   - UT026009: XNIO worker was not set on WebSocketDeploymentInfo, the default worker will be used
-2018-04-07 at 23:03:57 CST [main] WARN  io.undertow.websockets.jsr   - UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
-2018-04-07 at 23:03:57 CST [main] INFO  io.undertow.servlet   - Initializing Spring embedded WebApplicationContext
-2018-04-07 at 23:03:57 CST [main] INFO  org.springframework.web.context.ContextLoader   - Root WebApplicationContext: initialization completed in 2502 ms
-2018-04-07 at 23:03:57 CST [main] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean   - Mapping servlet: 'statViewServlet' to [/druid/*]
-2018-04-07 at 23:03:57 CST [main] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean   - Mapping servlet: 'dispatcherServlet' to [/]
-2018-04-07 at 23:03:57 CST [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean   - Mapping filter: 'characterEncodingFilter' to: [/*]
-2018-04-07 at 23:03:57 CST [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean   - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2018-04-07 at 23:03:57 CST [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean   - Mapping filter: 'httpPutFormContentFilter' to: [/*]
-2018-04-07 at 23:03:57 CST [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean   - Mapping filter: 'requestContextFilter' to: [/*]
-2018-04-07 at 23:03:57 CST [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean   - Mapping filter: 'webStatFilter' to urls: [/*]
-2018-04-07 at 23:03:57 CST [main] WARN  org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext   - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'frontController' defined in file [/Users/jcala/work/code/self/jexam/out/production/classes/me/anqi/jexam/ctrl/FrontController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'frontSerImpl' defined in file [/Users/jcala/work/code/self/jexam/out/production/classes/me/anqi/jexam/service/FrontSerImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'exerciseRepository': Invocation of init method failed; nested exception is org.springframework.data.mapping.PropertyReferenceException: No property difficulty found for type Exercise!
-2018-04-07 at 23:03:57 CST [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean   - Closing JPA EntityManagerFactory for persistence unit 'default'
-2018-04-07 at 23:03:57 CST [main] INFO  com.alibaba.druid.pool.DruidDataSource   - {dataSource-1} closed
-2018-04-07 at 23:03:57 CST [main] INFO  org.springframework.boot.autoconfigure.logging.AutoConfigurationReportLoggingInitializer   - 
-
-Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
-2018-04-07 at 23:06:28 CST [main] INFO  me.anqi.jexam.JexamApplication   - Starting JexamApplication on oneplusone.local with PID 86450 (/Users/jcala/work/code/self/jexam/out/production/classes started by jcala in /Users/jcala/work/code/self/jexam)
-2018-04-07 at 23:06:28 CST [main] INFO  me.anqi.jexam.JexamApplication   - The following profiles are active: dev
-2018-04-07 at 23:06:28 CST [main] INFO  org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext   - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@68f1b17f: startup date [Sat Apr 07 23:06:28 CST 2018]; root of context hierarchy
-2018-04-07 at 23:06:28 CST [background-preinit] INFO  org.hibernate.validator.internal.util.Version   - HV000001: Hibernate Validator 5.3.5.Final
-2018-04-07 at 23:06:29 CST [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean   - Building JPA container EntityManagerFactory for persistence unit 'default'
-2018-04-07 at 23:06:29 CST [main] INFO  org.hibernate.jpa.internal.util.LogHelper   - HHH000204: Processing PersistenceUnitInfo [
-	name: default
-	...]
-2018-04-07 at 23:06:29 CST [main] INFO  org.hibernate.Version   - HHH000412: Hibernate Core {5.2.10.Final}
-2018-04-07 at 23:06:29 CST [main] INFO  org.hibernate.cfg.Environment   - HHH000206: hibernate.properties not found
-2018-04-07 at 23:06:29 CST [main] INFO  org.hibernate.annotations.common.Version   - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-2018-04-07 at 23:06:30 CST [main] INFO  com.alibaba.druid.pool.DruidDataSource   - {dataSource-1} inited
-2018-04-07 at 23:06:30 CST [main] INFO  org.hibernate.dialect.Dialect   - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2018-04-07 at 23:06:30 CST [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean   - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2018-04-07 at 23:06:30 CST [main] INFO  org.xnio   - XNIO version 3.3.6.Final
-2018-04-07 at 23:06:30 CST [main] INFO  org.xnio.nio   - XNIO NIO Implementation Version 3.3.6.Final
-2018-04-07 at 23:06:30 CST [main] WARN  io.undertow.websockets.jsr   - UT026009: XNIO worker was not set on WebSocketDeploymentInfo, the default worker will be used
-2018-04-07 at 23:06:30 CST [main] WARN  io.undertow.websockets.jsr   - UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
-2018-04-07 at 23:06:30 CST [main] INFO  io.undertow.servlet   - Initializing Spring embedded WebApplicationContext
-2018-04-07 at 23:06:30 CST [main] INFO  org.springframework.web.context.ContextLoader   - Root WebApplicationContext: initialization completed in 2272 ms
-2018-04-07 at 23:06:30 CST [main] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean   - Mapping servlet: 'statViewServlet' to [/druid/*]
-2018-04-07 at 23:06:30 CST [main] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean   - Mapping servlet: 'dispatcherServlet' to [/]
-2018-04-07 at 23:06:30 CST [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean   - Mapping filter: 'characterEncodingFilter' to: [/*]
-2018-04-07 at 23:06:30 CST [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean   - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2018-04-07 at 23:06:30 CST [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean   - Mapping filter: 'httpPutFormContentFilter' to: [/*]
-2018-04-07 at 23:06:30 CST [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean   - Mapping filter: 'requestContextFilter' to: [/*]
-2018-04-07 at 23:06:30 CST [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean   - Mapping filter: 'webStatFilter' to urls: [/*]
-2018-04-07 at 23:06:31 CST [main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator   - HHH000397: Using ASTQueryTranslatorFactory
-2018-04-07 at 23:06:31 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter   - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@68f1b17f: startup date [Sat Apr 07 23:06:28 CST 2018]; root of context hierarchy
-2018-04-07 at 23:06:31 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.FrontController.index(org.springframework.ui.Model,javax.servlet.http.HttpServletRequest)
-2018-04-07 at 23:06:31 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/exercise/list],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.FrontController.exercise(java.lang.String,org.springframework.data.domain.Pageable,javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
-2018-04-07 at 23:06:31 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/exercise/{id}],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.FrontController.courseExe(long,org.springframework.ui.Model,javax.servlet.http.HttpServletRequest)
-2018-04-07 at 23:06:31 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/login],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.UserController.loginPage()
-2018-04-07 at 23:06:31 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/login.do],methods=[POST]}" onto public java.lang.String me.anqi.jexam.ctrl.UserController.DoLogin(me.anqi.jexam.entity.User,javax.servlet.http.HttpServletRequest)
-2018-04-07 at 23:06:31 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/user/logout],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.UserController.doLogOut(javax.servlet.http.HttpServletRequest)
-2018-04-07 at 23:06:31 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-2018-04-07 at 23:06:31 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-2018-04-07 at 23:06:31 CST [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping   - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-04-07 at 23:06:31 CST [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping   - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-04-07 at 23:06:31 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver   - Detected @ExceptionHandler methods in ctrlExceptionHandler
-2018-04-07 at 23:06:31 CST [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping   - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-04-07 at 23:06:31 CST [main] INFO  org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer   - ClassTemplateLoader for Spring macros added to FreeMarker configuration
-2018-04-07 at 23:06:31 CST [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter   - Registering beans for JMX exposure on startup
-2018-04-07 at 23:06:31 CST [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter   - Bean with name 'dataSource' has been autodetected for JMX exposure
-2018-04-07 at 23:06:31 CST [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter   - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
-2018-04-07 at 23:06:32 CST [main] INFO  org.springframework.boot.context.embedded.undertow.UndertowEmbeddedServletContainer   - Undertow started on port(s) 8037 (http)
-2018-04-07 at 23:06:32 CST [main] INFO  me.anqi.jexam.JexamApplication   - Started JexamApplication in 3.755 seconds (JVM running for 4.71)
+2018-04-08 at 02:03:56 CST [main] INFO  org.hibernate.Version   - HHH000412: Hibernate Core {5.2.10.Final}
+2018-04-08 at 02:03:56 CST [main] INFO  org.hibernate.cfg.Environment   - HHH000206: hibernate.properties not found
+2018-04-08 at 02:03:56 CST [main] INFO  org.hibernate.annotations.common.Version   - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-04-08 at 02:03:56 CST [main] INFO  com.alibaba.druid.pool.DruidDataSource   - {dataSource-1} inited
+2018-04-08 at 02:03:56 CST [main] INFO  org.hibernate.dialect.Dialect   - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2018-04-08 at 02:03:57 CST [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean   - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-04-08 at 02:03:57 CST [main] INFO  org.xnio   - XNIO version 3.3.6.Final
+2018-04-08 at 02:03:57 CST [main] INFO  org.xnio.nio   - XNIO NIO Implementation Version 3.3.6.Final
+2018-04-08 at 02:03:57 CST [main] WARN  io.undertow.websockets.jsr   - UT026009: XNIO worker was not set on WebSocketDeploymentInfo, the default worker will be used
+2018-04-08 at 02:03:57 CST [main] WARN  io.undertow.websockets.jsr   - UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2018-04-08 at 02:03:57 CST [main] INFO  io.undertow.servlet   - Initializing Spring embedded WebApplicationContext
+2018-04-08 at 02:03:57 CST [main] INFO  org.springframework.web.context.ContextLoader   - Root WebApplicationContext: initialization completed in 2465 ms
+2018-04-08 at 02:03:57 CST [main] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean   - Mapping servlet: 'statViewServlet' to [/druid/*]
+2018-04-08 at 02:03:57 CST [main] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean   - Mapping servlet: 'dispatcherServlet' to [/]
+2018-04-08 at 02:03:57 CST [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean   - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-04-08 at 02:03:57 CST [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean   - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-04-08 at 02:03:57 CST [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean   - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-04-08 at 02:03:57 CST [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean   - Mapping filter: 'requestContextFilter' to: [/*]
+2018-04-08 at 02:03:57 CST [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean   - Mapping filter: 'webStatFilter' to urls: [/*]
+2018-04-08 at 02:03:58 CST [main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator   - HHH000397: Using ASTQueryTranslatorFactory
+2018-04-08 at 02:03:58 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter   - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@68f1b17f: startup date [Sun Apr 08 02:03:55 CST 2018]; root of context hierarchy
+2018-04-08 at 02:03:58 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/exercises/list],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.ExerciseController.exercise(java.lang.String,java.lang.Long,org.springframework.data.domain.Pageable,javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+2018-04-08 at 02:03:58 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/exercises/{id}],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.ExerciseController.courseExe(long,org.springframework.ui.Model,javax.servlet.http.HttpServletRequest)
+2018-04-08 at 02:03:58 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.FrontController.index(org.springframework.ui.Model,javax.servlet.http.HttpServletRequest)
+2018-04-08 at 02:03:58 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/user/stu/exercises],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.StudentController.exercises()
+2018-04-08 at 02:03:58 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/user/stu/exams],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.StudentController.exams()
+2018-04-08 at 02:03:58 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/user/tea/subjects],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.TeacherController.subjects()
+2018-04-08 at 02:03:58 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/user/tea/papers],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.TeacherController.papers()
+2018-04-08 at 02:03:58 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/user/tea/exams],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.TeacherController.exams()
+2018-04-08 at 02:03:58 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/user/tea/students],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.TeacherController.students()
+2018-04-08 at 02:03:58 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/login],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.UserController.loginPage()
+2018-04-08 at 02:03:58 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/login.do],methods=[POST]}" onto public java.lang.String me.anqi.jexam.ctrl.UserController.DoLogin(me.anqi.jexam.entity.User,javax.servlet.http.HttpServletRequest)
+2018-04-08 at 02:03:58 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/user/logout],methods=[GET]}" onto public java.lang.String me.anqi.jexam.ctrl.UserController.doLogOut(javax.servlet.http.HttpServletRequest)
+2018-04-08 at 02:03:58 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-04-08 at 02:03:58 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping   - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-04-08 at 02:03:58 CST [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping   - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-08 at 02:03:58 CST [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping   - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-08 at 02:03:58 CST [main] INFO  org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver   - Detected @ExceptionHandler methods in ctrlExceptionHandler
+2018-04-08 at 02:03:58 CST [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping   - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-08 at 02:03:58 CST [main] INFO  org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer   - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2018-04-08 at 02:03:58 CST [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter   - Registering beans for JMX exposure on startup
+2018-04-08 at 02:03:58 CST [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter   - Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-04-08 at 02:03:58 CST [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter   - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2018-04-08 at 02:03:58 CST [main] INFO  org.springframework.boot.context.embedded.undertow.UndertowEmbeddedServletContainer   - Undertow started on port(s) 8037 (http)
+2018-04-08 at 02:03:58 CST [main] INFO  me.anqi.jexam.JexamApplication   - Started JexamApplication in 4.066 seconds (JVM running for 5.256)
+2018-04-08 at 02:04:04 CST [XNIO-3 task-1] INFO  io.undertow.servlet   - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-04-08 at 02:04:04 CST [XNIO-3 task-1] INFO  org.springframework.web.servlet.DispatcherServlet   - FrameworkServlet 'dispatcherServlet': initialization started
+2018-04-08 at 02:04:04 CST [XNIO-3 task-1] INFO  org.springframework.web.servlet.DispatcherServlet   - FrameworkServlet 'dispatcherServlet': initialization completed in 16 ms
