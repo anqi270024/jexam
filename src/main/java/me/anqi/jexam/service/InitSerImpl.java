@@ -1,10 +1,10 @@
 package me.anqi.jexam.service;
 
 import me.anqi.jexam.entity.Subject;
+import me.anqi.jexam.entity.User;
 import me.anqi.jexam.repository.SubjectRepository;
 import me.anqi.jexam.repository.UserRepository;
 import me.anqi.jexam.service.inter.InitSer;
-import me.anqi.jexam.entity.User;
 import me.anqi.jexam.utils.EncryptUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -13,7 +13,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.PostConstruct;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -42,10 +41,10 @@ public class InitSerImpl implements InitSer {
 
 
     private void initUserData(){
-        User jcala = userRepository.findUserByName("jcala");
-        if (jcala==null){
-            String pass= EncryptUtils.EncoderByMd5("jcala");
-            userRepository.save(new User("jcala",pass,1));
+        User anqi = userRepository.findUserByName("anqi");
+        if (anqi == null){
+            String pass= EncryptUtils.EncoderByMd5("anqi");
+            userRepository.save(new User("anqi",pass,1));
         }
 
         User tea=userRepository.findUserByName("tea");
