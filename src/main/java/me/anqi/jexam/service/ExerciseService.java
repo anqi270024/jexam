@@ -1,4 +1,4 @@
-package me.anqi.jexam.service.inter;
+package me.anqi.jexam.service;
 
 import me.anqi.jexam.entity.Exercise;
 import me.anqi.jexam.entity.Subject;
@@ -10,7 +10,7 @@ import java.util.List;
  * @author flyleft
  * @date 2018/4/8
  */
-public interface ExerciseSer {
+public interface ExerciseService {
 
     class ExeFront{
         public final List<Exercise> exercises;
@@ -33,5 +33,4 @@ public interface ExerciseSer {
      */
     Exercise getExercise(long exeId);
 
-    List<Subject> getAllSubjects();
 }

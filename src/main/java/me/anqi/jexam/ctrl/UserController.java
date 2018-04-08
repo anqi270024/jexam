@@ -1,7 +1,7 @@
 package me.anqi.jexam.ctrl;
 
 import me.anqi.jexam.entity.User;
-import me.anqi.jexam.service.inter.UserSer;
+import me.anqi.jexam.service.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,11 +17,11 @@ public class UserController {
 
     private static final Logger logger= LoggerFactory.getLogger(UserController.class);
 
-    private UserSer userSer;
+    private UserService userService;
 
     @Autowired
-    public UserController(UserSer userSer) {
-        this.userSer = userSer;
+    public UserController(UserService userService) {
+        this.userService = userService;
     }
 
     @GetMapping("/login")
@@ -33,7 +33,7 @@ public class UserController {
     public String DoLogin(User user, HttpServletRequest request){
         boolean result= false;
         try {
-            result = userSer.login(user,request);
+            result = userService.login(user,request);
         } catch (Exception e) {
             e.printStackTrace();
         }

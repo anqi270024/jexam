@@ -8,6 +8,8 @@ import org.springframework.transaction.annotation.Transactional;
  * @author flyleft
  * @date 2018/4/7
  */
-@Transactional
 public interface SubjectRepository extends CrudRepository<Subject,Long> {
+
+    int countByName(String name);
+
 }
