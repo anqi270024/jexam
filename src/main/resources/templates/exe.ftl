@@ -44,8 +44,8 @@
                             <li class="dropdown user-dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>${name!"jmooc"}<b class="caret"></b></a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="/user/stu/exams"><i class="fa fa-user"></i> 参与考试</a></li>
                                     <li><a href="/user/stu/exercises"><i class="fa fa-gear"></i> 习题收藏</a></li>
+                                    <li><a href="/user/stu/exams"><i class="fa fa-user"></i> 我的考试</a></li>
                                     <li class="divider"></li>
                                     <li><a href="/user/logout"><i class="fa fa-power-off"></i> 登出</a></li>
                                 </ul>
