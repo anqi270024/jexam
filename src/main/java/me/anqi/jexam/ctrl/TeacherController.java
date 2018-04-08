@@ -1,8 +1,11 @@
 package me.anqi.jexam.ctrl;
 
 import lombok.extern.slf4j.Slf4j;
-import me.anqi.jexam.entity.Subject;
+import me.anqi.jexam.entity.User;
+import me.anqi.jexam.entity.auxiliary.UserAuxiliary;
+import me.anqi.jexam.service.StudentService;
 import me.anqi.jexam.service.SubjectService;
+import me.anqi.jexam.utils.RequestUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -12,6 +15,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 /**
@@ -26,6 +30,9 @@ public class TeacherController {
     @Autowired
     private SubjectService subjectService;
 
+    @Autowired
+    private StudentService studentService;
+
     @GetMapping("/subjects")
     public String subjects(Model model) {
         StringBuilder builder = new StringBuilder();
@@ -35,7 +42,14 @@ public class TeacherController {
     }
 
     @GetMapping("/students")
-    public String students() {
+    public String students(HttpServletRequest request, Model model) {
+        UserAuxiliary userAuxiliary = RequestUtils.getUserAuxiliaryFromReq(request);
+        List<User> existStudents = studentService.findAllStudentsByTeacherId(userAuxiliary.getId());
+        List<User> allStudents = studentService.findAllStudents();
+        StringBuilder builder = new StringBuilder();
+        existStudents.forEach(t -> builder.append(t.getName()).append(" "));
+        model.addAttribute("studentNames", builder.toString());
+        model.addAttribute("students", allStudents);
         return "tea/tea_student";
     }
 
@@ -57,4 +71,15 @@ public class TeacherController {
        subjectService.addSubject(name);
        return "redirect:/user/tea/subjects";
     }
+
+    @PostMapping("/students")
+    public String addStudent(@RequestParam("id") Long id, HttpServletRequest request) {
+        if (id == null) {
+            throw new RuntimeException("error.students.add");
+        }
+        UserAuxiliary userAuxiliary = RequestUtils.getUserAuxiliaryFromReq(request);
+        studentService.addStudent(userAuxiliary.getId(), id);
+        return "redirect:/user/tea/students";
+    }
+
 }

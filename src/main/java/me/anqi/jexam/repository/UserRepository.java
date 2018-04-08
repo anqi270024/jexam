@@ -7,6 +7,8 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 @Transactional
 public interface UserRepository extends CrudRepository<User,Long> {
 
@@ -15,4 +17,6 @@ public interface UserRepository extends CrudRepository<User,Long> {
     User findUserByNameAndPasswordAndRole(@Param("name") String name,
                                       @Param("password") String password,
                                       @Param("role") int role);
+
+    List<User> findAllByRole(int role);
 }

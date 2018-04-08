@@ -47,32 +47,17 @@
     <div id="page-wrapper">
         <div class="row">
             <div class="col-lg-12">
-                <form role="form" name="course" action="/user/tea/crs_mgr/add" method="post">
+                <br>
+                <h4> 已有学生: ${studentNames}</h4>
+                <br>
+                <br>
+                <form role="form" name="course" action="/user/tea/students" method="post">
                     <div class="form-group">
-                        <label for="name">名称</label>
-                        <input type="text" class="form-control" name="name"
-                               placeholder="请输入课程的名称">
-                    </div>
-                    <div class="form-group">
-                        <label for="name">描述</label>
-                        <input type="text" class="form-control" name="desp"
-                               placeholder="请输入关于本课程的描述">
-                    </div>
-                    <div class="form-group">
-                        <label>方向</label>
-                        <select class="form-control" name="dir">
-                            <option value="fe">前端开发</option>
-                            <option value="be">后端开发</option>
-                            <option value="mb">移动开发</option>
-                            <option value="db">数据库</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label>类型</label>
-                        <select class="form-control" name="type">
-                            <option value="c">c</option>
-                            <option value="cp">c++</option>
-                            <option value="java">java</option>
+                        <label>请选择学生</label>
+                        <select class="form-control" name="id">
+                            <#list students as item>
+                            <option value="${item.id}">${item.name}</option>
+                            </#list>
                         </select>
                     </div>
                     <div class="form-group">
