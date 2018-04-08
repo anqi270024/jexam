@@ -16,12 +16,12 @@ public class StudentController {
 
     @GetMapping("/exams")
     public String exams() {
-        return "stu_exam";
+        return "stu/stu_exam";
     }
 
     @GetMapping("/exercises")
     public String exercises() {
-        return "stu_exercise";
+        return "stu/stu_exercise";
     }
 
 }

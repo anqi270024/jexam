@@ -1,7 +1,7 @@
 .idea/
 build/*
 *.iml
-.gradle/3.1/*
+.gradle/
 out/
 /chat/node_modules/*
 /jchat/node_modules/*

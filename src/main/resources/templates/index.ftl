@@ -48,7 +48,7 @@
                                 <li><a href="/user/tea/subjects"><i class="fa fa-user"></i> 添加科目</a></li>
                                 <li><a href="/user/tea/students"><i class="fa fa-user"></i> 添加学生</a></li>
                                 <li><a href="/user/tea/exams"><i class="fa fa-user"></i> 添加试卷</a></li>
-                                <li><a href="/user/tea/papers"><i class="fa fa-user"></i> 成绩批改</a></li>
+                                <li><a href="/user/tea/papers"><i class="fa fa-user"></i> 试卷批改</a></li>
                                 <li class="divider"></li>
                                 <li><a href="/user/logout"><i class="fa fa-power-off"></i> 登出</a></li>
                             </ul>

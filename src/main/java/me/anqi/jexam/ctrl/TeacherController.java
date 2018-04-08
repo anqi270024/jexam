@@ -16,22 +16,22 @@ public class TeacherController {
 
     @GetMapping("/subjects")
     public String subjects() {
-        return "tea_subject";
+        return "tea/tea_subject";
     }
 
     @GetMapping("/students")
     public String students() {
-        return "tea_student";
+        return "tea/tea_student";
     }
 
     @GetMapping("/exams")
     public String exams() {
-        return "tea_exam";
+        return "tea/tea_exam";
     }
 
     @GetMapping("/papers")
     public String papers() {
-        return "tea_paper";
+        return "tea/tea_paper";
     }
 
 }
