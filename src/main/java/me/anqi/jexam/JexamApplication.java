@@ -10,6 +10,7 @@ import org.springframework.cache.annotation.EnableCaching;
 @SpringBootApplication(exclude = DataSourceAutoConfiguration.class)
 @EnableCaching
 public class JexamApplication extends SpringBootServletInitializer {
+
 	@Override
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
 		return application.sources(JexamApplication.class);

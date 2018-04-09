@@ -3,6 +3,8 @@ package me.anqi.jexam.ctrl;
 import lombok.extern.slf4j.Slf4j;
 import me.anqi.jexam.entity.User;
 import me.anqi.jexam.entity.auxiliary.UserAuxiliary;
+import me.anqi.jexam.exception.CommonException;
+import me.anqi.jexam.service.PaperService;
 import me.anqi.jexam.service.StudentService;
 import me.anqi.jexam.service.SubjectService;
 import me.anqi.jexam.utils.RequestUtils;
@@ -10,10 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.StringUtils;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
@@ -33,16 +32,19 @@ public class TeacherController {
     @Autowired
     private StudentService studentService;
 
-    @GetMapping("/subjects")
-    public String subjects(Model model) {
+    @Autowired
+    private PaperService paperService;
+
+    @GetMapping("/add_subject")
+    public String addSubject(Model model) {
         StringBuilder builder = new StringBuilder();
         subjectService.getAllSubjects().forEach(t -> builder.append(t.getName()).append(" "));
         model.addAttribute("subjects", builder.toString());
-        return "tea/tea_subject";
+        return "tea/add_subject";
     }
 
-    @GetMapping("/students")
-    public String students(HttpServletRequest request, Model model) {
+    @GetMapping("/add_student")
+    public String addStudent(HttpServletRequest request, Model model) {
         UserAuxiliary userAuxiliary = RequestUtils.getUserAuxiliaryFromReq(request);
         List<User> existStudents = studentService.findAllStudentsByTeacherId(userAuxiliary.getId());
         List<User> allStudents = studentService.findAllStudents();
@@ -50,36 +52,70 @@ public class TeacherController {
         existStudents.forEach(t -> builder.append(t.getName()).append(" "));
         model.addAttribute("studentNames", builder.toString());
         model.addAttribute("students", allStudents);
-        return "tea/tea_student";
+        return "tea/add_student";
     }
 
-    @GetMapping("/exams")
-    public String exams() {
-        return "tea/tea_exam";
+    @GetMapping("/add_paper")
+    public String addPaper(Model model) {
+        model.addAttribute("subjects", subjectService.getAllSubjects());
+        return "tea/add_paper";
     }
 
-    @GetMapping("/papers")
-    public String papers() {
-        return "tea/tea_paper";
+    @GetMapping("/manager_paper")
+    public String managerPaper(Model model, HttpServletRequest request) {
+        UserAuxiliary userAuxiliary = RequestUtils.getUserAuxiliaryFromReq(request);
+        model.addAttribute("papers", paperService.findPapersByTeacherId(userAuxiliary.getId()));
+        return "tea/manager_paper";
     }
+
+    @GetMapping("/correct_paper")
+    public String correctPaper() {
+        return "tea/correct_paper";
+    }
+
 
     @PostMapping("/subjects")
     public String addSubject(@RequestParam("name") String name) {
        if (StringUtils.isEmpty(name)) {
-           throw new RuntimeException("error.subjects.add");
+           throw new CommonException("error.subjects.add");
        }
        subjectService.addSubject(name);
-       return "redirect:/user/tea/subjects";
+       return "redirect:/user/tea/add_subject";
     }
 
     @PostMapping("/students")
     public String addStudent(@RequestParam("id") Long id, HttpServletRequest request) {
         if (id == null) {
-            throw new RuntimeException("error.students.add");
+            throw new CommonException("error.students.add.badRequest");
         }
         UserAuxiliary userAuxiliary = RequestUtils.getUserAuxiliaryFromReq(request);
         studentService.addStudent(userAuxiliary.getId(), id);
-        return "redirect:/user/tea/students";
+        return "redirect:/user/tea/add_student";
+    }
+
+    @PostMapping("/papers")
+    public String addPaper(@RequestParam("title") String title,
+                           @RequestParam("subject") Long subject,
+                           HttpServletRequest request) {
+        if (StringUtils.isEmpty(title) || subject == null) {
+            throw new CommonException("error.papers.add.badRequest");
+        }
+        UserAuxiliary userAuxiliary = RequestUtils.getUserAuxiliaryFromReq(request);
+        paperService.addPaper(title, subject, userAuxiliary.getId());
+        return "redirect:/user/tea/manager_paper";
+    }
+
+    @GetMapping("/papers/{id}/delete")
+    public String deletePaper(@PathVariable long id,
+                              HttpServletRequest request) {
+        UserAuxiliary userAuxiliary = RequestUtils.getUserAuxiliaryFromReq(request);
+        paperService.deletePaper(id, userAuxiliary.getId());
+        return "redirect:/user/tea/manager_paper";
+    }
+
+    @PostMapping("/papers/{id}/edit")
+    public String editPage(@PathVariable long id) {
+        return "tea/edit_paper";
     }
 
 }

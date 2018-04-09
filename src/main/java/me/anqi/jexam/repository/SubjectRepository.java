@@ -12,4 +12,6 @@ public interface SubjectRepository extends CrudRepository<Subject,Long> {
 
     int countByName(String name);
 
+
+
 }

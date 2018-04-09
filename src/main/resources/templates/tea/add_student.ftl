@@ -34,10 +34,11 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav side-nav">
-                <li><a href="/user/tea/subjects"><i class="fa fa-bell"></i> 添加科目</a></li>
-                <li class="active-bg"><a href="/user/tea/students"><i class="fa fa-plus"></i> 添加学生</a></li>
-                <li><a href="/user/tea/exams"><i class="fa fa-edit"></i> 添加试卷</a></li>
-                <li><a href="/user/tea/papers"><i class="fa fa-edit"></i> 试卷批改</a></li>
+                <li><a href="/user/tea/add_subject"><i class="fa fa-bell"></i> 添加科目</a></li>
+                <li class="active-bg"><a href="/user/tea/add_student"><i class="fa fa-plus"></i> 添加学生</a></li>
+                <li><a href="/user/tea/add_paper"><i class="fa fa-edit"></i> 添加试卷</a></li>
+                <li><a href="/user/tea/manager_paper"><i class="fa fa-edit"></i> 试卷管理</a></li>
+                <li><a href="/user/tea/correct_paper"><i class="fa fa-edit"></i> 试卷批改</a></li>
             </ul>
 
             <h3 style="text-align: center;color: #ffffff;"> 添加学生</h3>

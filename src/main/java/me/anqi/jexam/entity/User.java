@@ -46,12 +46,6 @@ public class User implements Serializable {
     @ManyToMany(cascade = CascadeType.REMOVE,fetch=FetchType.LAZY)
     private Set<Exercise> exerciseCollection=new HashSet<>();
 
-    @ManyToMany(mappedBy = "participants")
-    private Set<Exam> exams =new HashSet<>();
-
-    @Column(name = "notice_num",columnDefinition = "int default 0")
-    private int noticeNum;
-
     public User() {
     }
 

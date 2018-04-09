@@ -45,10 +45,11 @@
                         <li class="dropdown user-dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>${name!"jmooc"}<b class="caret"></b></a>
                             <ul class="dropdown-menu">
-                                <li><a href="/user/tea/subjects"><i class="fa fa-user"></i> 添加科目</a></li>
-                                <li><a href="/user/tea/students"><i class="fa fa-user"></i> 添加学生</a></li>
-                                <li><a href="/user/tea/exams"><i class="fa fa-user"></i> 添加试卷</a></li>
-                                <li><a href="/user/tea/papers"><i class="fa fa-user"></i> 试卷批改</a></li>
+                                <li><a href="/user/tea/add_subject"><i class="fa fa-user"></i> 添加科目</a></li>
+                                <li><a href="/user/tea/add_student"><i class="fa fa-user"></i> 添加学生</a></li>
+                                <li><a href="/user/tea/add_paper"><i class="fa fa-user"></i> 添加试卷</a></li>
+                                <li><a href="/user/tea/manager_paper"><i class="fa fa-user"></i> 管理试卷</a></li>
+                                <li><a href="/user/tea/correct_paper"><i class="fa fa-user"></i> 试卷批改</a></li>
                                 <li class="divider"></li>
                                 <li><a href="/user/logout"><i class="fa fa-power-off"></i> 登出</a></li>
                             </ul>

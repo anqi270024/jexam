@@ -29,8 +29,7 @@ public class CommonUtils {
                 user.getId(),
                 user.getName(),
                 user.getRole(),
-                user.getAvatarUrl(),
-                user.getNoticeNum()
+                user.getAvatarUrl()
         );
 
     }

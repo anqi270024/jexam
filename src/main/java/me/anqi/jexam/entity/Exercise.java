@@ -29,20 +29,33 @@ public class Exercise implements Serializable {
     private long subjectId;
 
     /**
+     * 习题标题
+     */
+    @Column(nullable = false, columnDefinition="text")
+    private String title;
+
+    /**
      * 习题内容
      */
-    @Column(nullable = false,columnDefinition="text")
+    @Column(nullable = false, columnDefinition="text")
     private String content;
+
+    /**
+     * 习题备注信息，比如参考答案等
+     */
+    @Column(nullable = false, columnDefinition="text")
+    private String remark;
 
     /**
      * 习题分值
      */
-    @Column(nullable = false,columnDefinition="tinyint default 1")
+    @Column(nullable = false, columnDefinition="tinyint default 1")
     private int score;
 
     /**
      * 习题类型
-     * 选择题： choose
+     * 单择题： single_choose
+     * 多选题： multi_choose
      * 填空题： completion
      * 简答题： short_answer
      */
@@ -60,17 +73,6 @@ public class Exercise implements Serializable {
      */
     @Column(nullable = false, columnDefinition = "bigint default 0")
     private long ownerId;
-
-
-    /**
-     * 习题参考答案
-     */
-    @Column(columnDefinition="text")
-    private String answer;
-
-    @ManyToOne(cascade = CascadeType.REMOVE, fetch=FetchType.EAGER, targetEntity = Exam.class)
-    @JoinColumn(name = "exam_id")
-    private Exam exam;
 
     @Transient
     @JsonIgnore

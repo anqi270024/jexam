@@ -40,11 +40,9 @@ public class RequestUtils {
         }else if (userAuxiliary.getType()==1){
             model.addAttribute("type",1);
             model.addAttribute("name",userAuxiliary.getName());
-            model.addAttribute("num",userAuxiliary.getNoticeNum());
         }else if (userAuxiliary.getType()==2){
             model.addAttribute("type",2);
             model.addAttribute("name",userAuxiliary.getName());
-            model.addAttribute("num",userAuxiliary.getNoticeNum());
         }
     }
 }
