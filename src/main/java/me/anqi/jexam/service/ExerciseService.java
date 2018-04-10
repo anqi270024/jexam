@@ -2,6 +2,7 @@ package me.anqi.jexam.service;
 
 import me.anqi.jexam.entity.Exercise;
 import me.anqi.jexam.entity.Subject;
+import me.anqi.jexam.entity.auxiliary.ExerciseForm;
 import org.springframework.data.domain.Pageable;
 
 import java.util.List;
@@ -34,5 +35,7 @@ public interface ExerciseService {
     Exercise getExercise(long exeId);
 
     List<Exercise> getAllExercisesByPaperId(long paperId);
+
+    void addExercise(ExerciseForm exerciseForm);
 
 }

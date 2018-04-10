@@ -67,7 +67,7 @@ public class Exercise implements Serializable {
      * 填空题： completion
      * 简答题： short_answer
      */
-    @Column(nullable = false, length = 10)
+    @Column(nullable = false, length = 32)
     private String type;
 
     /**

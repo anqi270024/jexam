@@ -1,7 +1,7 @@
 package me.anqi.jexam.utils;
 
 import me.anqi.jexam.entity.Exercise;
-import me.anqi.jexam.entity.auxiliary.ExeForm;
+import me.anqi.jexam.entity.auxiliary.ExerciseForm;
 
 import java.util.Collection;
 import java.util.HashMap;
@@ -10,22 +10,9 @@ import java.util.Map;
 public class JexamBeanUtils {
 
 
-    public static Exercise exeFormToBean(ExeForm form, long lesId){
-        Exercise exercise= null;
-        Map<Character,String> chooseMap=new HashMap<>();
-        chooseMap.put('A',form.getA());
-        chooseMap.put('B',form.getB());
+    public static Exercise exeFormToBean(ExerciseForm form, long lesId){
 
-        if (form.getC()!=null && !form.getC().trim().isEmpty()){
-            chooseMap.put('C',form.getD());
-        }
-        if (form.getD()!=null && !form.getD().trim().isEmpty()){
-            chooseMap.put('D',form.getD());
-        }
-
-        exercise.setChooses(JsonUtils.instance.toJson(chooseMap));
-        exercise.setContent(form.getContent());
-        return exercise;
+        return null;
     }
 
     public static Collection<Exercise> setExeChooseList(Collection<Exercise> exercises){

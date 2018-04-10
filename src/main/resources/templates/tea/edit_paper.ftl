@@ -66,6 +66,7 @@
                              </div>
                              <div class="panel-body">
                                  ${item.content!}
+                                 <br>
                                   <#list item.chooseList!?keys as key>
                                     <div class="form-group">
                                         <div class="radio">
@@ -94,6 +95,7 @@
                              </div>
                              <div class="panel-body">
                                  ${item.content!}
+                                 <br>
                                  <#list item.chooseList!?keys as key>
                                     <div class="form-group">
                                         <div class="checkbox">
@@ -121,6 +123,7 @@
                              </div>
                              <div class="panel-body">
                                  ${item.content!}
+                                 <br>
                                  <p>
                                      分值： ${item.score!}
                                  </p>
@@ -138,6 +141,7 @@
                             </div>
                             <div class="panel-body">
                                 ${item.content!}
+                                <br>
                                 <p>
                                     分值： ${item.score!}
                                 </p>
@@ -156,7 +160,6 @@
 
 </div><!-- /#wrapper -->
 
-
 <!-- JavaScript -->
 <script src="/js/jquery.min.js"></script>
 <script src="/js/bootstrap.min.js"></script>
@@ -165,57 +168,59 @@
     $(document).on("click", "#add_single_choose",
             function () {
                 bootbox.dialog({
-                    title: "添加单选题",
                     message: '<div class="row">\n' +
                     '    <div class="col-md-12">\n' +
                     '        <form class="form-horizontal" id="add_single_choose_form">\n' +
+                    '          <input type="hidden" name="paperId" value="${paperId}">\n' +
+                    '          <input type="hidden" name="subjectId" value="${subjectId}">\n' +
+                    '          <input type="hidden" name="type" value="single_choose">\n' +
                     '            <div class="panel panel-info">\n' +
                     '                <div class="panel-heading">\n' +
                     '                    <h3 class="panel-title">\n' +
-                    '                            <input type="text" class="form-control" name="title" placeholder="标题">\n' +
+                    '                        <input type="text" class="form-control" name="title" placeholder="题目">\n' +
                     '                    </h3>\n' +
                     '                </div>\n' +
                     '                <div class="panel-body">\n' +
-                    '                    <textarea class="form-control" rows="2" placeholder="内容，可为空"></textarea>\n' +
+                    '                    <textarea class="form-control" rows="2" name="content" placeholder="内容"></textarea>\n' +
                     '                    <br>\n' +
                     '                    <div class="form-inline">\n' +
-                    '                        A:  <input type="text" class="form-control" name="choose-a" placeholder="选项A">\n' +
+                    '                        A:&#12288;  <input type="text" class="form-control" name="A">\n' +
                     '                    </div>\n' +
                     '                    <br>\n' +
                     '                    <div class="form-inline">\n' +
-                    '                        B:  <input type="text" class="form-control" name="choose-b" placeholder="选项B">\n' +
+                    '                        B:&#12288  <input type="text" class="form-control" name="B">\n' +
                     '                    </div>\n' +
                     '                    <br>\n' +
                     '                    <div class="form-inline">\n' +
-                    '                        C:  <input type="text" class="form-control" name="choose-a" placeholder="选项C">\n' +
+                    '                        C:&#12288;  <input type="text" class="form-control" name="C">\n' +
                     '                    </div>\n' +
                     '                    <br>\n' +
                     '                    <div class="form-inline">\n' +
-                    '                        D:  <input type="text" class="form-control" name="choose-b" placeholder="选项D">\n' +
+                    '                        D:&#12288; <input type="text" class="form-control" name="D">\n' +
                     '                    </div>\n' +
                     '                    <br>\n' +
                     '                    <div class="form-inline">\n' +
-                    '                        分值： <input type="number" class="form-control" name="score">\n' +
+                    '                        备注: <textarea class="form-control" rows="1" name="remark"></textarea>\n' +
                     '                    </div>\n' +
                     '                    <br>\n' +
                     '                    <div class="form-inline">\n' +
-                    '                        备注： <input type="text" class="form-control" name="remark" placeholder="比如参考答案">\n' +
+                    '                        分值: <input type="number" class="form-control" name="score">\n' +
                     '                    </div>\n' +
-                    '                    <br>\n' +
                     '                </div>\n' +
                     '            </div>\n' +
                     '        </form>\n' +
                     '    </div>\n' +
                     '</div>',
+                    title: "添加单选题",
                     buttons: {
                         success: {
                             label: "保存",
                             className: "btn-success",
                             callback: function () {
-                                var a = document.getElementById("add_pro_form");
-                                a.action = "/admin/addPro.action",
-                                        a.method = "post",
-                                        a.submit()
+                                var a = document.getElementById("add_single_choose_form");
+                                a.action = "/user/tea/exercises",
+                                a.method = "post",
+                                a.submit()
                             }
                         }
                     }
@@ -227,40 +232,42 @@
                             title: "添加多选题",
                             message: '<div class="row">\n' +
                             '    <div class="col-md-12">\n' +
-                            '        <form class="form-horizontal" id="add_single_choose_form">\n' +
+                            '        <form class="form-horizontal" id="add_multi_choose_form">\n' +
+                            '          <input type="hidden" name="paperId" value="${paperId}">\n' +
+                            '          <input type="hidden" name="subjectId" value="${subjectId}">\n' +
+                            '          <input type="hidden" name="type" value="multi_choose">\n' +
                             '            <div class="panel panel-success">\n' +
                             '                <div class="panel-heading">\n' +
                             '                    <h3 class="panel-title">\n' +
-                            '                            <input type="text" class="form-control" name="title" placeholder="标题">\n' +
+                            '                        <input type="text" class="form-control" name="title" placeholder="题目">\n' +
                             '                    </h3>\n' +
                             '                </div>\n' +
                             '                <div class="panel-body">\n' +
-                            '                    <textarea class="form-control" rows="2" placeholder="内容，可为空"></textarea>\n' +
+                            '                    <textarea class="form-control" rows="2" name="content" placeholder="内容"></textarea>\n' +
                             '                    <br>\n' +
                             '                    <div class="form-inline">\n' +
-                            '                        A:  <input type="text" class="form-control" name="choose-a" placeholder="选项A">\n' +
+                            '                        A:&#12288;  <input type="text" class="form-control" name="A">\n' +
                             '                    </div>\n' +
                             '                    <br>\n' +
                             '                    <div class="form-inline">\n' +
-                            '                        B:  <input type="text" class="form-control" name="choose-b" placeholder="选项B">\n' +
+                            '                        B:&#12288;  <input type="text" class="form-control" name="B">\n' +
                             '                    </div>\n' +
                             '                    <br>\n' +
                             '                    <div class="form-inline">\n' +
-                            '                        C:  <input type="text" class="form-control" name="choose-a" placeholder="选项C">\n' +
+                            '                        C:&#12288;  <input type="text" class="form-control" name="C">\n' +
                             '                    </div>\n' +
                             '                    <br>\n' +
                             '                    <div class="form-inline">\n' +
-                            '                        D:  <input type="text" class="form-control" name="choose-b" placeholder="选项D">\n' +
+                            '                        D:&#12288;  <input type="text" class="form-control" name="D">\n' +
                             '                    </div>\n' +
                             '                    <br>\n' +
                             '                    <div class="form-inline">\n' +
-                            '                        分值： <input type="number" class="form-control" name="score">\n' +
+                            '                        备注: <textarea class="form-control" rows="1" name="remark"></textarea>\n' +
                             '                    </div>\n' +
                             '                    <br>\n' +
                             '                    <div class="form-inline">\n' +
-                            '                        备注： <input type="text" class="form-control" name="remark" placeholder="比如参考答案">\n' +
+                            '                        分值: <input type="number" class="form-control" name="score">\n' +
                             '                    </div>\n' +
-                            '                    <br>\n' +
                             '                </div>\n' +
                             '            </div>\n' +
                             '        </form>\n' +
@@ -271,113 +278,77 @@
                                     label: "保存",
                                     className: "btn-success",
                                     callback: function () {
-                                        var a = document.getElementById("add_pro_form");
-                                        a.action = "/admin/addPro.action",
-                                                a.method = "post",
-                                                a.submit()
+                                        var a = document.getElementById("add_multi_choose_form");
+                                        a.action = "/user/tea/exercises",
+                                        a.method = "post",
+                                        a.submit()
                                     }
                                 }
                             }
                         })
                     }),
             $(document).on("click", "#add_completion",
-            function () {
-                bootbox.dialog({
-                    title: "添加填空题",
-                    message: '<div class="row">\n' +
-                    '    <div class="col-md-12">\n' +
-                    '        <form class="form-horizontal" id="add_single_choose_form">\n' +
-                    '            <div class="panel panel-warning">\n' +
-                    '                <div class="panel-heading">\n' +
-                    '                    <h3 class="panel-title">\n' +
-                    '                            <input type="text" class="form-control" name="title" placeholder="标题">\n' +
-                    '                    </h3>\n' +
-                    '                </div>\n' +
-                    '                <div class="panel-body">\n' +
-                    '                    <textarea class="form-control" rows="2" placeholder="内容，可为空"></textarea>\n' +
-                    '                    <br>\n' +
-                    '                    <div class="form-inline">\n' +
-                    '                        A:  <input type="text" class="form-control" name="choose-a" placeholder="选项A">\n' +
-                    '                    </div>\n' +
-                    '                    <br>\n' +
-                    '                    <div class="form-inline">\n' +
-                    '                        B:  <input type="text" class="form-control" name="choose-b" placeholder="选项B">\n' +
-                    '                    </div>\n' +
-                    '                    <br>\n' +
-                    '                    <div class="form-inline">\n' +
-                    '                        C:  <input type="text" class="form-control" name="choose-a" placeholder="选项C">\n' +
-                    '                    </div>\n' +
-                    '                    <br>\n' +
-                    '                    <div class="form-inline">\n' +
-                    '                        D:  <input type="text" class="form-control" name="choose-b" placeholder="选项D">\n' +
-                    '                    </div>\n' +
-                    '                    <br>\n' +
-                    '                    <div class="form-inline">\n' +
-                    '                        分值： <input type="number" class="form-control" name="score">\n' +
-                    '                    </div>\n' +
-                    '                    <br>\n' +
-                    '                    <div class="form-inline">\n' +
-                    '                        备注： <input type="text" class="form-control" name="remark" placeholder="比如参考答案">\n' +
-                    '                    </div>\n' +
-                    '                    <br>\n' +
-                    '                </div>\n' +
-                    '            </div>\n' +
-                    '        </form>\n' +
-                    '    </div>\n' +
-                    '</div>',
-                    buttons: {
-                        success: {
-                            label: "保存",
-                            className: "btn-success",
-                            callback: function () {
-                                var a = document.getElementById("add_pro_form");
-                                a.action = "/admin/addPro.action",
+                    function () {
+                        bootbox.dialog({
+                            title: "添加填空题",
+                            message: '<div class="row">\n' +
+                            '    <div class="col-md-12">\n' +
+                            '        <form class="form-horizontal" id="add_completion_form">\n' +
+                            '          <input type="hidden" name="paperId" value="${paperId}">\n' +
+                            '          <input type="hidden" name="subjectId" value="${subjectId}">\n' +
+                            '          <input type="hidden" name="type" value="completion">\n' +
+                            '            <div class="panel panel-warning">\n' +
+                            '                <div class="panel-heading">\n' +
+                            '                    <h3 class="panel-title">\n' +
+                            '                        <input type="text" class="form-control" name="title" placeholder="题目">\n' +
+                            '                    </h3>\n' +
+                            '                </div>\n' +
+                            '                <div class="panel-body">\n' +
+                            '                    <textarea class="form-control" rows="2" placeholder="内容" name="content"></textarea>\n' +
+                            '                    <br>\n' +
+                            '                    <textarea class="form-control" rows="1" name="remark" placeholder="备注，比如答案等"></textarea>\n' +
+                            '                    <br>\n' +
+                            '                    <input type="number" class="form-control" name="score" placeholder="分值">\n' +
+                            '                </div>\n' +
+                            '            </div>\n' +
+                            '    </form>\n' +
+                            '</div>\n' +
+                            '</div>',
+                            buttons: {
+                                success: {
+                                    label: "保存",
+                                    className: "btn-success",
+                                    callback: function () {
+                                        var a = document.getElementById("add_completion_form");
+                                        a.action = "/user/tea/exercises",
                                         a.method = "post",
                                         a.submit()
+                                    }
+                                }
                             }
-                        }
-                    }
-                })
-            }),    $(document).on("click", "#add_short_answer",
+                        })
+                    }), $(document).on("click", "#add_short_answer",
             function () {
                 bootbox.dialog({
                     title: "添加简答题",
                     message: '<div class="row">\n' +
                     '    <div class="col-md-12">\n' +
-                    '        <form class="form-horizontal" id="add_single_choose_form">\n' +
+                    '        <form class="form-horizontal" id="add_short_answer_form">\n' +
+                    '          <input type="hidden" name="paperId" value="${paperId}">\n' +
+                    '          <input type="hidden" name="subjectId" value="${subjectId}">\n' +
+                    '          <input type="hidden" name="type" value="short_answer">\n' +
                     '            <div class="panel panel-danger">\n' +
                     '                <div class="panel-heading">\n' +
                     '                    <h3 class="panel-title">\n' +
-                    '                            <input type="text" class="form-control" name="title" placeholder="标题">\n' +
+                    '                        <input type="text" class="form-control" name="title" placeholder="题目">\n' +
                     '                    </h3>\n' +
                     '                </div>\n' +
                     '                <div class="panel-body">\n' +
-                    '                    <textarea class="form-control" rows="2" placeholder="内容，可为空"></textarea>\n' +
+                    '                    <textarea class="form-control" rows="4" placeholder="内容" name="content"></textarea>\n' +
                     '                    <br>\n' +
-                    '                    <div class="form-inline">\n' +
-                    '                        A:  <input type="text" class="form-control" name="choose-a" placeholder="选项A">\n' +
-                    '                    </div>\n' +
+                    '                    <textarea class="form-control" rows="4" name="remark" placeholder="备注，比如答案等"></textarea>\n' +
                     '                    <br>\n' +
-                    '                    <div class="form-inline">\n' +
-                    '                        B:  <input type="text" class="form-control" name="choose-b" placeholder="选项B">\n' +
-                    '                    </div>\n' +
-                    '                    <br>\n' +
-                    '                    <div class="form-inline">\n' +
-                    '                        C:  <input type="text" class="form-control" name="choose-a" placeholder="选项C">\n' +
-                    '                    </div>\n' +
-                    '                    <br>\n' +
-                    '                    <div class="form-inline">\n' +
-                    '                        D:  <input type="text" class="form-control" name="choose-b" placeholder="选项D">\n' +
-                    '                    </div>\n' +
-                    '                    <br>\n' +
-                    '                    <div class="form-inline">\n' +
-                    '                        分值： <input type="number" class="form-control" name="score">\n' +
-                    '                    </div>\n' +
-                    '                    <br>\n' +
-                    '                    <div class="form-inline">\n' +
-                    '                        备注： <input type="text" class="form-control" name="remark" placeholder="比如参考答案">\n' +
-                    '                    </div>\n' +
-                    '                    <br>\n' +
+                    '                    <input type="number" class="form-control" name="score" placeholder="分值">\n' +
                     '                </div>\n' +
                     '            </div>\n' +
                     '        </form>\n' +
@@ -388,10 +359,10 @@
                             label: "保存",
                             className: "btn-success",
                             callback: function () {
-                                var a = document.getElementById("add_pro_form");
-                                a.action = "/admin/addPro.action",
-                                        a.method = "post",
-                                        a.submit()
+                                var a = document.getElementById("add_short_answer_form");
+                                a.action = "/user/tea/exercises",
+                                a.method = "post",
+                                a.submit()
                             }
                         }
                     }

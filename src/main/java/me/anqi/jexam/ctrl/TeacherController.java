@@ -3,6 +3,7 @@ package me.anqi.jexam.ctrl;
 import lombok.extern.slf4j.Slf4j;
 import me.anqi.jexam.entity.Exercise;
 import me.anqi.jexam.entity.User;
+import me.anqi.jexam.entity.auxiliary.ExerciseForm;
 import me.anqi.jexam.entity.auxiliary.UserAuxiliary;
 import me.anqi.jexam.exception.CommonException;
 import me.anqi.jexam.service.ExerciseService;
@@ -17,6 +18,7 @@ import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.validation.Valid;
 import java.util.List;
 
 /**
@@ -120,9 +122,17 @@ public class TeacherController {
 
     @GetMapping("/papers/{id}/edit")
     public String editPage(@PathVariable long id, Model model) {
+        model.addAttribute("paperId", id);
+        model.addAttribute("subjectId", paperService.findPageById(id).getSubjectId());
         List<Exercise> exercises = exerciseService.getAllExercisesByPaperId(id);
         model.addAttribute("exercises", exercises);
         return "tea/edit_paper";
+    }
+
+    @PostMapping("/exercises")
+    public String addExercise(@Valid ExerciseForm exerciseForm) {
+      exerciseService.addExercise(exerciseForm);
+      return "redirect:/user/tea/papers/" + exerciseForm.getPaperId() + "/edit";
     }
 
 }

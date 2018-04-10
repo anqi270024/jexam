@@ -53,4 +53,13 @@ public class PaperServiceImpl implements PaperService {
         }
         return papers;
     }
+
+    @Override
+    public Paper findPageById(long id) {
+        Paper paper = paperRepository.findOne(id);
+        if (paper == null) {
+            throw new CommonException("error.paper.find");
+        }
+        return paper;
+    }
 }

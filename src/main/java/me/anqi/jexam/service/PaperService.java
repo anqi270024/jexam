@@ -16,4 +16,6 @@ public interface PaperService {
 
     List<Paper> findPapersByTeacherId(long teacherId);
 
+    Paper findPageById(long id);
+
 }
