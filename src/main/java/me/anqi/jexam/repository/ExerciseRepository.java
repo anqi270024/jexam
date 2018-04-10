@@ -5,11 +5,9 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
-@Transactional
 public interface ExerciseRepository  extends CrudRepository<Exercise, Long> {
 
     List<Exercise> findByType(@Param("type") String type, Pageable pageable);
@@ -21,5 +19,8 @@ public interface ExerciseRepository  extends CrudRepository<Exercise, Long> {
     int countExerciseByType(@Param("type") String type);
 
     int countExerciseBySubjectId(@Param("subject_id") long subjectId);
+
+    List<Exercise> findAllByPaperIdOrderByPosition(long paperId);
+
 
 }

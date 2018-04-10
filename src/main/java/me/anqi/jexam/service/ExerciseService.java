@@ -33,4 +33,6 @@ public interface ExerciseService {
      */
     Exercise getExercise(long exeId);
 
+    List<Exercise> getAllExercisesByPaperId(long paperId);
+
 }

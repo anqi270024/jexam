@@ -1,9 +1,11 @@
 package me.anqi.jexam.ctrl;
 
 import lombok.extern.slf4j.Slf4j;
+import me.anqi.jexam.entity.Exercise;
 import me.anqi.jexam.entity.User;
 import me.anqi.jexam.entity.auxiliary.UserAuxiliary;
 import me.anqi.jexam.exception.CommonException;
+import me.anqi.jexam.service.ExerciseService;
 import me.anqi.jexam.service.PaperService;
 import me.anqi.jexam.service.StudentService;
 import me.anqi.jexam.service.SubjectService;
@@ -34,6 +36,9 @@ public class TeacherController {
 
     @Autowired
     private PaperService paperService;
+
+    @Autowired
+    private ExerciseService exerciseService;
 
     @GetMapping("/add_subject")
     public String addSubject(Model model) {
@@ -113,8 +118,10 @@ public class TeacherController {
         return "redirect:/user/tea/manager_paper";
     }
 
-    @PostMapping("/papers/{id}/edit")
-    public String editPage(@PathVariable long id) {
+    @GetMapping("/papers/{id}/edit")
+    public String editPage(@PathVariable long id, Model model) {
+        List<Exercise> exercises = exerciseService.getAllExercisesByPaperId(id);
+        model.addAttribute("exercises", exercises);
         return "tea/edit_paper";
     }
 

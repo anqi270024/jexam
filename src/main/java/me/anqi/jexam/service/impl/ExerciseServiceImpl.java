@@ -1,17 +1,19 @@
 package me.anqi.jexam.service.impl;
 
 import me.anqi.jexam.entity.Exercise;
-import me.anqi.jexam.entity.Subject;
 import me.anqi.jexam.repository.ExerciseRepository;
-import me.anqi.jexam.repository.SubjectRepository;
 import me.anqi.jexam.service.ExerciseService;
 import me.anqi.jexam.utils.JexamBeanUtils;
+import me.anqi.jexam.utils.JsonUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+
+import static me.anqi.jexam.entity.Exercise.TYPE_MULTI_CHOOSE;
+import static me.anqi.jexam.entity.Exercise.TYPE_SINGLE_CHOOSE;
 
 /**
  * @author flyleft
@@ -51,4 +53,15 @@ public class ExerciseServiceImpl implements ExerciseService {
         return exercise;
     }
 
+    @Override
+    public List<Exercise> getAllExercisesByPaperId(long paperId) {
+        List<Exercise> exercises = exerciseRepository.findAllByPaperIdOrderByPosition(paperId);
+        for (Exercise exercise: exercises) {
+            if (TYPE_SINGLE_CHOOSE.equals(exercise.getType()) || TYPE_MULTI_CHOOSE.equals(exercise.getType())) {
+                Map<Character, String> characterStringMap = JsonUtils.instance.readJsonToExeMap(exercise.getChooses());
+                exercise.setChooseList(characterStringMap);
+            }
+        }
+        return exercises;
+    }
 }

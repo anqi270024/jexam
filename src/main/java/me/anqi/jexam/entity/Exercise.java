@@ -21,6 +21,14 @@ public class Exercise implements Serializable {
 
     private static final long serialVersionUID = -5175465537985355910L;
 
+    public static final String TYPE_SINGLE_CHOOSE = "single_choose";
+
+    public static final String TYPE_MULTI_CHOOSE = "multi_choose";
+
+    public static final String TYPE_COMPLETION = "completion";
+
+    public static final String TYPE_SHORT_ANSWER = "short_answer";
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
@@ -72,7 +80,14 @@ public class Exercise implements Serializable {
      * 题目所有者的id
      */
     @Column(nullable = false, columnDefinition = "bigint default 0")
-    private long ownerId;
+    private long paperId;
+
+    /**
+     * 习题在试卷中的位置
+     */
+    @Column(nullable = false)
+    private int position;
+
 
     @Transient
     @JsonIgnore

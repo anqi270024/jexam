@@ -15,4 +15,5 @@ public interface PaperService {
     void deletePaper(long paperId, long teacherId);
 
     List<Paper> findPapersByTeacherId(long teacherId);
+
 }

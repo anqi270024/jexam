@@ -53,7 +53,7 @@ public enum  JsonUtils {
         }
     }
 
-    public HashMap<Character, String> readJsonToExeMap(String jsonStr) {
+    public Map<Character, String> readJsonToExeMap(String jsonStr) {
         if (jsonStr==null || jsonStr.trim().isEmpty()) return new HashMap<>();
         HashMap<Character, String> modelMap;
         try {
