@@ -39,7 +39,7 @@
                     <ul class="nav navbar-nav">
 
                         <li><a href="/"><span>首页</span></a></li>
-                        <li><a href="/exercises/list"><span>习题中心</span></a></li>
+                        <li><a href="/exercises/list?type=all"><span>习题中心</span></a></li>
                         <#if type == 1>
                             <li class="dropdown user-dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>${name!"jmooc"}<b class="caret"></b></a>
@@ -80,11 +80,11 @@
                 <p>科目：</p>
                 <ul class="">
                     <li class="course-nav-item on">
-                        <a href="/exercises/list">全部</a>
+                        <a href="/exercises/list?type=all">全部</a>
                     </li>
                     <#list subjects as item>
                     <li class="course-nav-item">
-                        <a href="/exercises/list?subject_id=${(item.id)!}" >${(item.name)!}</a>
+                        <a href="/exercises/list?type=${(item.id)!}" >${(item.name)!}</a>
                     </li>
                     </#list>
                 </ul>
@@ -95,7 +95,7 @@
                 <p>题型：</p>
                 <ul class="">
                     <li class="course-nav-item on">
-                        <a href="/exercises/list">全部</a>
+                        <a href="/exercises/list?type=all">全部</a>
                     </li>
                     <li class="course-nav-item">
                         <a href="/exercises/list?type=single_choose" >单择题</a>
@@ -125,49 +125,98 @@
         <hr class="invisible" />-->
         <div class="row">
             <div class="col-lg-9">
-                <#list exe as item>
-                <div class="panel panel-info">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">${item_index + 1}.&#8194;${item.title!}</h3>
-                    </div>
-                    <div class="panel-body">
-                    ${(item.content)!}
-                        <div class="form-group">
-                            <#list item.chooseList!?keys as key>
-                                <div class="radio">
-                                    <label>
-                                        <input type="radio" name="optionsRadios">
-                                    ${key}:${item.chooseList[key]}
-                                    </label>
-                                </div>
-                            </#list>
+                <#list exercises as item>
+                    <#if  item.type == "single_choose">
+                     <div class="form-group">
+                         <div class="panel panel-info">
+                             <div class="panel-heading">
+                                 <h3 class="panel-title">${item.position!}. ${item.title!}</h3>
+                             </div>
+                             <div class="panel-body">
+                                 ${item.content!}
+                                 <br>
+                                  <#list item.chooseList!?keys as key>
+                                    <div class="form-group">
+                                        <div class="radio">
+                                            <label>
+                                                <input type="radio" name="optionsRadios">
+                                                ${key}: ${item.chooseList[key]}
+                                            </label>
+                                        </div>
+                                    </div>
+                                  </#list>
+                             </div>
+                         </div>
+                     </div>
+
+                    <#elseif item.type == "multi_choose">
+                     <div class="form-group">
+                         <div class="panel panel-success">
+                             <div class="panel-heading">
+                                 <h3 class="panel-title">${item.position!}. ${item.title!}</h3>
+                             </div>
+                             <div class="panel-body">
+                                 ${item.content!}
+                                 <br>
+                                 <#list item.chooseList!?keys as key>
+                                    <div class="form-group">
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" name="choose">
+                                                ${key}: ${item.chooseList[key]}
+                                            </label>
+                                        </div>
+                                    </div>
+                                 </#list>
+                             </div>
+                         </div>
+                     </div>
+                    <#elseif item.type== "completion">
+                     <div class="form-group">
+                         <div class="panel panel-warning">
+                             <div class="panel-heading">
+                                 <h3 class="panel-title">${item.position!}. ${item.title!}</h3>
+                             </div>
+                             <div class="panel-body">
+                                 ${item.content!}
+                                 <br>
+                             </div>
+                         </div>
+                     </div>
+                    <#else>
+                    <div class="form-group">
+                        <div class="panel panel-danger">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">${item.position!}. ${item.title!}</h3>
+                            </div>
+                            <div class="panel-body">
+                                ${item.content!}
+                                <br>
+                            </div>
                         </div>
-                        <p>
-                            <a class="btn btn-default" href="/exercise/${item.id!}">详情...</a>
-                        </p>
                     </div>
-                </div>
+                    </#if>
                 </#list>
             </div>
         </div><!-- /.row -->
         <!-- Pagination -->
         <ul class="pagination">
-        <#if (cur > 1)>
-            <li><a href="/exercise/list?c=${c!"all"}&page=${cur - 1}"><i class="fa fa-angle-left"></i></a></li>
+        <#if (currentPage > 1)>
+            <li><a href="/exercises/list?type=${exerciseType!"all"}&page=${currentPage - 1}"><i class="fa fa-angle-left"></i></a></li>
         <#else>
-            <li class="disabled"><a href="/exercise/list?c=${c!"all"}&page=${cur - 1}"><i class="fa fa-angle-left"></i></a></li>
+            <li class="disabled"><a href="/exercises/list?type=${exerciseType!"all"}&page=${currentPage - 1}"><i class="fa fa-angle-left"></i></a></li>
         </#if>
         <#list 1..count as t>
-            <#if cur == t>
-                <li class="active"><a href="/exercise/list?c=${c!"all"}&page=${t - 1}">${t}</a></li>
+            <#if currentPage == t>
+                <li class="active"><a href="/exercises/list?type=${exerciseType!"all"}&page=${t - 1}">${t}</a></li>
             <#else>
-                <li><a href="/exercise/list?c=${c!"all"}&page=${t - 1}"></a></li>
+                <li><a href="/exercises/list?type=${exerciseType!"all"}&page=${t - 1}"></a></li>
             </#if>
         </#list>
-        <#if (cur < count)>
-            <li><a href="/exercise/list?c=${c!"all"}&page=${cur + 1}"><i class="fa fa-angle-right"></i></a></li>
+        <#if (currentPage < count)>
+            <li><a href="/exercises/list?type=${exerciseType!"all"}&page=${currentPage + 1}"><i class="fa fa-angle-right"></i></a></li>
         <#else>
-            <li class="disabled"><a href="/exercise/list?c=${c!"all"}&page=${cur + 1}"><i class="fa fa-angle-right"></i></a></li>
+            <li class="disabled"><a href="/exercises/list?type=${exerciseType!"all"}&page=${currentPage + 1}"><i class="fa fa-angle-right"></i></a></li>
         </#if>
         </ul>
     </div>

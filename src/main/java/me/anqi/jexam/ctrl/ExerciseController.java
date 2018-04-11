@@ -2,9 +2,9 @@ package me.anqi.jexam.ctrl;
 
 import lombok.extern.slf4j.Slf4j;
 import me.anqi.jexam.entity.Exercise;
+import me.anqi.jexam.entity.auxiliary.ExerciseFront;
 import me.anqi.jexam.service.ExerciseService;
 import me.anqi.jexam.service.SubjectService;
-import me.anqi.jexam.utils.JexamBeanUtils;
 import me.anqi.jexam.utils.RequestUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
@@ -36,21 +36,20 @@ public class ExerciseController {
 
     @GetMapping("/list")
     public String exercise(@RequestParam(value = "type", required = false) String type,
-                           @RequestParam(value = "subject_id", required = false) Long subjectId ,
-                           @PageableDefault(sort = {"id"}, direction = Sort.Direction.DESC) Pageable pageable,
+                           @PageableDefault(sort = {"id"}, direction = Sort.Direction.ASC) Pageable pageable,
                            HttpServletRequest request,
                            Model model) {
         RequestUtils.setFrontUserInfo(model, request);
 
         model.addAttribute("subjects", subjectService.getAllSubjects());
 
-        ExerciseService.ExeFront exe = exerciseService.getExeFront(type, subjectId, pageable);
+        ExerciseFront exerciseFront = exerciseService.getAllByFrontType(type, pageable);
 
-        long count = exe.count / pageable.getPageSize() + 1;
-        model.addAttribute("exe", JexamBeanUtils.setExeChooseList(exe.exercises));
+        long count = exerciseFront.count / pageable.getPageSize() + 1;
+        model.addAttribute("exercises", exerciseFront.exercisePage.getContent());
         model.addAttribute("count", count);
-        model.addAttribute("c", type);
-        model.addAttribute("cur", pageable.getPageNumber() + 1);
+        model.addAttribute("exerciseType", type);
+        model.addAttribute("currentPage", pageable.getPageNumber() + 1);
         return "exe";
     }
 

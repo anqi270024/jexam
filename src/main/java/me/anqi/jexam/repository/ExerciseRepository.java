@@ -22,5 +22,12 @@ public interface ExerciseRepository  extends CrudRepository<Exercise, Long> {
 
     List<Exercise> findAllByPaperIdOrderByPosition(long paperId);
 
+    Page<Exercise> findAllBySubjectId(@Param("subject_id")long subjectId, Pageable pageable);
+
+    Page<Exercise> findAllByType(@Param("type") String type, Pageable pageable);
+
+    int countBySubjectId(long subjectId);
+
+    int countByType(String type);
 
 }

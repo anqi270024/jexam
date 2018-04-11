@@ -66,7 +66,6 @@
                              </div>
                              <div class="panel-body">
                                  ${item.content!}
-                                 <br>
                                   <#list item.chooseList!?keys as key>
                                     <div class="form-group">
                                         <div class="radio">
@@ -95,7 +94,6 @@
                              </div>
                              <div class="panel-body">
                                  ${item.content!}
-                                 <br>
                                  <#list item.chooseList!?keys as key>
                                     <div class="form-group">
                                         <div class="checkbox">
@@ -123,7 +121,6 @@
                              </div>
                              <div class="panel-body">
                                  ${item.content!}
-                                 <br>
                                  <p>
                                      分值： ${item.score!}
                                  </p>
@@ -141,7 +138,6 @@
                             </div>
                             <div class="panel-body">
                                 ${item.content!}
-                                <br>
                                 <p>
                                     分值： ${item.score!}
                                 </p>
