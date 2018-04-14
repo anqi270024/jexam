@@ -2,6 +2,7 @@ package me.anqi.jexam.controller;
 
 import lombok.extern.slf4j.Slf4j;
 import me.anqi.jexam.entity.Exercise;
+import me.anqi.jexam.entity.auxiliary.PaperFront;
 import me.anqi.jexam.entity.auxiliary.UserAuxiliary;
 import me.anqi.jexam.service.UserService;
 import me.anqi.jexam.utils.RequestUtils;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -32,7 +34,10 @@ public class StudentController {
     }
 
     @GetMapping("/exams")
-    public String exams() {
+    public String exams(HttpServletRequest request, Model model) {
+        UserAuxiliary userAuxiliary = RequestUtils.getUserAuxiliaryFromReq(request);
+        List<PaperFront> paperFronts = userService.getPapersByStudentId(userAuxiliary.getId());
+        model.addAttribute("papers", paperFronts);
         return "stu/exam_page";
     }
 

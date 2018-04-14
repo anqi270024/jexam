@@ -14,6 +14,8 @@ public interface TeacherStudentRepository extends CrudRepository<TeacherStudent,
 
     List<TeacherStudent> findAllByTeacherId(long teacherId);
 
+    List<TeacherStudent> findAllByStudentId(long studentId);
+
     int countByTeacherIdAndStudentId(@Param("teacherId") long teacherId,
                                      @Param("studentId")long studentId);
 
