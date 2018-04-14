@@ -1,4 +1,4 @@
-package me.anqi.jexam.ctrl;
+package me.anqi.jexam.controller;
 
 import lombok.extern.slf4j.Slf4j;
 import me.anqi.jexam.entity.Exercise;

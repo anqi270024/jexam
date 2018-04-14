@@ -1,11 +1,13 @@
-package me.anqi.jexam.ctrl;
+package me.anqi.jexam.controller;
 
 import me.anqi.jexam.entity.User;
 import me.anqi.jexam.service.UserService;
+import me.anqi.jexam.utils.RequestUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
@@ -22,6 +24,12 @@ public class UserController {
     @Autowired
     public UserController(UserService userService) {
         this.userService = userService;
+    }
+
+    @GetMapping("/")
+    public String index(Model model, HttpServletRequest request) {
+        RequestUtils.setFrontUserInfo(model, request);
+        return "index";
     }
 
     @GetMapping("/login")

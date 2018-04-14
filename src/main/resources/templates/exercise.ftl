@@ -130,11 +130,10 @@
                      <div class="form-group">
                          <div class="panel panel-info">
                              <div class="panel-heading">
-                                 <h3 class="panel-title">${item.position!}. ${item.title!}</h3>
+                                 <h3 class="panel-title">${item_index + 1}. ${item.title!}</h3>
                              </div>
                              <div class="panel-body">
                                  ${item.content!}
-                                 <br>
                                   <#list item.chooseList!?keys as key>
                                     <div class="form-group">
                                         <div class="radio">
@@ -145,6 +144,9 @@
                                         </div>
                                     </div>
                                   </#list>
+                                 <p>
+                                     <a class="btn btn-info" style="color:white" href="/user/stu/collect_exercises/add/${item.id!}">收藏</a>
+                                 </p>
                              </div>
                          </div>
                      </div>
@@ -153,11 +155,10 @@
                      <div class="form-group">
                          <div class="panel panel-success">
                              <div class="panel-heading">
-                                 <h3 class="panel-title">${item.position!}. ${item.title!}</h3>
+                                 <h3 class="panel-title">${item_index + 1}. ${item.title!}</h3>
                              </div>
                              <div class="panel-body">
                                  ${item.content!}
-                                 <br>
                                  <#list item.chooseList!?keys as key>
                                     <div class="form-group">
                                         <div class="checkbox">
@@ -168,6 +169,9 @@
                                         </div>
                                     </div>
                                  </#list>
+                                 <p>
+                                     <a class="btn btn-info" style="color:white" href="/user/stu/collect_exercises/add/${item.id!}">收藏</a>
+                                 </p>
                              </div>
                          </div>
                      </div>
@@ -175,11 +179,13 @@
                      <div class="form-group">
                          <div class="panel panel-warning">
                              <div class="panel-heading">
-                                 <h3 class="panel-title">${item.position!}. ${item.title!}</h3>
+                                 <h3 class="panel-title">${item_index + 1}. ${item.title!}</h3>
                              </div>
                              <div class="panel-body">
                                  ${item.content!}
-                                 <br>
+                                 <p>
+                                     <a class="btn btn-info" style="color:white" href="/user/stu/collect_exercises/add/${item.id!}">收藏</a>
+                                 </p>
                              </div>
                          </div>
                      </div>
@@ -187,11 +193,13 @@
                     <div class="form-group">
                         <div class="panel panel-danger">
                             <div class="panel-heading">
-                                <h3 class="panel-title">${item.position!}. ${item.title!}</h3>
+                                <h3 class="panel-title">${item_index + 1}. ${item.title!}</h3>
                             </div>
                             <div class="panel-body">
                                 ${item.content!}
-                                <br>
+                                <p>
+                                    <a class="btn btn-info" style="color:white" href="/user/stu/collect_exercises/add/${item.id!}">收藏</a>
+                                </p>
                             </div>
                         </div>
                     </div>

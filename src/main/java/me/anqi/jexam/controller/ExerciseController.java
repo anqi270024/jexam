@@ -1,4 +1,4 @@
-package me.anqi.jexam.ctrl;
+package me.anqi.jexam.controller;
 
 import lombok.extern.slf4j.Slf4j;
 import me.anqi.jexam.entity.Exercise;
@@ -50,7 +50,7 @@ public class ExerciseController {
         model.addAttribute("count", count);
         model.addAttribute("exerciseType", type);
         model.addAttribute("currentPage", pageable.getPageNumber() + 1);
-        return "exe";
+        return "exercise";
     }
 
     /**

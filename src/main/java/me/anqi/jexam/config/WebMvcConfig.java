@@ -1,4 +1,4 @@
-package me.anqi.jexam.conf;
+package me.anqi.jexam.config;
 
 import me.anqi.jexam.interceptor.UserSecurityInterceptor;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -62,7 +62,7 @@
                      <div class="form-group">
                          <div class="panel panel-info">
                              <div class="panel-heading">
-                                 <h3 class="panel-title">${item.position!}. ${item.title!}</h3>
+                                 <h3 class="panel-title">${item_index + 1}. ${item.title!}</h3>
                              </div>
                              <div class="panel-body">
                                  ${item.content!}
@@ -90,7 +90,7 @@
                      <div class="form-group">
                          <div class="panel panel-success">
                              <div class="panel-heading">
-                                 <h3 class="panel-title">${item.position!}. ${item.title!}</h3>
+                                 <h3 class="panel-title">${item_index + 1}. ${item.title!}</h3>
                              </div>
                              <div class="panel-body">
                                  ${item.content!}
@@ -117,7 +117,7 @@
                      <div class="form-group">
                          <div class="panel panel-warning">
                              <div class="panel-heading">
-                                 <h3 class="panel-title">${item.position!}. ${item.title!}</h3>
+                                 <h3 class="panel-title">${item_index + 1}. ${item.title!}</h3>
                              </div>
                              <div class="panel-body">
                                  ${item.content!}
@@ -134,7 +134,7 @@
                     <div class="form-group">
                         <div class="panel panel-danger">
                             <div class="panel-heading">
-                                <h3 class="panel-title">${item.position!}. ${item.title!}</h3>
+                                <h3 class="panel-title">${item_index + 1}. ${item.title!}</h3>
                             </div>
                             <div class="panel-body">
                                 ${item.content!}

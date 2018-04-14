@@ -1,8 +1,9 @@
-package me.anqi.jexam.ctrl;
+package me.anqi.jexam.controller;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
@@ -22,6 +23,11 @@ public class StudentController {
     @GetMapping("/exercises")
     public String exercises() {
         return "stu/stu_exercise";
+    }
+
+    @GetMapping("/collect_exercises/add/{id}")
+    public String addCollectionExercises(@PathVariable Long id) {
+       return "";
     }
 
 }
