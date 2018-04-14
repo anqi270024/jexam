@@ -37,8 +37,19 @@ public class UserController {
         return "login";
     }
 
+    @GetMapping("/register")
+    public String registerPage(){
+        return "register";
+    }
+
+    @PostMapping("/register.do")
+    public String deoRegister(User user){
+        userService.register(user);
+        return "redirect:/login";
+    }
+
     @PostMapping("/login.do")
-    public String DoLogin(User user, HttpServletRequest request){
+    public String doLogin(User user, HttpServletRequest request){
         boolean result= false;
         try {
             result = userService.login(user,request);

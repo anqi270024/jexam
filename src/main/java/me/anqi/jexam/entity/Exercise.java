@@ -7,9 +7,11 @@ import lombok.Setter;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Map;
+import java.util.Objects;
 
 /**
  * 习题
+ *
  * @author flyleft
  * @date 2018/4/7
  */
@@ -39,25 +41,25 @@ public class Exercise implements Serializable {
     /**
      * 习题标题
      */
-    @Column(nullable = false, columnDefinition="text")
+    @Column(nullable = false, columnDefinition = "text")
     private String title;
 
     /**
      * 习题内容
      */
-    @Column(nullable = false, columnDefinition="text")
+    @Column(nullable = false, columnDefinition = "text")
     private String content;
 
     /**
      * 习题备注信息，比如参考答案等
      */
-    @Column(nullable = false, columnDefinition="text")
+    @Column(nullable = false, columnDefinition = "text")
     private String remark;
 
     /**
      * 习题分值
      */
-    @Column(nullable = false, columnDefinition="tinyint default 1")
+    @Column(nullable = false, columnDefinition = "tinyint default 1")
     private int score;
 
     /**
@@ -73,7 +75,7 @@ public class Exercise implements Serializable {
     /**
      * 选择题选项列表
      */
-    @Column(columnDefinition="text")
+    @Column(columnDefinition = "text")
     private String chooses;
 
     /**
@@ -91,9 +93,25 @@ public class Exercise implements Serializable {
 
     @Transient
     @JsonIgnore
-    private Map<Character,String> chooseList;
+    private Map<Character, String> chooseList;
 
     public Exercise() {
     }
 
+
+    @Override
+    public boolean equals(Object o) {
+        if (o instanceof Exercise) {
+            Exercise exercise = (Exercise) o;
+            if (this.id == exercise.id) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, subjectId, title, content, remark, score, type, chooses, paperId, position, chooseList);
+    }
 }

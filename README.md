@@ -11,3 +11,6 @@
 - bootstrap：CSS框架
 - slf4j+log4j2：日志
 - ehcache：缓存
+
+## 亮点
+- 性能

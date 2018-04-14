@@ -27,7 +27,7 @@ public class User implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @Column(nullable = false,length = 40)
+    @Column(nullable = false,length = 40, unique = true)
     private String name;
 
     @Column(nullable = false,length = 32)
@@ -36,10 +36,10 @@ public class User implements Serializable {
     /**
      * 类型。1：学生，2：老师
      */
-    @Column(nullable = false,columnDefinition="tinyint default 1")
+    @Column(nullable = false, columnDefinition="tinyint default 1")
     private int role;
 
-    @Column(nullable = false,name = "avatar_url",columnDefinition="varchar(40) default '/img/default.png'")
+    @Column(nullable = false, name = "avatar_url", columnDefinition="varchar(40) default '/img/default.png'")
     private String avatarUrl;
 
     @Column(name = "exercise_collection")

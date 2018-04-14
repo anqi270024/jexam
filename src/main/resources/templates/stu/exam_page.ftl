@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="/css/per-center.css"/>
+    <link rel="stylesheet" href="/css/icon-font.min.css"/>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:700,500,300,100italic,100,400' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
@@ -45,29 +47,7 @@
     <div id="page-wrapper">
         <div class="row">
             <div class="col-lg-6 col-lg-offset-3">
-           <#-- <#list exe as item>
-                <div class="panel panel-info">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">${item_index + 1}.&#8194;${item.title!}</h3>
-                    </div>
-                    <div class="panel-body">
-                        ${(item.content)!}
-                        <div class="form-group">
-                            <#list item.chooseList!?keys as key>
-                                <div class="radio">
-                                    <label>
-                                        <input type="radio" name="optionsRadios">
-                                        ${key}:${item.chooseList[key]}
-                                    </label>
-                                </div>
-                            </#list>
-                        </div>
-                        <p>
-                            <a class="btn btn-default" href="/exercise/${item.id!}">详情...</a>
-                        </p>
-                    </div>
-                </div>
-            </#list>-->
+
             </div>
         </div><!-- /.row -->
     </div><!-- /#page-wrapper -->
