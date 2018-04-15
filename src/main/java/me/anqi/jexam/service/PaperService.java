@@ -18,4 +18,6 @@ public interface PaperService {
 
     Paper findPageById(long id);
 
+    List<Paper> getAllPapers();
+
 }

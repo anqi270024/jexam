@@ -75,59 +75,11 @@
     </div>
 </header>
 
-<div class="page-header">
-    <div class="container">
-        <div class="row">
-            <div class="test col-md-9">
-                <p>科目：</p>
-                <ul class="">
-                    <li class="course-nav-item on">
-                        <a href="/exercises/list?type=all">全部</a>
-                    </li>
-                    <#list subjects as item>
-                    <li class="course-nav-item">
-                        <a href="/exercises/list?type=${(item.id)!}" >${(item.name)!}</a>
-                    </li>
-                    </#list>
-                </ul>
-            </div>
-        </div>
-        <div class="row">
-            <div class="test col-md-9">
-                <p>题型：</p>
-                <ul class="">
-                    <li class="course-nav-item on">
-                        <a href="/exercises/list?type=all">全部</a>
-                    </li>
-                    <li class="course-nav-item">
-                        <a href="/exercises/list?type=single_choose" >单择题</a>
-                    </li>
-                    <li class="course-nav-item">
-                        <a href="/exercises/list?type=multi_choose" >选择题</a>
-                    </li>
-                    <li class="course-nav-item">
-                        <a href="/exercises/list?type=completion" >填空题</a>
-                    </li>
-                    <li class="course-nav-item">
-                        <a href="/exercises/list?type=short_answer" >简答题</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
-
 <!-- Video list boxes: grid -->
 <div class="container content content-light">
-   <#--     <div class="filter">
-            <a href="#" class="btn btn-theme navbar-btn btn-btn-orange">最热门</a>
-            <a href="#" class="btn btn-theme navbar-btn btn-lightblue">最新更新</a>
-        </div>
-
-        <hr class="invisible" />-->
-        <div class="row">
-            <div class="col-lg-9">
-                <#list exercises as item>
+    <div class="row">
+        <div class="col-lg-9">
+            <#list exercises as item>
                     <#if  item.type == "single_choose">
                      <div class="form-group">
                          <div class="panel panel-info">
@@ -146,9 +98,6 @@
                                         </div>
                                     </div>
                                   </#list>
-                                 <p>
-                                     <a class="btn btn-info" style="color:white" href="/user/stu/collect_exercises/add/${item.id!}">收藏</a>
-                                 </p>
                              </div>
                          </div>
                      </div>
@@ -171,9 +120,6 @@
                                         </div>
                                     </div>
                                  </#list>
-                                 <p>
-                                     <a class="btn btn-info" style="color:white" href="/user/stu/collect_exercises/add/${item.id!}">收藏</a>
-                                 </p>
                              </div>
                          </div>
                      </div>
@@ -185,9 +131,6 @@
                              </div>
                              <div class="panel-body">
                                  ${item.content!}
-                                 <p>
-                                     <a class="btn btn-info" style="color:white" href="/user/stu/collect_exercises/add/${item.id!}">收藏</a>
-                                 </p>
                              </div>
                          </div>
                      </div>
@@ -199,37 +142,15 @@
                             </div>
                             <div class="panel-body">
                                 ${item.content!}
-                                <p>
-                                    <a class="btn btn-info" style="color:white" href="/user/stu/collect_exercises/add/${item.id!}">收藏</a>
-                                </p>
                             </div>
                         </div>
                     </div>
                     </#if>
-                </#list>
-            </div>
-        </div><!-- /.row -->
-        <!-- Pagination -->
-        <ul class="pagination">
-        <#if (currentPage > 1)>
-            <li><a href="/exercises/list?type=${exerciseType!"all"}&page=${currentPage - 1}"><i class="fa fa-angle-left"></i></a></li>
-        <#else>
-            <li class="disabled"><a href="/exercises/list?type=${exerciseType!"all"}&page=${currentPage - 1}"><i class="fa fa-angle-left"></i></a></li>
-        </#if>
-        <#list 1..count as t>
-            <#if currentPage == t>
-                <li class="active"><a href="/exercises/list?type=${exerciseType!"all"}&page=${t - 1}">${t}</a></li>
-            <#else>
-                <li><a href="/exercises/list?type=${exerciseType!"all"}&page=${t - 1}"></a></li>
-            </#if>
-        </#list>
-        <#if (currentPage < count)>
-            <li><a href="/exercises/list?type=${exerciseType!"all"}&page=${currentPage + 1}"><i class="fa fa-angle-right"></i></a></li>
-        <#else>
-            <li class="disabled"><a href="/exercises/list?type=${exerciseType!"all"}&page=${currentPage + 1}"><i class="fa fa-angle-right"></i></a></li>
-        </#if>
-        </ul>
-    </div>
+            </#list>
+        </div>
+    </div><!-- /.row -->
+    <!-- Pagination -->
+</div>
 
 <footer class="main bg-dark-img">
     <section class="copyright">

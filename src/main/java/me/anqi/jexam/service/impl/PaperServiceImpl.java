@@ -8,6 +8,7 @@ import me.anqi.jexam.service.PaperService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -62,5 +63,17 @@ public class PaperServiceImpl implements PaperService {
             throw new CommonException("error.paper.find");
         }
         return paper;
+    }
+
+    @Override
+    public List<Paper> getAllPapers() {
+        Iterable<Paper> paperIterable = paperRepository.findAll();
+        List<Paper> list = new ArrayList<>();
+        paperIterable.forEach(single -> list.add(single));
+        for (Paper paper : list) {
+            String subject = subjectRepository.findOne(paper.getSubjectId()).getName();
+            paper.setSubject(subject);
+        }
+        return list;
     }
 }
