@@ -95,6 +95,9 @@ public class Exercise implements Serializable {
     @JsonIgnore
     private Map<Character, String> chooseList;
 
+    @Transient
+    private String studentAnswer;
+
     public Exercise() {
     }
 
