@@ -24,11 +24,12 @@ public class PaperServiceImpl implements PaperService {
     private SubjectRepository subjectRepository;
 
     @Override
-    public void addPaper(String title, long subjectId, long teacherId) {
+    public void addPaper(String title, long subjectId, int answerTime, long teacherId) {
         Paper paper = new Paper();
         paper.setName(title);
         paper.setSubjectId(subjectId);
         paper.setOwnerId(teacherId);
+        paper.setAnswerTime(answerTime);
         paperRepository.save(paper);
     }
 

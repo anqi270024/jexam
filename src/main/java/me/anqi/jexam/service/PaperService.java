@@ -10,7 +10,7 @@ import java.util.List;
  */
 public interface PaperService {
 
-    void addPaper(String title, long subjectId, long teacherId);
+    void addPaper(String title, long subjectId, int answerTime, long teacherId);
 
     void deletePaper(long paperId, long teacherId);
 

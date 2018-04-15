@@ -24,6 +24,9 @@ public class Paper implements Serializable {
     @Column(nullable = false,length = 40)
     private String name;
 
+    @Column(nullable = false, name = "answer_time")
+    private int answerTime;
+
     @Column(nullable = false, name = "subject_id")
     private long subjectId;
 

@@ -83,11 +83,11 @@ public class TeacherController {
 
     @PostMapping("/subjects")
     public String addSubject(@RequestParam("name") String name) {
-       if (StringUtils.isEmpty(name)) {
-           throw new CommonException("error.subjects.add");
-       }
-       subjectService.addSubject(name);
-       return "redirect:/user/tea/add_subject";
+        if (StringUtils.isEmpty(name)) {
+            throw new CommonException("error.subjects.add");
+        }
+        subjectService.addSubject(name);
+        return "redirect:/user/tea/add_subject";
     }
 
     @PostMapping("/students")
@@ -101,14 +101,15 @@ public class TeacherController {
     }
 
     @PostMapping("/papers")
-    public String addPaper(@RequestParam("title") String title,
+    public String addPaper(@RequestParam(value = "title") String title,
                            @RequestParam("subject") Long subject,
+                           @RequestParam("answer_time") Integer answerTime,
                            HttpServletRequest request) {
         if (StringUtils.isEmpty(title) || subject == null) {
             throw new CommonException("error.papers.add.badRequest");
         }
         UserAuxiliary userAuxiliary = RequestUtils.getUserAuxiliaryFromReq(request);
-        paperService.addPaper(title, subject, userAuxiliary.getId());
+        paperService.addPaper(title, subject, answerTime, userAuxiliary.getId());
         return "redirect:/user/tea/manager_paper";
     }
 
@@ -131,8 +132,8 @@ public class TeacherController {
 
     @PostMapping("/exercises")
     public String addExercise(@Valid ExerciseForm exerciseForm) {
-      exerciseService.addExercise(exerciseForm);
-      return "redirect:/user/tea/papers/" + exerciseForm.getPaperId() + "/edit";
+        exerciseService.addExercise(exerciseForm);
+        return "redirect:/user/tea/papers/" + exerciseForm.getPaperId() + "/edit";
     }
 
 }

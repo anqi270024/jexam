@@ -105,6 +105,7 @@ public class UserSerServiceImpl implements UserService {
         List<PaperFront> paperFronts = new ArrayList<>();
         for (Paper paper : paperList) {
             PaperFront paperFront = new PaperFront();
+            paperFront.setId(paper.getId());
             paperFront.setName(paper.getName());
             paperFront.setTeacher(userRepository.findOne(paper.getOwnerId()).getName());
             paperFront.setSubject(subjectRepository.findOne(paper.getSubjectId()).getName());

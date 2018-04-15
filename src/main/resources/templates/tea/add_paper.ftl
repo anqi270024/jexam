@@ -50,18 +50,21 @@
             <div class="col-lg-12">
                 <form role="form" name="course" action="/user/tea/papers" method="post">
                     <div class="form-group">
-                        <label>名称</label>
-                        <input type="text" class="form-control" name="title"
-                               placeholder="请输入试卷的名称">
+                        <label>试卷名称</label>
+                        <input type="text" class="form-control" name="title">
                     </div>
                     <div class="form-group">
-                        <label>科目</label>
+                        <label>试卷科目</label>
                         <select class="form-control" name="subject">
                             <#list subjects as item>
                             <option value="${(item.id)!}">${(item.name)!}</option>
                             </#list>
                         </select>
-                    </div
+                    </div>
+                    <div class="form-group">
+                        <label>考试时长(分钟)</label>
+                        <input type="number" class="form-control" name="answer_time" value="90">
+                    </div>
                     <div class="form-group">
                         <input type="submit" class="form-control" value="提交">
                     </div>

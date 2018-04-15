@@ -4,6 +4,8 @@ import lombok.extern.slf4j.Slf4j;
 import me.anqi.jexam.entity.Exercise;
 import me.anqi.jexam.entity.auxiliary.PaperFront;
 import me.anqi.jexam.entity.auxiliary.UserAuxiliary;
+import me.anqi.jexam.service.ExerciseService;
+import me.anqi.jexam.service.PaperService;
 import me.anqi.jexam.service.UserService;
 import me.anqi.jexam.utils.RequestUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,9 +30,15 @@ public class StudentController {
 
     private UserService userService;
 
+    private ExerciseService exerciseService;
+
+    private PaperService paperService;
+
     @Autowired
-    public StudentController(UserService userService) {
+    public StudentController(UserService userService, ExerciseService exerciseService, PaperService paperService) {
         this.userService = userService;
+        this.exerciseService = exerciseService;
+        this.paperService = paperService;
     }
 
     @GetMapping("/exams")
@@ -54,6 +62,15 @@ public class StudentController {
         UserAuxiliary userAuxiliary = RequestUtils.getUserAuxiliaryFromReq(request);
         userService.addCollectionExercises(userAuxiliary.getId(), id);
         return "redirect:/exercises/list?type=all";
+    }
+
+    @GetMapping("/papers/{id}/join")
+    public String joinExam(@PathVariable("id") Long paperId, Model model) {
+        List<Exercise> exerciseList = exerciseService.getAllExercisesByPaperId(paperId);
+        int time = paperService.findPageById(paperId).getAnswerTime();
+        model.addAttribute("time", time);
+        model.addAttribute("exercises", exerciseList);
+        return "stu/answer_paper";
     }
 
 

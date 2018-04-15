@@ -11,16 +11,16 @@ For more info and more free Bootstrap 3 HTML themes, visit http://startbootstrap
 /* Global Styles */
 
 body {
-  margin-top: 50px;
+    margin-top: 50px;
 }
 
 #wrapper {
-  padding-left: 0;
+    padding-left: 0;
 }
 
 #page-wrapper {
-  width: 100%;
-  padding: 5px 15px;
+    width: 100%;
+    padding: 5px 15px;
 }
 
 /* Nav Messages */
@@ -29,139 +29,172 @@ body {
 .messages-dropdown .dropdown-menu .message-preview .name,
 .messages-dropdown .dropdown-menu .message-preview .message,
 .messages-dropdown .dropdown-menu .message-preview .time {
-  display: block;
+    display: block;
 }
 
 .messages-dropdown .dropdown-menu .message-preview .avatar {
-  float: left;
-  margin-right: 15px;
+    float: left;
+    margin-right: 15px;
 }
 
 .messages-dropdown .dropdown-menu .message-preview .name {
-  font-weight: bold;
+    font-weight: bold;
 }
 
 .messages-dropdown .dropdown-menu .message-preview .message {
-  font-size: 12px;
+    font-size: 12px;
 }
 
 .messages-dropdown .dropdown-menu .message-preview .time {
-  font-size: 12px;
+    font-size: 12px;
 }
-
 
 /* Nav Announcements */
 
 .announcement-heading {
-  font-size: 50px;
-  margin: 0;
+    font-size: 50px;
+    margin: 0;
 }
 
 .announcement-text {
-  margin: 0;
+    margin: 0;
 }
 
 /* Table Headers */
 
 table.tablesorter thead {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 table.tablesorter thead tr th:hover {
-  background-color: #f5f5f5;
+    background-color: #f5f5f5;
 }
 
 /* Flot Chart Containers */
 
 .flot-chart {
-  display: block;
-  height: 400px;
+    display: block;
+    height: 400px;
 }
 
 .flot-chart-content {
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
 }
 
 /* Edit Below to Customize Widths > 768px */
-@media (min-width:768px) {
+@media (min-width: 768px) {
 
-  /* Wrappers */
+    /* Wrappers */
+    #wrapper {
+        padding-left: 225px;
+    }
 
-  #wrapper {
-	padding-left: 225px;
-  }
+    #page-wrapper {
+        padding: 15px 25px;
+    }
 
-  #page-wrapper {
-	padding: 15px 25px;
-  }
+    /* Side Nav */
+    .side-nav {
+        margin-left: -225px;
+        left: 225px;
+        width: 225px;
+        position: fixed;
+        top: 50px;
+        height: 100%;
+        border-radius: 0;
+        border: none;
+        background-color: #36404B;
+        overflow-y: auto;
+    }
 
-  /* Side Nav */
+    /* Bootstrap Default Overrides - Customized Dropdowns for the Side Nav */
+    .side-nav > li.dropdown > ul.dropdown-menu {
+        position: relative;
+        min-width: 225px;
+        margin: 0;
+        padding: 0;
+        border: none;
+        border-radius: 0;
+        background-color: transparent;
+        box-shadow: none;
+        -webkit-box-shadow: none;
+    }
 
-  .side-nav {
-	margin-left: -225px;
-	left: 225px;
-	width: 225px;
-	position: fixed;
-	top: 50px;
-	height: 100%;
-	border-radius: 0;
-	border: none;
-	background-color: #36404B;
-	overflow-y: auto;
-  }
+    .side-nav > li.dropdown > ul.dropdown-menu > li > a {
+        color: #999999;
+        padding: 15px 15px 15px 25px;
+    }
 
-  /* Bootstrap Default Overrides - Customized Dropdowns for the Side Nav */
+    .side-nav > li.dropdown > ul.dropdown-menu > li > a:hover,
+    .side-nav > li.dropdown > ul.dropdown-menu > li > a.active,
+    .side-nav > li.dropdown > ul.dropdown-menu > li > a:focus {
+        color: #fff;
+        background-color: #36404B;
+    }
 
-  .side-nav>li.dropdown>ul.dropdown-menu {
-	position: relative;
-	min-width: 225px;
-	margin: 0;
-	padding: 0;
-	border: none;
-	border-radius: 0;
-	background-color: transparent;
-	box-shadow: none;
-	-webkit-box-shadow: none;
-  }
+    .side-nav > li > a {
+        width: 225px;
+    }
 
-  .side-nav>li.dropdown>ul.dropdown-menu>li>a {
-	color: #999999;
-	padding: 15px 15px 15px 25px;
-  }
+    .navbar-inverse .navbar-nav > li > a:hover,
+    .navbar-inverse .navbar-nav > li > a:focus {
+        background-color: #36404B;
+    }
 
-  .side-nav>li.dropdown>ul.dropdown-menu>li>a:hover,
-  .side-nav>li.dropdown>ul.dropdown-menu>li>a.active,
-  .side-nav>li.dropdown>ul.dropdown-menu>li>a:focus {
-	color: #fff;
-	background-color: #36404B;
-  }
+    /* Nav Messages */
+    .messages-dropdown .dropdown-menu {
+        min-width: 300px;
+    }
 
-  .side-nav>li>a {
-	width: 225px;
-  }
+    .messages-dropdown .dropdown-menu li a {
+        white-space: normal;
+    }
 
-  .navbar-inverse .navbar-nav>li>a:hover,
-  .navbar-inverse .navbar-nav>li>a:focus {
-	background-color: #36404B;
-  }
+    .navbar-bg {
+        background-color: #36404B;
+    }
 
-  /* Nav Messages */
+    .active-bg {
+        background-color: #1d344b;
+    }
 
-  .messages-dropdown .dropdown-menu {
-	min-width: 300px;
-  }
+    h1 {
+        font-family: "微软雅黑";
+        font-size: 40px;
+        margin: 20px 0;
+        border-bottom: solid 1px #ccc;
+        padding-bottom: 20px;
+        letter-spacing: 2px;
+    }
 
-  .messages-dropdown .dropdown-menu li a {
-	white-space: normal;
-  }
+    .time-item strong {
+        background: #C71C60;
+        color: #fff;
+        line-height: 49px;
+        font-size: 36px;
+        font-family: Arial;
+        padding: 0 10px;
+        margin-right: 10px;
+        border-radius: 5px;
+        box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    }
 
-  .navbar-bg{
-      background-color: #36404B;
-  }
+    #day_show {
+        float: left;
+        line-height: 49px;
+        color: #c71c60;
+        font-size: 32px;
+        margin: 0 10px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
 
-  .active-bg{
-      background-color: #1d344b;
-  }
+    .item-title .unit {
+        background: none;
+        line-height: 49px;
+        font-size: 24px;
+        padding: 0 10px;
+        float: left;
+    }
 
 }
