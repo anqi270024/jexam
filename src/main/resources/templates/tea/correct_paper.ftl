@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>试卷批改</title>
+    <title>学生答卷</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css"/>
@@ -38,56 +38,52 @@
                 <li><a href="/user/tea/add_student"><i class="fa fa-plus"></i> 添加学生</a></li>
                 <li><a href="/user/tea/add_paper"><i class="fa fa-edit"></i> 添加试卷</a></li>
                 <li><a href="/user/tea/manager_paper"><i class="fa fa-edit"></i> 试卷管理</a></li>
-                <li class="active-bg"><a href="/user/tea/correct_paper"><i class="fa fa-edit"></i> 试卷批改</a></li>
+                <li class="active-bg"><a href="/user/tea/correct_paper"><i class="fa fa-edit"></i> 学生答卷</a></li>
             </ul>
 
-            <h3 style="text-align: center;color: #ffffff;"> 试卷批改</h3>
+            <h3 style="text-align: center;color: #ffffff;"> 学生答卷</h3>
         </div><!-- /.navbar-collapse -->
     </nav>
 
     <div id="page-wrapper">
         <div class="row">
             <div class="col-lg-12">
-                <form role="form" name="course" action="/user/tea/crs_mgr/add" method="post">
-                    <div class="form-group">
-                        <label for="name">名称</label>
-                        <input type="text" class="form-control" name="name"
-                               placeholder="请输入课程的名称">
-                    </div>
-                    <div class="form-group">
-                        <label for="name">描述</label>
-                        <input type="text" class="form-control" name="desp"
-                               placeholder="请输入关于本课程的描述">
-                    </div>
-                    <div class="form-group">
-                        <label>方向</label>
-                        <select class="form-control" name="dir">
-                            <option value="fe">前端开发</option>
-                            <option value="be">后端开发</option>
-                            <option value="mb">移动开发</option>
-                            <option value="db">数据库</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label>类型</label>
-                        <select class="form-control" name="type">
-                            <option value="c">c</option>
-                            <option value="cp">c++</option>
-                            <option value="java">java</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <input type="submit" class="form-control" value="提交">
-                    </div>
-                </form>
+                <div class="table-responsive">
+                    <table class="table table-hover table-bordered">
+                        <thead>
+                        <tr>
+                            <th>试卷名称</th>
+                            <th>学生</th>
+                            <th>科目</th>
+                            <th>成绩</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <#list papers as item>
+                        <td>${item.name!}</td>
+                        <td>${item.student!}</td>
+                        <td>
+                            ${item.subject!}
+                        </td>
+                        <td>
+                             <#if  item.type == 1 >
+                                 ${item.score!}
+                             <#else>
+                                 <a href='/user/tea/papers/${item.id}/score?student=${item.studentId}'>待批阅</i></a>
+                             </#if>
+                        </td>
+                        </tr>
+                        </#list>
+                        </tbody>
+                    </table>
+                </div>
             </div>
-        </div>
-    </div><!-- /#page-wrapper -->
+        </div><!-- /.row -->
 
-</div><!-- /#wrapper -->
+    </div><!-- /#wrapper -->
 
-<!-- JavaScript -->
-<script src="/js/jquery.min.js"></script>
-<script src="/js/bootstrap.min.js"></script>
+    <!-- JavaScript -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
 </body>
 </html>

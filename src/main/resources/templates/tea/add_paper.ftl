@@ -38,7 +38,7 @@
                 <li><a href="/user/tea/add_student"><i class="fa fa-plus"></i> 添加学生</a></li>
                 <li class="active-bg"><a href="/user/tea/add_paper"><i class="fa fa-edit"></i> 添加试卷</a></li>
                 <li><a href="/user/tea/manager_paper"><i class="fa fa-edit"></i> 试卷管理</a></li>
-                <li><a href="/user/tea/correct_paper"><i class="fa fa-edit"></i> 试卷批改</a></li>
+                <li><a href="/user/tea/correct_paper"><i class="fa fa-edit"></i> 学生答卷</a></li>
             </ul>
 
             <h3 style="text-align: center;color: #ffffff;"> 添加试卷</h3>

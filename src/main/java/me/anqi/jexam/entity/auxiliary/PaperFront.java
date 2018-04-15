@@ -12,6 +12,8 @@ public class PaperFront {
     private long id;
     private String name;
     private String teacher;
+    private String student;
+    private long studentId;
     private String subject;
     private int type;
     private double score;

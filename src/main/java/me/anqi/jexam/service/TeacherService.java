@@ -1,6 +1,7 @@
 package me.anqi.jexam.service;
 
 import me.anqi.jexam.entity.User;
+import me.anqi.jexam.entity.auxiliary.PaperFront;
 
 import java.util.List;
 
@@ -15,5 +16,7 @@ public interface TeacherService {
     List<User> findAllStudentsByTeacherId(long teacherId);
 
     void addStudent(long teacherId, long studentId);
+
+    List<PaperFront> getPapersByTeacherId(long teacherId);
 
 }

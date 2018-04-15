@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>我的考试</title>
+    <title>打分</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css"/>
@@ -34,14 +34,17 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav side-nav">
-                <li><a href="/user/stu/exercises"><i class="fa fa-plus"></i> 习题收藏</a></li>
-                <li class="active-bg"><a href="/user/stu/exams"><i class="fa fa-edit"></i> 我的考试</a></li>
+                <li><a href="/user/tea/add_subject"><i class="fa fa-bell"></i> 添加科目</a></li>
+                <li><a href="/user/tea/add_student"><i class="fa fa-plus"></i> 添加学生</a></li>
+                <li><a href="/user/tea/add_paper"><i class="fa fa-edit"></i> 添加试卷</a></li>
+                <li><a href="/user/tea/manager_paper"><i class="fa fa-edit"></i> 试卷管理</a></li>
+                <li><a href="/user/tea/correct_paper"><i class="fa fa-edit"></i> 学生答卷</a></li>
+                <li class="active-bg"><a href="/user/tea/correct_paper"><i class="fa fa-edit"></i> 试卷打分</a></li>
             </ul>
 
-            <h3 style="text-align: center;color: #ffffff;"> 我的考试</h3>
+            <h3 style="text-align: center;color: #ffffff;"> 试卷批改</h3>
         </div><!-- /.navbar-collapse -->
     </nav>
-
 
     <div id="page-wrapper">
         <div class="row">
@@ -51,7 +54,7 @@
                         <thead>
                         <tr>
                             <th>试卷名称</th>
-                            <th>教师</th>
+                            <th>学生</th>
                             <th>科目</th>
                             <th>成绩</th>
                         </tr>
@@ -59,17 +62,15 @@
                         <tbody>
                         <#list papers as item>
                         <td>${item.name!}</td>
-                        <td>${item.teacher!}</td>
+                        <td>${item.student!}</td>
                         <td>
                             ${item.subject!}
                         </td>
                         <td>
                              <#if  item.type == 1 >
-                                 <a href='/user/stu/papers/${item.id}/join'>参加考试</i></a>
-                             <#elseif item.type == 2 >
-                                  成绩未出
-                             <#else>
                                  ${item.score!}
+                             <#else>
+                                 <a href='/user/teacher/papers/${item.id}/correct?student=${item.studentId}'>待批阅</i></a>
                              </#if>
                         </td>
                         </tr>

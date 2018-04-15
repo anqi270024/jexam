@@ -78,7 +78,6 @@ public class StudentController {
 
     @PostMapping("/papers/{id}")
     public String answerPaper(@PathVariable("id") Long paperId, String answers, HttpServletRequest request) {
-        log.info(answers);
         UserAuxiliary userAuxiliary = RequestUtils.getUserAuxiliaryFromReq(request);
         studentService.answerPaper(userAuxiliary.getId(), paperId, answers);
         return "redirect:/user/stu/exams";

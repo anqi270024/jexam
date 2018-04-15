@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 import me.anqi.jexam.entity.Exercise;
 import me.anqi.jexam.entity.User;
 import me.anqi.jexam.entity.auxiliary.ExerciseForm;
+import me.anqi.jexam.entity.auxiliary.PaperFront;
 import me.anqi.jexam.entity.auxiliary.UserAuxiliary;
 import me.anqi.jexam.exception.CommonException;
 import me.anqi.jexam.service.*;
@@ -73,7 +74,10 @@ public class TeacherController {
     }
 
     @GetMapping("/correct_paper")
-    public String correctPaper() {
+    public String correctPaper(HttpServletRequest request, Model model) {
+        UserAuxiliary userAuxiliary = RequestUtils.getUserAuxiliaryFromReq(request);
+        List<PaperFront> paperFronts = teacherService.getPapersByTeacherId(userAuxiliary.getId());
+        model.addAttribute("papers", paperFronts);
         return "tea/correct_paper";
     }
 
@@ -131,6 +135,12 @@ public class TeacherController {
     public String addExercise(@Valid ExerciseForm exerciseForm) {
         exerciseService.addExercise(exerciseForm);
         return "redirect:/user/tea/papers/" + exerciseForm.getPaperId() + "/edit";
+    }
+
+    @GetMapping("/papers/{id}/score")
+    public String scorePage(@PathVariable long id, @RequestParam("student") String studentId, Model model) {
+
+        return "tea/score_page";
     }
 
 }
