@@ -12,9 +12,6 @@
     <link rel="stylesheet" href="/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="/css/per-center.css"/>
-    <link rel="stylesheet" href="/css/icon-font.min.css"/>
-    <link href='https://fonts.googleapis.com/css?family=Roboto:700,500,300,100italic,100,400' rel='stylesheet'
-          type='text/css'>
 </head>
 
 <body>

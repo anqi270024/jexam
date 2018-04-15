@@ -30,6 +30,7 @@
 
                         <li><a href="/"><span>首页</span></a></li>
                         <li><a href="/exercises/list?type=all"><span>习题中心</span></a></li>
+                        <li><a href="/papers"><span>试卷中心</span></a></li>
 
                     <#if type == 1>
                         <li class="dropdown user-dropdown">

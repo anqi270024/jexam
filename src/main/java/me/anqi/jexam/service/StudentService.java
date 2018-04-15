@@ -1,8 +1,11 @@
 package me.anqi.jexam.service;
 
+import me.anqi.jexam.entity.Exercise;
 import me.anqi.jexam.entity.User;
+import me.anqi.jexam.entity.auxiliary.PaperFront;
 
 import java.util.List;
+import java.util.Set;
 
 /**
  * @author flyleft
@@ -10,10 +13,12 @@ import java.util.List;
  */
 public interface StudentService {
 
-     List<User> findAllStudents();
+     void addCollectionExercises(long userId, long exerciseId);
 
-     List<User> findAllStudentsByTeacherId(long teacherId);
+     Set<Exercise> getCollectionExercises(long userId);
 
-     void addStudent(long teacherId, long studentId);
+     List<PaperFront> getPapersByStudentId(long studentId);
+
+     void answerPaper(long studentId, long paperId, String answer);
 
 }

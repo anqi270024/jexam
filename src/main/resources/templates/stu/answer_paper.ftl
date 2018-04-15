@@ -57,7 +57,7 @@
         <div class="row">
             <div class="col-lg-12">
                            <#list exercises as item>
-                    <#if  item.type == "single_choose">
+                               <#if  item.type == "single_choose">
                      <div class="form-group">
                          <div class="panel panel-info">
                              <div class="panel-heading">
@@ -65,9 +65,7 @@
                              </div>
                              <div class="panel-body">
                                  ${item.content!}
-                                 <div class="form-group jexam-exercise">
-                                     <input type="hidden" value="${item.id}" name="id">
-                                     <input type="hidden" value="${item.type}" name="type">
+                                 <div class="form-group jexam-exercise ans-radio" data-type="${item.type}" data-id="${item.id}">
                                      <label>请选择答案(单选):</label>
                                      <#list item.chooseList!?keys as key>
                                                 <div class="form-group">
@@ -84,7 +82,7 @@
                          </div>
                      </div>
 
-                    <#elseif item.type == "multi_choose">
+                               <#elseif item.type == "multi_choose">
                      <div class="form-group">
                          <div class="panel panel-success">
                              <div class="panel-heading">
@@ -92,9 +90,7 @@
                              </div>
                              <div class="panel-body">
                                  ${item.content!}
-                                 <div class="form-group jexam-exercise">
-                                     <input type="hidden" value="${item.id}" name="id">
-                                     <input type="hidden" value="${item.type}" name="type">
+                                 <div class="form-group jexam-exercise ans-mul" data-type="${item.type}" data-id="${item.id}">
                                      <label>请选择答案(多选):</label>
                                      <#list item.chooseList!?keys as key>
                                                     <div class="form-group">
@@ -110,7 +106,7 @@
                              </div>
                          </div>
                      </div>
-                    <#elseif item.type== "completion">
+                               <#elseif item.type== "completion">
                      <div class="form-group">
                          <div class="panel panel-warning">
                              <div class="panel-heading">
@@ -119,15 +115,13 @@
                              <div class="panel-body">
                                  ${item.content!}
                                  <div class="form-group jexam-exercise">
-                                     <input type="hidden" value="${item.id}" name="id">
-                                     <input type="hidden" value="${item.type}" name="type">
                                      <label>请填写答案(填空):</label>
-                                     <input type="text" class="form-control" name="answer">
+                                     <input type="text" class="form-control ans-input" name="answer" data-type="${item.type}" data-id="${item.id}">
                                  </div
                              </div>
                          </div>
                      </div>
-                    <#else>
+                               <#else>
                     <div class="form-group">
                         <div class="panel panel-danger">
                             <div class="panel-heading">
@@ -136,15 +130,13 @@
                             <div class="panel-body">
                                 ${item.content!}
                                 <div class="form-group jexam-exercise">
-                                    <input type="hidden" value="${item.id}" name="id">
-                                    <input type="hidden" value="${item.type}" name="type">
                                     <label>请填写答案(简答):</label>
-                                    <textarea class="form-control" rows="3" name="answer"></textarea>
+                                    <textarea class="form-control ans-textArea" rows="3" name="answer" data-type="${item.type}" data-id="${item.id}"></textarea>
                                 </div
                             </div>
                         </div>
                     </div>
-                    </#if>
+                               </#if>
                            </#list>
                 <div class="form-group">
                     <input type="submit" class="form-control" value="提交" id="paper-submit" onclick="exerciseSubmit()">
@@ -181,7 +173,7 @@
         }
 
         $(function(){
-            document.oncontextmenu = function(){
+           /* document.oncontextmenu = function(){
                 event.returnValue = false;
             }
             document.onselectStart = function(){
@@ -189,10 +181,74 @@
             }
             document.oncopy = function(){
                 event.returnValue = false;
-            }
+            }*/
 
             timer(intDiff);
         });
+
+        function formPost(URL, ANSWER) {
+            var temp = document.createElement("form");
+            temp.action = URL;
+            temp.method = "post";
+            temp.style.display = "none";
+            var opt = document.createElement("input");
+            opt.setAttribute("name", "answers");
+            opt.setAttribute("value", ANSWER);
+            temp.appendChild(opt);
+            document.body.appendChild(temp);
+            temp.submit();
+            return temp;
+        }
+
+        function exerciseSubmit() {
+            var ans_radio_arr = $('.ans-radio');
+            var ans_mul_arr = $('.ans-mul');
+            var ans_input_arr = $('.ans-input');
+            var ans_textArea_arr = $('.ans-textArea');
+            var res = [];
+            for (var i = 0, l = ans_radio_arr.length; i < l; i++) {
+                var obj = {
+                    value: $('input:radio:checked', ans_radio_arr[i]).val(),
+                    type: $(ans_radio_arr[i]).attr('data-type'),
+                    id: $(ans_radio_arr[i]).attr('data-id'),
+                };
+                res.push(obj);
+            }
+            for (var i = 0, l = ans_mul_arr.length; i < l; i++) {
+                var obj = {
+                    value: this.getMulValue($('input:checkbox:checked', ans_mul_arr[i])),
+                    type: $(ans_mul_arr[i]).attr('data-type'),
+                    id: $(ans_mul_arr[i]).attr('data-id'),
+                };
+                res.push(obj);
+            }
+            for (var i = 0, l = ans_input_arr.length; i < l; i++) {
+                var obj = {
+                    value: $(ans_input_arr[i]).val(),
+                    type: $(ans_input_arr[i]).attr('data-type'),
+                    id: $(ans_input_arr[i]).attr('data-id'),
+                };
+                res.push(obj);
+            }
+            for (var i = 0, l = ans_textArea_arr.length; i < l; i++) {
+                var obj = {
+                    value: $(ans_textArea_arr[i]).val(),
+                    type: $(ans_textArea_arr[i]).attr('data-type'),
+                    id: $(ans_textArea_arr[i]).attr('data-id'),
+                };
+                res.push(obj);
+            }
+            var json = JSON.stringify(res);
+            formPost("/user/stu/papers/${paperId}", json);
+        }
+
+        function getMulValue(origin) {
+            var arr = [];
+            origin.each(function(){
+                arr.push($(this).val());
+            });
+            return arr.join();
+        }
     </script>
 </body>
 </html>

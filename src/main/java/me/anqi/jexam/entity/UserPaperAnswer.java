@@ -30,6 +30,5 @@ public class UserPaperAnswer {
 
     @Column(columnDefinition = "text")
     private String answer;
-
-    private int score;
+    
 }

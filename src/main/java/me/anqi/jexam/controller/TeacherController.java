@@ -6,10 +6,7 @@ import me.anqi.jexam.entity.User;
 import me.anqi.jexam.entity.auxiliary.ExerciseForm;
 import me.anqi.jexam.entity.auxiliary.UserAuxiliary;
 import me.anqi.jexam.exception.CommonException;
-import me.anqi.jexam.service.ExerciseService;
-import me.anqi.jexam.service.PaperService;
-import me.anqi.jexam.service.StudentService;
-import me.anqi.jexam.service.SubjectService;
+import me.anqi.jexam.service.*;
 import me.anqi.jexam.utils.RequestUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -34,10 +31,10 @@ public class TeacherController {
     private SubjectService subjectService;
 
     @Autowired
-    private StudentService studentService;
+    private PaperService paperService;
 
     @Autowired
-    private PaperService paperService;
+    private TeacherService teacherService;
 
     @Autowired
     private ExerciseService exerciseService;
@@ -53,8 +50,8 @@ public class TeacherController {
     @GetMapping("/add_student")
     public String addStudent(HttpServletRequest request, Model model) {
         UserAuxiliary userAuxiliary = RequestUtils.getUserAuxiliaryFromReq(request);
-        List<User> existStudents = studentService.findAllStudentsByTeacherId(userAuxiliary.getId());
-        List<User> allStudents = studentService.findAllStudents();
+        List<User> existStudents = teacherService.findAllStudentsByTeacherId(userAuxiliary.getId());
+        List<User> allStudents = teacherService.findAllStudents();
         StringBuilder builder = new StringBuilder();
         existStudents.forEach(t -> builder.append(t.getName()).append(" "));
         model.addAttribute("studentNames", builder.toString());
@@ -96,7 +93,7 @@ public class TeacherController {
             throw new CommonException("error.students.add.badRequest");
         }
         UserAuxiliary userAuxiliary = RequestUtils.getUserAuxiliaryFromReq(request);
-        studentService.addStudent(userAuxiliary.getId(), id);
+        teacherService.addStudent(userAuxiliary.getId(), id);
         return "redirect:/user/tea/add_student";
     }
 
