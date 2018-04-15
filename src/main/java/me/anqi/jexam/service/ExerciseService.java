@@ -40,4 +40,6 @@ public interface ExerciseService {
 
     ExerciseFront getAllByFrontType(String type, Pageable pageable);
 
+    List<Exercise> getExercisesByPaperIdAndStudentId(long paperId, long studentId);
+
 }

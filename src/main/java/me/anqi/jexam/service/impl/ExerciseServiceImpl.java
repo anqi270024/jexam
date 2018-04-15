@@ -3,10 +3,14 @@ package me.anqi.jexam.service.impl;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import me.anqi.jexam.entity.Exercise;
+import me.anqi.jexam.entity.Paper;
+import me.anqi.jexam.entity.UserPaperAnswer;
 import me.anqi.jexam.entity.auxiliary.ExerciseForm;
 import me.anqi.jexam.entity.auxiliary.ExerciseFront;
 import me.anqi.jexam.exception.CommonException;
 import me.anqi.jexam.repository.ExerciseRepository;
+import me.anqi.jexam.repository.PaperRepository;
+import me.anqi.jexam.repository.UserPaperAnswerRepository;
 import me.anqi.jexam.service.ExerciseService;
 import me.anqi.jexam.utils.CommonUtils;
 import me.anqi.jexam.utils.JexamBeanUtils;
@@ -36,9 +40,11 @@ public class ExerciseServiceImpl implements ExerciseService {
 
     private ExerciseRepository exerciseRepository;
 
-    @Autowired
-    public ExerciseServiceImpl(ExerciseRepository exerciseRepository) {
+    private UserPaperAnswerRepository userPaperAnswerRepository;
+
+    public ExerciseServiceImpl(ExerciseRepository exerciseRepository, UserPaperAnswerRepository userPaperAnswerRepository) {
         this.exerciseRepository = exerciseRepository;
+        this.userPaperAnswerRepository = userPaperAnswerRepository;
     }
 
     @Override
@@ -144,4 +150,18 @@ public class ExerciseServiceImpl implements ExerciseService {
         return new ExerciseFront(exercisePage, count);
     }
 
+    @Override
+    public List<Exercise> getExercisesByPaperIdAndStudentId(long paperId, long studentId) {
+        List<Exercise> exerciseList = exerciseRepository.findAllByPaperIdOrderByPosition(paperId);
+        for (Exercise exercise : exerciseList) {
+            exercise.setScore(exercise.getScore());
+            UserPaperAnswer userPaperAnswer = userPaperAnswerRepository.findByUserIdAndExerciseId(studentId, exercise.getId());
+            exercise.setStudentAnswer(userPaperAnswer.getAnswer());
+            if (TYPE_SINGLE_CHOOSE.equals(exercise.getType()) || TYPE_MULTI_CHOOSE.equals(exercise.getType())) {
+                Map<Character, String> characterStringMap = JsonUtils.instance.readJsonToExeMap(exercise.getChooses());
+                exercise.setChooseList(characterStringMap);
+            }
+        }
+        return exerciseList;
+    }
 }

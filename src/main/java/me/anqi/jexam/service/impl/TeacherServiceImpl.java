@@ -1,14 +1,15 @@
 package me.anqi.jexam.service.impl;
 
-import me.anqi.jexam.entity.Paper;
-import me.anqi.jexam.entity.TeacherStudent;
-import me.anqi.jexam.entity.User;
-import me.anqi.jexam.entity.UserPaperScore;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import me.anqi.jexam.entity.*;
 import me.anqi.jexam.entity.auxiliary.PaperFront;
+import me.anqi.jexam.entity.auxiliary.ScoreForm;
 import me.anqi.jexam.repository.*;
 import me.anqi.jexam.service.TeacherService;
 import org.springframework.stereotype.Service;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -31,6 +32,8 @@ public class TeacherServiceImpl implements TeacherService {
     private UserPaperScoreRepository userPaperScoreRepository;
 
     private SubjectRepository subjectRepository;
+
+    private ObjectMapper mapper = new ObjectMapper();
 
     public TeacherServiceImpl(TeacherStudentRepository teacherStudentRepository, UserRepository userRepository,
                               PaperRepository paperRepository, UserPaperAnswerRepository userPaperAnswerRepository,
@@ -92,5 +95,32 @@ public class TeacherServiceImpl implements TeacherService {
             }
         }
         return paperFrontList;
+    }
+
+    @Override
+    public void scorePaper(long paperId, long studentId, String scores) {
+        UserPaperScore userPaperScore = new UserPaperScore();
+        userPaperScore.setPaperId(paperId);
+        userPaperScore.setUserId(studentId);
+        try {
+            int score = 0;
+            List<ScoreForm> scoreFormList = mapper.readValue(scores, new TypeReference<List<ScoreForm>>() {
+            });
+            for (ScoreForm scoreForm : scoreFormList) {
+                int exeScore = Integer.parseInt(scoreForm.getScore());
+                score += exeScore;
+                UserPaperAnswer userPaperAnswer = userPaperAnswerRepository
+                        .findByUserIdAndExerciseId(studentId, Integer.parseInt(scoreForm.getId()));
+                if (userPaperAnswer != null) {
+                    userPaperAnswer.setScore(exeScore);
+                    userPaperAnswerRepository.save(userPaperAnswer);
+                }
+            }
+            userPaperScore.setScore(score);
+            userPaperScoreRepository.save(userPaperScore);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 }

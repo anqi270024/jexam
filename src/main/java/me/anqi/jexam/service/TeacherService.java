@@ -19,4 +19,6 @@ public interface TeacherService {
 
     List<PaperFront> getPapersByTeacherId(long teacherId);
 
+    void scorePaper(long paperId, long studentId, String scores);
+
 }

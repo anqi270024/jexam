@@ -12,4 +12,8 @@ public interface UserPaperAnswerRepository extends CrudRepository<UserPaperAnswe
 
     boolean existsByUserIdAndPaperId(@Param("userId") long userId,
                                      @Param("paperId") long paperId);
+
+    UserPaperAnswer findByUserIdAndExerciseId(@Param("userId") long userId,
+                                              @Param("exerciseId") long exerciseId);
+
 }

@@ -138,9 +138,20 @@ public class TeacherController {
     }
 
     @GetMapping("/papers/{id}/score")
-    public String scorePage(@PathVariable long id, @RequestParam("student") String studentId, Model model) {
-
+    public String scorePage(@PathVariable long id, @RequestParam("student") long studentId, Model model) {
+        List<Exercise> exercises = exerciseService.getExercisesByPaperIdAndStudentId(id, studentId);
+        model.addAttribute("exercises", exercises);
+        model.addAttribute("paperId", id);
+        model.addAttribute("studentId", studentId);
         return "tea/score_page";
     }
 
+    @PostMapping("/papers/{id}/score")
+    public String doScorePage(@PathVariable long id,
+                              @RequestParam("student") long studentId,
+                              @RequestParam String scores) {
+
+        teacherService.scorePaper(id, studentId, scores);
+        return "redirect:/user/tea/correct_paper";
+    }
 }

@@ -156,6 +156,7 @@
             var timeID = window.setInterval(function(){
                 if (intDiff < 0) {
                     window.clearInterval(timeID);
+                    exerciseSubmit();
                 }
                 var hour=0, minute=0, second=0;//时间默认值
                 if(intDiff > 0){
@@ -173,7 +174,7 @@
         }
 
         $(function(){
-           /* document.oncontextmenu = function(){
+            document.oncontextmenu = function(){
                 event.returnValue = false;
             }
             document.onselectStart = function(){
@@ -181,8 +182,7 @@
             }
             document.oncopy = function(){
                 event.returnValue = false;
-            }*/
-
+            }
             timer(intDiff);
         });
 
