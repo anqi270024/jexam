@@ -127,7 +127,7 @@
     
     响应式页面
     ![响应式页面](files/response1.png)
-    ![响应式页面](files/response2.png
+    ![响应式页面](files/response2.png)
 
 - druid监控网站(DruidDataSourceConfig中配置druid)
 
