@@ -8,6 +8,7 @@ import me.anqi.jexam.entity.auxiliary.ScoreForm;
 import me.anqi.jexam.repository.*;
 import me.anqi.jexam.service.TeacherService;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -98,6 +99,7 @@ public class TeacherServiceImpl implements TeacherService {
     }
 
     @Override
+    @Transactional
     public void scorePaper(long paperId, long studentId, String scores) {
         UserPaperScore userPaperScore = new UserPaperScore();
         userPaperScore.setPaperId(paperId);
@@ -121,6 +123,5 @@ public class TeacherServiceImpl implements TeacherService {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 }

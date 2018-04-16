@@ -92,6 +92,38 @@
 - 代码分层
     > 代码严格分为controller(控制器)，service(业务逻辑层)，repository(数据操作层)三层。使用JSP会插入java代码，不利于前后端严格分层，因此采用了性能也更高的freemarker模板引擎。
     
+    ![代码分层](files/code.png)
+    
+- 为了确保数据的操作一致性，使用spring的声明式事务@Transactional （TeacherServiceImpl）
+
+  ```
+   @Transactional
+      public void scorePaper(long paperId, long studentId, String scores) {
+          UserPaperScore userPaperScore = new UserPaperScore();
+          userPaperScore.setPaperId(paperId);
+          userPaperScore.setUserId(studentId);
+          try {
+              int score = 0;
+              List<ScoreForm> scoreFormList = mapper.readValue(scores, new TypeReference<List<ScoreForm>>() {
+              });
+              for (ScoreForm scoreForm : scoreFormList) {
+                  int exeScore = Integer.parseInt(scoreForm.getScore());
+                  score += exeScore;
+                  UserPaperAnswer userPaperAnswer = userPaperAnswerRepository
+                          .findByUserIdAndExerciseId(studentId, Integer.parseInt(scoreForm.getId()));
+                  if (userPaperAnswer != null) {
+                      userPaperAnswer.setScore(exeScore);
+                      userPaperAnswerRepository.save(userPaperAnswer);
+                  }
+              }
+              userPaperScore.setScore(score);
+              userPaperScoreRepository.save(userPaperScore);
+          } catch (IOException e) {
+              e.printStackTrace();
+          }
+      }
+  ```
+    
 - 答题
     > 答题时有倒计时功能，到达结束时间自动提交。为了防止作弊，禁用页面的复制和鼠标右键。
  
@@ -132,3 +164,4 @@
 - druid监控网站(DruidDataSourceConfig中配置druid)
 
    ![druid](files/druid.png)
+   
