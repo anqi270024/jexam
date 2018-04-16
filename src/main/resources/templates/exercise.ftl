@@ -6,8 +6,8 @@
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- CSS Files -->
-    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="/css/font-awesome.min.css"/>
+    <link href="https://cdn.bootcss.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css"/>
     <link rel="stylesheet" href="/css/animate.min.css"/>
     <style type="text/css">
@@ -238,8 +238,8 @@
     </section>
 </footer>
 <!-- JavaScript Files -->
-<script src="/js/jquery.min.js"></script>
-<script src="/js/bootstrap.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery/3.0.0/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 <script src="/js/animate.js"></script>
 <script src="/js/jquery.cuteTime.min.js"></script>
 <script src="/js/script.js"></script>

@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>login</title>
-    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="/css/font-awesome.min.css"/>
+    <link href="https://cdn.bootcss.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/login-page.min.css">
 </head>
 <body class="login-page">
@@ -55,8 +55,8 @@
         </form>
     </div>
 </div>
-<script src="/js/jquery.min.js"></script>
-<script src="/js/bootstrap.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery/3.0.0/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 <script src="/js/md5.min.js"></script>
 <script type="text/javascript">
     $("#user-type").click(function(){

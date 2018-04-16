@@ -29,13 +29,11 @@ usernamename ：cache的标识符，在一个CacheManager中必须唯一。
             memoryStoreEvictionPolicy="FIFO"
     />
 
-    <cache name="newTaskList"
+    <cache name="subjects"
            maxElementsInMemory="1"
-    />
-    <!--cache配置同defaultCache -->
-    <cache name="user_join_courses"
-           maxElementsInMemory="100"
-           maxElementsOnDisk="1000"
+           overflowToDisk="false"
+           diskPersistent="false"
+           diskExpiryThreadIntervalSeconds="1800"
            memoryStoreEvictionPolicy="FIFO"
     />
 </ehcache>

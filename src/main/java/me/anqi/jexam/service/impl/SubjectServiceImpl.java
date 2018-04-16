@@ -4,6 +4,9 @@ import me.anqi.jexam.entity.Subject;
 import me.anqi.jexam.repository.SubjectRepository;
 import me.anqi.jexam.service.SubjectService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
+import org.springframework.cache.annotation.Caching;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -23,6 +26,7 @@ public class SubjectServiceImpl implements SubjectService {
         this.subjectRepository = subjectRepository;
     }
 
+    @Cacheable(value = "subjects", key = "1")
     @Override
     public List<Subject> getAllSubjects() {
         Iterable<Subject> subjectIterable = subjectRepository.findAll();
@@ -31,6 +35,7 @@ public class SubjectServiceImpl implements SubjectService {
         return list;
     }
 
+    @Caching(evict = @CacheEvict(value = "subjects", key = "1"))
     @Override
     public void addSubject(String name) {
         int num = subjectRepository.countByName(name);
